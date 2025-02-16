@@ -8,6 +8,7 @@ import { TabBar } from "@/components/layout/TabBar";
 import { TitleBar } from "@/components/layout/TitleBar";
 import { SidebarProvider } from "@/provider/SidebarProvider";
 import { ToastNoticeProvider } from "@/provider/ToastNoticeProvider";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { ReactNode } from "react";
 
 type Props = {
@@ -54,6 +55,7 @@ const RootLayout = ({ children }: Props) => {
 						</footer>
 					</div>
 				</ToastNoticeProvider>
+				<SpeedInsights />
 			</body>
 		</html>
 	);
