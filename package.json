@@ -1,0 +1,45 @@
+{
+	"name": "saitogo.me",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev --turbo",
+		"build": "next build",
+		"postbuild": "next-sitemap",
+		"start": "next start",
+		"lint": "biome lint --write --verbose --unsafe .",
+		"format": "biome format --write --verbose .",
+		"check": "biome check --write --unsafe --verbose .",
+		"generate-thumbnails": "node --loader ts-node/esm scripts/generate-thumbnails.ts"
+	},
+	"dependencies": {
+		"@conform-to/react": "^1.2.2",
+		"@conform-to/zod": "^1.2.2",
+		"clsx": "^2.1.1",
+		"framer-motion": "^12.4.3",
+		"next": "^15.1.7",
+		"next-sitemap": "^4.2.3",
+		"nodemailer": "^6.10.0",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0",
+		"react-icons": "^5.4.0",
+		"react-intersection-observer": "^9.15.1",
+		"react-type-animation": "^3.2.0",
+		"tailwind-merge": "^3.0.1"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@next/bundle-analyzer": "^15.1.7",
+		"@tailwindcss/postcss": "^4.0.6",
+		"@types/glob": "^8.1.0",
+		"@types/node": "^22.13.4",
+		"@types/nodemailer": "^6.4.17",
+		"@types/react": "^19.0.9",
+		"@types/react-dom": "^19.0.3",
+		"postcss": "^8.5.2",
+		"tailwind-scrollbar": "^4.0.0",
+		"tailwindcss": "^4.0.6",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.7.3"
+	}
+}

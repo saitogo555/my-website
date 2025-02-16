@@ -1,0 +1,55 @@
+@import "tailwindcss";
+@import "./theme.css";
+@import "./font.css";
+@import "./utility.css";
+
+@plugin "tailwind-scrollbar";
+
+:root {
+	--viewport-top-height: 35px;
+	--viewport-middle-height: calc(
+		100dvh -
+		var(--viewport-top-height) -
+		var(--viewport-bottom-height)
+	);
+	--viewport-bottom-height: 24px;
+
+	--activity-bar-width: 48px;
+	--sidebar-width: 250px;
+}
+
+html {
+	font-size: 16px;
+}
+
+* {
+	font-family: "Consolas", "BIZUDGothic", monospace;
+}
+
+@media screen and (width < 1025px) {
+	:root {
+		--viewport-top-height: 6vw;
+		--viewport-bottom-height: 4vw;
+
+		--activity-bar-width: 8vw;
+		--sidebar-width: 40vw;
+	}
+
+	html {
+		font-size: 2vw;
+	}
+}
+
+@media screen and (width < 768px) {
+	:root {
+		--viewport-top-height: 8vw;
+		--viewport-bottom-height: 5vw;
+
+		--activity-bar-width: 10vw;
+		--sidebar-width: 60vw;
+	}
+
+	html {
+		font-size: 3vw;
+	}
+}
