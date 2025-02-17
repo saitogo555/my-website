@@ -4,6 +4,7 @@ import { cn } from "@/utils";
 import { type ChangeEvent, useState } from "react";
 import { VscTriangleDown, VscTriangleUp } from "react-icons/vsc";
 import type { WorkImage } from "../../types";
+import { Image } from "@/components/ui/Image";
 
 type Props = {
 	image: WorkImage;
@@ -78,7 +79,7 @@ export const ImageViewer = ({ image }: Props) => {
 					</div>
 				</div>
 			</div>
-			<img
+			<Image
 				className="mx-auto w-full"
 				src={image.src}
 				alt={image.title}

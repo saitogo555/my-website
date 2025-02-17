@@ -1,3 +1,4 @@
+import { Image } from "@/components/ui/Image";
 import { GITHUB_LINK, NPM_LINK, X_LINK, ZENN_LINK } from "@/constants/links";
 import type { ExternalLink } from "@/types/link";
 import Link from "next/link";
@@ -17,7 +18,7 @@ export const ProfileLinks = () => {
 					key={item.href}
 					aria-label={item.text}
 				>
-					<img className="w-7" src={item.iconSrc} alt={item.text} />
+					<Image className="w-7" src={item.iconSrc} alt={item.text} />
 				</a>
 			))}
 			<Link
@@ -26,7 +27,7 @@ export const ProfileLinks = () => {
 				title="Contact"
 				aria-label="Contact"
 			>
-				<img className="w-7 contrast-50" src="/images/logo/mail.svg" alt="contact" />
+				<Image className="w-7 contrast-50" src="/images/logo/mail.svg" alt="contact" />
 			</Link>
 		</div>
 	);

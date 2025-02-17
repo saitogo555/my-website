@@ -1,4 +1,5 @@
 "use client";
+import { Image } from "@/components/ui/Image";
 import type { NavigationLink } from "@/types/link";
 import { cn, getPageNameFromPath } from "@/utils";
 import Link from "next/link";
@@ -28,7 +29,7 @@ export const TabItem = ({ text, to, iconSrc }: Props) => {
 			{isCurrentPage && (
 				<div className="-mx-[1px] absolute top-0 left-0 z-10 h-[1px] w-[calc(100%+2px)] bg-theme-accent" />
 			)}
-			<img className={cn("w-4", "max-medium:w-6")} src={iconSrc} alt="File Icon" />
+			<Image className={cn("w-4", "max-medium:w-6")} src={iconSrc} alt="File Icon" />
 			<span className={cn("ml-2 text-sm text-theme-text-primary", "max-medium:text-lg")}>
 				{text}
 			</span>

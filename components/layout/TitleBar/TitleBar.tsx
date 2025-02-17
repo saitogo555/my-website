@@ -3,6 +3,7 @@ import Link from "next/link";
 import { MenuBar } from "../MenuBar";
 import { SearchBar } from "../SearchBar";
 import { WindowControlBar } from "../WindowControlBar";
+import { Image } from "@/components/ui/Image";
 
 export const TitleBar = () => {
 	return (
@@ -14,7 +15,7 @@ export const TitleBar = () => {
 		>
 			<div className={cn("flex grow basis-1/5 items-center")}>
 				<Link className={cn("mx-2 w-7")} href="/" title="Home">
-					<img className="w-full" src="/images/logo.webp" alt="SAITO GO PORTFOLIO" />
+					<Image className="w-full" src="/images/logo.webp" alt="SAITO GO PORTFOLIO" />
 				</Link>
 				<MenuBar className="grow" />
 			</div>

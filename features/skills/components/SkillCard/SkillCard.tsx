@@ -6,6 +6,7 @@ import { type AnimationProps, motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import type { SkillLevel } from "../../types/Skill";
 import { StarRating } from "../StarRating";
+import { Image } from "@/components/ui/Image";
 
 type Props = {
 	text: string;
@@ -43,7 +44,7 @@ export const SkillCard = ({ text, iconSrc, star }: Props) => {
 		<motion.div ref={ref} initial={initial} animate={animate(isInView)} transition={transition}>
 			<Card>
 				<CardContent className="flex h-24 items-center gap-4">
-					<img className="w-8" src={iconSrc} alt={text} />
+					<Image className="w-8" src={iconSrc} alt={text} />
 					<TypingText className="text-xl" tag="p" text={text} delay={300} />
 					<StarRating className="ml-auto" value={star} />
 				</CardContent>

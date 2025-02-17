@@ -1,4 +1,5 @@
 import { cn } from "@/utils";
+import { Image } from "../Image";
 
 type Props = {
 	className?: string;
@@ -10,7 +11,7 @@ type Props = {
 export const CardMedia = ({ className, src, title, alt }: Props) => {
 	return (
 		<div className={cn("w-full", className)}>
-			<img src={src} alt={alt} title={title} />
+			<Image src={src} alt={alt} title={title} />
 		</div>
 	);
 };

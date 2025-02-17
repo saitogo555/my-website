@@ -1,4 +1,5 @@
 "use client";
+import { Image } from "@/components/ui/Image";
 import { useBreakpoint } from "@/hooks/useBreakpoint";
 import { useSidebar } from "@/hooks/useSidebar";
 import type { NavigationLink } from "@/types/link";
@@ -37,7 +38,7 @@ export const SidebarNavigationLink = memo(({ text, to, iconSrc }: Props) => {
 			aria-label={title}
 			onClick={handleClick}
 		>
-			<img className={cn("w-4")} src={iconSrc} alt="File Icon" />
+			<Image className={cn("w-4")} src={iconSrc} alt="File Icon" />
 			<span className={cn("ml-2 text-sm text-theme-text-primary", "max-medium:text-lg")}>
 				{text}
 			</span>

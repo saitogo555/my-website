@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
+import { Image } from "@/components/ui/Image";
 import { PageTitle } from "@/components/ui/PageTitle";
 import { Section, SectionTitle } from "@/components/ui/Section";
 import { TypingText } from "@/components/ui/TypingText";
@@ -43,7 +44,7 @@ const WorkIdPage = async ({ params }: Props) => {
 			<PageTitle text={data.title} />
 			<Section className={cn("flex gap-8", "max-medium:flex-col")}>
 				<div className="basis-3/5 overflow-hidden rounded-lg">
-					<img src={data.thumbnail.src} alt={data.thumbnail.title} />
+					<Image src={data.thumbnail.src} alt={data.thumbnail.title} />
 				</div>
 				<Card className="basis-2/5">
 					<CardContent>

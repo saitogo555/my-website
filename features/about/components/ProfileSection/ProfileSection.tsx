@@ -9,6 +9,7 @@ import { MdOutlineBloodtype, MdOutlineCake, MdOutlineLocationOn } from "react-ic
 import { TbCalendarMonth } from "react-icons/tb";
 import { ProfileCard } from "./ProfileCard";
 import { ProfileLinks } from "./ProfileLinks";
+import { Image } from "@/components/ui/Image";
 
 export const ProfileSection = () => {
 	const age = (() => {
@@ -30,7 +31,7 @@ export const ProfileSection = () => {
 		<Section className={cn("flex gap-8", "max-medium:flex-col")}>
 			<div className="basis-2/5">
 				<div className="order-2 flex h-full animate-fade-in-up flex-col">
-					<img
+					<Image
 						className="grow overflow-hidden rounded-lg object-cover"
 						src="/images/about/profile.webp"
 						alt="My Icon"
