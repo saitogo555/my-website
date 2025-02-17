@@ -32,7 +32,7 @@ export const ProfileSection = () => {
 				<div className="order-2 flex h-full animate-fade-in-up flex-col">
 					<img
 						className="grow overflow-hidden rounded-lg object-cover"
-						src="/images/about/profile.jpg"
+						src="/images/about/profile.webp"
 						alt="My Icon"
 					/>
 					<ProfileLinks />
