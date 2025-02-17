@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import glob from "glob";
+import { glob } from "glob";
 import sharp from "sharp";
 
 // ANSI カラーコードの定義
@@ -25,7 +25,7 @@ interface Config {
 const config: Config = {
 	thumbnailWidth: 500, // サムネイルの幅
 	aspectRatio: "16:9", // デフォルトのアスペクト比。変更すれば好みの比率にできます。
-	extensions: ["jpg", "jpeg", "png"], // 処理対象の画像拡張子
+	extensions: ["webp"], // 処理対象の画像拡張子
 };
 
 /**
@@ -39,7 +39,7 @@ function parseAspectRatio(ratioStr: string): number {
 }
 
 // 元画像が格納されているディレクトリ（サブディレクトリも含む）
-const inputDir = path.join(__dirname, "..", "public", "images");
+const inputDir = path.join(__dirname, "..", "public", "images", "works");
 
 /**
  * 指定された画像ファイルを処理し、設定されたアスペクト比のサムネイルを生成して
@@ -97,18 +97,16 @@ function processImage(file: string): Promise<void> {
 		});
 }
 
-// globを使用して、指定ディレクトリ内のすべての対象画像ファイルを検索し処理を実行
-glob(`${inputDir}/**/*.+(${config.extensions.join("|")})`, (err, files) => {
-	if (err) {
-		console.error(`${RED}画像の読み込み中にエラーが発生しました: ${err}${RESET}`);
-		return;
-	}
+// メイン処理を非同期関数として定義
+async function main() {
+  try {
+    const files = await glob(`${inputDir}/**/*.+(${config.extensions.join("|")})`);
+    await Promise.all(files.map((file) => processImage(file)));
+    console.log(`${GREEN}全てのサムネイル生成が完了しました。${RESET}`);
+  } catch (err) {
+    console.error(`${RED}エラーが発生しました: ${err}${RESET}`);
+  }
+}
 
-	Promise.all(files.map((file) => processImage(file)))
-		.then(() => {
-			console.log(`${GREEN}全てのサムネイル生成が完了しました。${RESET}`);
-		})
-		.catch((err) => {
-			console.error(`${RED}サムネイル生成中にエラーが発生しました: ${err}${RESET}`);
-		});
-});
+// メイン処理を実行
+main();
