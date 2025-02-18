@@ -2,7 +2,6 @@
 
 import { useSidebar } from "@/hooks/useSidebar";
 import { cn } from "@/utils";
-import { useCallback, useEffect } from "react";
 import { SidebarAnchorMenu } from "./SidebarAnchorMenu";
 import { SidebarNavigation } from "./SidebarNavigationMenu";
 
@@ -12,23 +11,6 @@ export const Sidebar = () => {
 	const handleClickOverlay = () => {
 		sidebar.close();
 	};
-
-	const handleKeydown = useCallback(
-		(e: globalThis.KeyboardEvent) => {
-			if (e.ctrlKey && e.key === "b") {
-				e.preventDefault();
-				sidebar.toggle();
-			}
-		},
-		[sidebar],
-	);
-
-	useEffect(() => {
-		window.addEventListener("keydown", handleKeydown);
-		return () => {
-			window.removeEventListener("keydown", handleKeydown);
-		};
-	}, [handleKeydown]);
 
 	return (
 		<div

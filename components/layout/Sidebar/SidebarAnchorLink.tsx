@@ -1,5 +1,3 @@
-"use client";
-
 import { useBreakpoint } from "@/hooks/useBreakpoint";
 import { useSidebar } from "@/hooks/useSidebar";
 import type { AnchorLink } from "@/types/link";
