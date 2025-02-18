@@ -10,6 +10,7 @@ import { SidebarProvider } from "@/provider/SidebarProvider";
 import { ToastNoticeProvider } from "@/provider/ToastNoticeProvider";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { ReactNode } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 type Props = {
 	children?: ReactNode;
@@ -56,6 +57,7 @@ const RootLayout = ({ children }: Props) => {
 					</div>
 				</ToastNoticeProvider>
 				<SpeedInsights />
+				<Analytics />
 			</body>
 		</html>
 	);
