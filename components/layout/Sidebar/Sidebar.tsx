@@ -2,7 +2,6 @@
 
 import { useSidebar } from "@/hooks/useSidebar";
 import { cn } from "@/utils";
-import { useCallback, useEffect } from "react";
 import { SidebarAnchorMenu } from "./SidebarAnchorMenu";
 import { SidebarNavigation } from "./SidebarNavigationMenu";
 
@@ -13,31 +12,16 @@ export const Sidebar = () => {
 		sidebar.close();
 	};
 
-	const handleKeydown = useCallback(
-		(e: globalThis.KeyboardEvent) => {
-			if (e.ctrlKey && e.key === "b") {
-				e.preventDefault();
-				sidebar.toggle();
-			}
-		},
-		[sidebar],
-	);
-
-	useEffect(() => {
-		window.addEventListener("keydown", handleKeydown);
-		return () => {
-			window.removeEventListener("keydown", handleKeydown);
-		};
-	}, [handleKeydown]);
-
 	return (
-		<div className="relative z-20 border-theme-border border-r">
+		<div className={cn("relative z-20")}>
 			<div
 				className={cn(
-					"flex h-full w-(--sidebar-width) select-none flex-col bg-theme-primary py-1",
-					"transition-all duration-300",
+					"flex h-full w-(--sidebar-width) select-none flex-col py-1",
+					"border-theme-border border-r bg-theme-primary transition-all duration-300",
 					"max-medium:absolute max-medium:top-0 max-medium:z-20",
-					{ "-translate-x-full -mr-(--sidebar-width)": !sidebar.isOpen },
+					{
+						"-translate-x-full -mr-(--sidebar-width)": !sidebar.isOpen,
+					},
 				)}
 			>
 				<h2 className={cn("py-2 pl-6 text-theme-text-primary text-xs", "max-medium:text-base")}>
