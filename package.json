@@ -2,7 +2,6 @@
 	"name": "saitogo.me",
 	"version": "0.1.0",
 	"private": true,
-	"type": "module",
 	"scripts": {
 		"dev": "next dev --turbo",
 		"build": "next build",
@@ -11,8 +10,8 @@
 		"lint": "biome lint --write --verbose --unsafe .",
 		"format": "biome format --write --verbose .",
 		"check": "biome check --write --unsafe --verbose .",
-		"convert-to-webp": "node --loader ts-node/esm scripts/convert-to-webp.ts",
-		"generate-thumbnails": "node --loader ts-node/esm scripts/generate-thumbnails.ts"
+		"convert-to-webp": "tsx scripts/convert-to-webp.ts",
+		"generate-thumbnails": "tsx scripts/generate-thumbnails.ts"
 	},
 	"dependencies": {
 		"@conform-to/react": "^1.2.2",
@@ -45,7 +44,7 @@
 		"postcss": "^8.5.2",
 		"tailwind-scrollbar": "^4.0.0",
 		"tailwindcss": "^4.0.6",
-		"ts-node": "^10.9.2",
+		"tsx": "^4.19.2",
 		"typescript": "^5.7.3"
 	}
 }
