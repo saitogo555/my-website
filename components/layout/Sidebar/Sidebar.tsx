@@ -13,16 +13,15 @@ export const Sidebar = () => {
 	};
 
 	return (
-		<div
-			className={cn("relative z-20 border-theme-border border-r", "transition-all duration-300", {
-				"-translate-x-full -mr-(--sidebar-width)": !sidebar.isOpen,
-			})}
-		>
+		<div className={cn("relative z-20")}>
 			<div
 				className={cn(
-					"flex h-full w-(--sidebar-width) select-none flex-col bg-theme-primary py-1",
-
+					"flex h-full w-(--sidebar-width) select-none flex-col py-1",
+					"border-theme-border border-r bg-theme-primary transition-all duration-300",
 					"max-medium:absolute max-medium:top-0 max-medium:z-20",
+					{
+						"-translate-x-full -mr-(--sidebar-width)": !sidebar.isOpen,
+					},
 				)}
 			>
 				<h2 className={cn("py-2 pl-6 text-theme-text-primary text-xs", "max-medium:text-base")}>
