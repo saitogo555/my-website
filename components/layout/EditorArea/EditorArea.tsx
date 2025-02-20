@@ -11,7 +11,7 @@ export const EditorArea = ({ children }: Props) => {
 			<div
 				className={cn(
 					"h-full w-full overflow-y-auto overflow-x-hidden",
-					"scrollbar scrollbar-thumb-[#555555c2] scrollbar-track-transparent",
+					"scrollbar scrollbar-thumb-neutral-400/30 scrollbar-track-transparent",
 				)}
 			>
 				{children}
