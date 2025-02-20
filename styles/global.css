@@ -2,6 +2,7 @@
 @import "./theme.css";
 @import "./font.css";
 @import "./utility.css";
+@import "./animate.css";
 
 @plugin "tailwind-scrollbar";
 

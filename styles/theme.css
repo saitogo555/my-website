@@ -16,4 +16,6 @@
 	--container-medium: 1025px;
 	--container-large: 1281px;
 	--container-extra: 1536px;
+
+	--animate-toast-in: toast-in 0.3s linear;
 }
