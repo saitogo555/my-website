@@ -8,7 +8,7 @@ export const TabBar = () => {
 			className={cn(
 				"relative z-0 flex w-full shrink-0 overflow-x-auto",
 				"border-theme-border border-b bg-theme-primary",
-				"scrollbar-thin scrollbar-thumb-[#555555c2] scrollbar-track-transparent",
+				"scrollbar-thin scrollbar-thumb-neutral-400/30 scrollbar-track-transparent",
 			)}
 		>
 			{NAVIGATION_LINKS.map((item) => (

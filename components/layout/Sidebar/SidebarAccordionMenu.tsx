@@ -41,7 +41,14 @@ export const SidebarAccordionMenu = memo(({ title, children }: Props) => {
 				/>
 				{title}
 			</button>
-			<div className={cn("grow hover:overflow-y-auto")}>{children}</div>
+			<div
+				className={cn(
+					"grow overflow-y-auto",
+					"scrollbar-thin scrollbar-thumb-neutral-400/30 scrollbar-track-transparent",
+				)}
+			>
+				{children}
+			</div>
 		</div>
 	);
 });
