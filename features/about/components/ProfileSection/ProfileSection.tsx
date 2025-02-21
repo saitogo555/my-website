@@ -53,7 +53,7 @@ export const ProfileSection = () => {
 					/>
 					<ProfileCard
 						className={cn("col-span-2", "max-small:col-span-1")}
-						label="一言"
+						label="メッセージ"
 						text={PROFILE.message}
 						icon={<BiMessageRoundedDetail />}
 					/>
