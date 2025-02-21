@@ -1,1 +1,1 @@
-export { SidebarProvider } from "./SidebarProvider";
+export { SidebarContext, SidebarProvider } from "./SidebarProvider";
