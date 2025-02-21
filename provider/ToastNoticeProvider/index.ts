@@ -1,1 +1,1 @@
-export { ToastNoticeProvider } from "./ToastNoticeProvider";
+export { ToastNoticeContext, ToastNoticeProvider } from "./ToastNoticeProvider";

@@ -1,7 +1,6 @@
 "use client";
 
-import { ToastNoticeContext, type ToastNoticeType } from "@/context/ToastNoticeContext";
-import { type ReactNode, useCallback, useState } from "react";
+import { createContext, type ReactNode, useCallback, useState } from "react";
 import { ToastNoticeItem } from "./ToastNoticeItem";
 
 type Props = {
@@ -13,6 +12,14 @@ type ToastNotice = {
 	type: ToastNoticeType;
 	message: string;
 };
+
+export type ToastNoticeType = "info" | "warning" | "error";
+
+type ToastNoticeContextProps = {
+	add: (options: { type?: ToastNoticeType; message: string }) => void;
+};
+
+export const ToastNoticeContext = createContext<ToastNoticeContextProps | undefined>(undefined);
 
 export const ToastNoticeProvider = ({ children }: Props) => {
 	const [toastNotices, setToastNotices] = useState<ToastNotice[]>([]);
