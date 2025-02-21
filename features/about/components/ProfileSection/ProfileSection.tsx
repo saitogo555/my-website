@@ -10,23 +10,9 @@ import { TbCalendarMonth } from "react-icons/tb";
 import { ProfileCard } from "./ProfileCard";
 import { ProfileLinks } from "./ProfileLinks";
 import { Image } from "@/components/ui/Image";
+import { PROFILE } from "../../constants/profile";
 
 export const ProfileSection = () => {
-	const age = (() => {
-		const year = 2001;
-		const month = 5;
-		const day = 16;
-		const birthdate = new Date(year, month - 1, day); // monthは0-11なので、1を引く
-		const today = new Date();
-		const val = today.getFullYear() - birthdate.getFullYear();
-		const monthDiff = today.getMonth() - birthdate.getMonth();
-		// 今年の誕生日がまだ来ていない場合、年齢を1つ減らす
-		if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthdate.getDate())) {
-			return val - 1;
-		}
-		return val;
-	})();
-
 	return (
 		<Section className={cn("flex gap-8", "max-medium:flex-col")}>
 			<div className="basis-2/5">
@@ -46,29 +32,29 @@ export const ProfileSection = () => {
 						<TypingText
 							className={cn("font-bold text-3xl")}
 							tag="p"
-							text="齋藤 豪 (サイトウ ゴウ)"
+							text={`${PROFILE.name} (${PROFILE.ruby})`}
 						/>
 					</div>
-					<ProfileCard label="年齢" text={age.toString()} icon={<MdOutlineCake />} />
-					<ProfileCard label="誕生日" text="2001/05/16" icon={<TbCalendarMonth />} />
-					<ProfileCard label="血液型" text="A(+)" icon={<MdOutlineBloodtype />} />
-					<ProfileCard label="出身地" text="愛知県 名古屋市" icon={<MdOutlineLocationOn />} />
+					<ProfileCard label="年齢" text={PROFILE.age.toString()} icon={<MdOutlineCake />} />
+					<ProfileCard label="誕生日" text={PROFILE.birthday} icon={<TbCalendarMonth />} />
+					<ProfileCard label="血液型" text={PROFILE.bloodType} icon={<MdOutlineBloodtype />} />
+					<ProfileCard label="出身地" text={PROFILE.birthPlace} icon={<MdOutlineLocationOn />} />
 					<ProfileCard
 						className={cn("col-span-2", "max-small:col-span-1")}
 						label="職業"
-						text="自動車部品の試作品組立"
+						text={PROFILE.job}
 						icon={<BiBriefcase />}
 					/>
 					<ProfileCard
 						className={cn("col-span-2", "max-small:col-span-1")}
 						label="趣味"
-						text="プログラミング, ゲーム, 旅行, ドライブ, コスプレ"
+						text={PROFILE.hobbies.join(", ")}
 						icon={<GrGamepad />}
 					/>
 					<ProfileCard
 						className={cn("col-span-2", "max-small:col-span-1")}
 						label="一言"
-						text="これからの時代、全てのアプリはWebアプリに置き換わる"
+						text={PROFILE.message}
 						icon={<BiMessageRoundedDetail />}
 					/>
 				</div>
