@@ -1,7 +1,7 @@
-import type { ToastNoticeType } from "@/context/ToastNoticeContext/ToastNoticeContext";
 import { type MouseEventHandler, memo } from "react";
 import { ToastNoticeCloseButton } from "./ToastNoticeCloseButton";
 import { ToastNoticeIcon } from "./ToastNoticeIcon";
+import type { ToastNoticeType } from "./ToastNoticeProvider";
 
 type Props = {
 	variant?: ToastNoticeType;

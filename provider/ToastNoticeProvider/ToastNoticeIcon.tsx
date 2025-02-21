@@ -1,6 +1,6 @@
-import type { ToastNoticeType } from "@/context/ToastNoticeContext/ToastNoticeContext";
 import { type ReactNode, memo } from "react";
 import { VscError, VscInfo, VscWarning } from "react-icons/vsc";
+import type { ToastNoticeType } from "./ToastNoticeProvider";
 
 type Props = {
 	variant: ToastNoticeType;
