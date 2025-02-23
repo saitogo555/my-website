@@ -1,10 +1,10 @@
 "use client";
 
+import { Image } from "@/components/ui/Image";
 import { cn } from "@/utils";
 import { type ChangeEvent, useState } from "react";
 import { VscTriangleDown, VscTriangleUp } from "react-icons/vsc";
 import type { WorkImage } from "../../types";
-import { Image } from "@/components/ui/Image";
 
 type Props = {
 	image: WorkImage;

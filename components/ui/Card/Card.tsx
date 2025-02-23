@@ -8,10 +8,7 @@ type Props = {
 
 export const Card = ({ className, children, ...props }: Props) => {
 	return (
-		<div
-			className={cn("overflow-hidden rounded-lg bg-primary shadow-lg", className)}
-			{...props}
-		>
+		<div className={cn("overflow-hidden rounded-lg bg-primary shadow-lg", className)} {...props}>
 			{children}
 		</div>
 	);

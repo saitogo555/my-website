@@ -15,10 +15,10 @@ export const ToastNoticeItem = memo(({ variant = "info", title, message, onClose
 		<div className="w-[25rem] animate-toast-in border border-neutral-800 bg-secondary p-3 shadow-[0px_0px_12px_3px_#00000080] shadow-neutral-900">
 			<div className="flex items-center">
 				<ToastNoticeIcon variant={variant} />
-				<h2 className="ml-1 break-all text-sm text-primary-text">{title}</h2>
+				<h2 className="ml-1 break-all text-primary-text text-sm">{title}</h2>
 				<ToastNoticeCloseButton onClick={onClose} />
 			</div>
-			<p className="mt-4 text-sm text-primary-text">{message}</p>
+			<p className="mt-4 text-primary-text text-sm">{message}</p>
 		</div>
 	);
 });

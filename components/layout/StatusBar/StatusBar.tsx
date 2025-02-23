@@ -7,7 +7,7 @@ export const StatusBar = () => {
 			<div className="flex gap-1">
 				<div
 					className={cn(
-						"flex cursor-default items-center gap-1 bg-accent px-3 text-sm text-accent-text",
+						"flex cursor-default items-center gap-1 bg-accent px-3 text-accent-text text-sm",
 						"hover:contrast-75",
 						"max-medium:text-lg",
 					)}

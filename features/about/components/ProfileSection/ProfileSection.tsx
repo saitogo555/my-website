@@ -1,5 +1,6 @@
 "use client";
 
+import { Image } from "@/components/ui/Image";
 import { Section, SectionTitle } from "@/components/ui/Section";
 import { TypingText } from "@/components/ui/TypingText";
 import { cn } from "@/utils";
@@ -7,10 +8,9 @@ import { BiBriefcase, BiMessageRoundedDetail } from "react-icons/bi";
 import { GrGamepad } from "react-icons/gr";
 import { MdOutlineBloodtype, MdOutlineCake, MdOutlineLocationOn } from "react-icons/md";
 import { TbCalendarMonth } from "react-icons/tb";
+import { PROFILE } from "../../constants/profile";
 import { ProfileCard } from "./ProfileCard";
 import { ProfileLinks } from "./ProfileLinks";
-import { Image } from "@/components/ui/Image";
-import { PROFILE } from "../../constants/profile";
 
 export const ProfileSection = () => {
 	return (

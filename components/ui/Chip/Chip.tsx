@@ -8,12 +8,7 @@ type Props = {
 
 export const Chip = ({ className, children }: Props) => {
 	return (
-		<div
-			className={cn(
-				"rounded-full bg-secondary px-3 py-1 text-sm text-primary-text",
-				className,
-			)}
-		>
+		<div className={cn("rounded-full bg-secondary px-3 py-1 text-primary-text text-sm", className)}>
 			{children}
 		</div>
 	);

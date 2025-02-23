@@ -1,9 +1,9 @@
+import { Image } from "@/components/ui/Image";
 import { cn } from "@/utils";
 import Link from "next/link";
 import { MenuBar } from "../MenuBar";
 import { SearchBar } from "../SearchBar";
 import { WindowControlBar } from "../WindowControlBar";
-import { Image } from "@/components/ui/Image";
 
 export const TitleBar = () => {
 	return (

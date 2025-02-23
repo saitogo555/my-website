@@ -6,7 +6,7 @@ const calcAge = () => {
 	const birthdate = new Date(birthYear, birthMonth - 1, birthDate);
 	const val = today.getFullYear() - birthdate.getFullYear();
 	const monthDiff = today.getMonth() - birthdate.getMonth();
-  const dayDiff = today.getDate() - birthdate.getDate();
+	const dayDiff = today.getDate() - birthdate.getDate();
 	// 今年の誕生日がまだ来ていない場合、年齢を1つ減らす
 	if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
 		return val - 1;

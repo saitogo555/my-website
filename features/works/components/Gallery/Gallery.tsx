@@ -38,11 +38,7 @@ export const Gallery = ({ id, images }: Props) => {
 							</div>
 						</div>
 						<CardContent>
-							<TypingText
-								className="text-center text-accent-text"
-								tag="p"
-								text={image.title}
-							/>
+							<TypingText className="text-center text-accent-text" tag="p" text={image.title} />
 						</CardContent>
 					</Card>
 				</Link>

@@ -39,9 +39,7 @@ export const SidebarNavigationLink = memo(({ text, to, iconSrc }: Props) => {
 			onClick={handleClick}
 		>
 			<Image className={cn("w-4")} src={iconSrc} alt="File Icon" />
-			<span className={cn("ml-2 text-sm text-primary-text", "max-medium:text-lg")}>
-				{text}
-			</span>
+			<span className={cn("ml-2 text-primary-text text-sm", "max-medium:text-lg")}>{text}</span>
 		</Link>
 	);
 });

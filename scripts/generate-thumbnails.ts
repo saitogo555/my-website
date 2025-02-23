@@ -99,13 +99,13 @@ function processImage(file: string): Promise<void> {
 
 // メイン処理を非同期関数として定義
 async function main() {
-  try {
-    const files = await glob(`${inputDir}/**/*.+(${config.extensions.join("|")})`);
-    await Promise.all(files.map((file) => processImage(file)));
-    console.log(`${GREEN}全てのサムネイル生成が完了しました。${RESET}`);
-  } catch (err) {
-    console.error(`${RED}エラーが発生しました: ${err}${RESET}`);
-  }
+	try {
+		const files = await glob(`${inputDir}/**/*.+(${config.extensions.join("|")})`);
+		await Promise.all(files.map((file) => processImage(file)));
+		console.log(`${GREEN}全てのサムネイル生成が完了しました。${RESET}`);
+	} catch (err) {
+		console.error(`${RED}エラーが発生しました: ${err}${RESET}`);
+	}
 }
 
 // メイン処理を実行

@@ -23,13 +23,9 @@ export const WorkCard = ({ data }: Props) => {
 					/>
 				</div>
 				<CardContent>
+					<TypingText className="font-bold text-primary-text text-xl" tag="h2" text={data.title} />
 					<TypingText
-						className="font-bold text-primary-text text-xl"
-						tag="h2"
-						text={data.title}
-					/>
-					<TypingText
-						className="mt-2 block text-sm text-primary-text opacity-50"
+						className="mt-2 block text-primary-text text-sm opacity-50"
 						tag="p"
 						text={data.summary}
 					/>

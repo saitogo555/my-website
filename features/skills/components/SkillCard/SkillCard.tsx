@@ -1,12 +1,12 @@
 "use client";
 
 import { Card, CardContent } from "@/components/ui/Card";
+import { Image } from "@/components/ui/Image";
 import { TypingText } from "@/components/ui/TypingText";
 import { type AnimationProps, motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import type { SkillLevel } from "../../types/Skill";
 import { StarRating } from "../StarRating";
-import { Image } from "@/components/ui/Image";
 
 type Props = {
 	text: string;

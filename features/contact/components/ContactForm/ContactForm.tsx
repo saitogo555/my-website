@@ -81,7 +81,7 @@ export const ContactForm = () => {
 					isError={!!fields.tel.errors}
 					key={fields.tel.key}
 				/>
-				<ul className="mt-2 list-disc pl-6 text-sm text-primary-text/50">
+				<ul className="mt-2 list-disc pl-6 text-primary-text/50 text-sm">
 					<li>区切り文字を使う場合は、「-(ハイフン)」「.(ドット)」「半角スペース」が使えます</li>
 					<li>国際電話番号の場合は、最初に+(プラスマーク)をつけてください</li>
 				</ul>

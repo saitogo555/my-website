@@ -2,7 +2,7 @@ import NextImage from "next/image";
 import type { HTMLAttributes } from "react";
 
 type Props = {
-  className?: string;
+	className?: string;
 	src: string;
 	alt: string;
 } & HTMLAttributes<HTMLDivElement>;
