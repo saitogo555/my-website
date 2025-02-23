@@ -47,7 +47,7 @@ const RootLayout = ({ children }: Props) => {
 							</SidebarProvider>
 							<div className="flex min-w-0 grow flex-col">
 								<TabBar />
-								<main className="grow overflow-hidden">
+								<main className="shrink grow basis-0 overflow-hidden">
 									<EditorArea>{children}</EditorArea>
 								</main>
 								<Terminal />
