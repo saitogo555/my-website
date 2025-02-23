@@ -30,8 +30,8 @@ export const SearchBar = ({ className }: Props) => {
 		<button
 			className={cn(
 				"flex w-full max-w-xl shrink-0 items-center justify-center px-2 py-[2px]",
-				"rounded-lg border border-neutral-700 bg-theme-secondary",
-				"cursor-pointer text-[0.75rem] text-theme-text-primary",
+				"rounded-lg border border-neutral-700 bg-secondary",
+				"cursor-pointer text-[0.75rem] text-primary-text",
 				"hover:border-neutral-500",
 				"max-medium:shrink max-medium:text-base",
 				className,

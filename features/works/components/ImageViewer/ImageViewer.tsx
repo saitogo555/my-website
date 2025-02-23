@@ -31,14 +31,14 @@ export const ImageViewer = ({ image }: Props) => {
 		<div>
 			<div
 				className={cn(
-					"sticky top-0 z-10 flex items-center justify-between bg-theme-primary px-4 py-2 shadow-lg",
+					"sticky top-0 z-10 flex items-center justify-between bg-primary px-4 py-2 shadow-lg",
 					"max-medium:flex-col",
 				)}
 			>
-				<h1 className="font-bold text-theme-text-primary text-xl">{image.title}</h1>
+				<h1 className="font-bold text-primary-text text-xl">{image.title}</h1>
 				<div className={cn("flex w-full max-w-lg items-center gap-4", "max-medium:max-w-full")}>
 					<input
-						className="grow cursor-pointer accent-theme-accent"
+						className="grow cursor-pointer accent-accent"
 						type="range"
 						min={1}
 						max={100}
@@ -47,8 +47,8 @@ export const ImageViewer = ({ image }: Props) => {
 					/>
 					<div
 						className={cn(
-							"flex items-center rounded-lg border border-theme-border px-4 py-2 text-theme-text-accent",
-							"has-[input[type=number]:focus]:border-theme-accent",
+							"flex items-center rounded-lg border border-divider px-4 py-2 text-accent-text",
+							"has-[input[type=number]:focus]:border-accent",
 						)}
 					>
 						<input
@@ -62,14 +62,14 @@ export const ImageViewer = ({ image }: Props) => {
 						<span>%</span>
 						<div className="ml-2 flex flex-col">
 							<button
-								className={cn("cursor-pointer text-xs", "hover:text-theme-accent")}
+								className={cn("cursor-pointer text-xs", "hover:text-accent")}
 								type="button"
 								onClick={handleClickScaleUp}
 							>
 								<VscTriangleUp />
 							</button>
 							<button
-								className={cn("cursor-pointer text-xs", "hover:text-theme-accent")}
+								className={cn("cursor-pointer text-xs", "hover:text-accent")}
 								type="button"
 								onClick={handleClickScaleDown}
 							>

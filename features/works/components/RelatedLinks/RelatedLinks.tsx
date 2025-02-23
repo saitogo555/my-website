@@ -15,8 +15,8 @@ export const RelatedLinks = ({ links }: Props) => {
 						<li key={i.toString()}>
 							<a
 								className={cn(
-									"mt-2 flex items-center gap-1 text-theme-text-primary/70 underline",
-									"hover:text-theme-accent",
+									"mt-2 flex items-center gap-1 text-primary-text/70 underline",
+									"hover:text-accent",
 								)}
 								href={link}
 								target="_blank"
@@ -30,7 +30,7 @@ export const RelatedLinks = ({ links }: Props) => {
 					))}
 				</ul>
 			) : (
-				<p className="mt-2 text-theme-text-primary">リンクはありません</p>
+				<p className="mt-2 text-primary-text">リンクはありません</p>
 			)}
 		</>
 	);

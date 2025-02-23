@@ -15,7 +15,7 @@ export const SectionTitle = ({ className, text }: Props) => {
 		<div
 			id={id}
 			className={cn(
-				"mb-8 h-11 border-b-4 border-b-theme-border text-4xl text-theme-text-primary",
+				"mb-8 h-11 border-b-4 border-b-divider text-4xl text-primary-text",
 				className,
 			)}
 			data-anchor-link={text}

@@ -1,10 +1,10 @@
 @theme {
-	--color-theme-primary: #181818;
-	--color-theme-secondary: #1f1f1f;
-	--color-theme-accent: #0859b6;
-	--color-theme-text-primary: #cccccc;
-	--color-theme-text-accent: #dddddd;
-	--color-theme-border: #2b2b2b;
+	--color-primary: #181818;
+	--color-secondary: #1f1f1f;
+	--color-accent: #0859b6;
+	--color-primary-text: #cccccc;
+	--color-accent-text: #dddddd;
+	--color-divider: #2b2b2b;
 
 	--breakpoint-: initial;
 	--breakpoint-small: 768px;

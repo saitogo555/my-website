@@ -10,7 +10,7 @@ export const Chip = ({ className, children }: Props) => {
 	return (
 		<div
 			className={cn(
-				"rounded-full bg-theme-secondary px-3 py-1 text-sm text-theme-text-primary",
+				"rounded-full bg-secondary px-3 py-1 text-sm text-primary-text",
 				className,
 			)}
 		>

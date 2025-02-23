@@ -11,6 +11,7 @@ import { ToastNoticeProvider } from "@/provider/ToastNoticeProvider";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { ReactNode } from "react";
 import { Analytics } from "@vercel/analytics/react";
+import { Terminal } from "@/components/layout/Terminal";
 
 type Props = {
 	children?: ReactNode;
@@ -35,7 +36,7 @@ const RootLayout = ({ children }: Props) => {
 		<html lang="ja">
 			<body>
 				<ToastNoticeProvider>
-					<div className="flex h-screen w-screen flex-col overflow-hidden bg-theme-secondary">
+					<div className="flex h-screen w-screen flex-col overflow-hidden bg-secondary">
 						<header>
 							<TitleBar />
 						</header>
@@ -49,6 +50,7 @@ const RootLayout = ({ children }: Props) => {
 								<main className="grow overflow-hidden">
 									<EditorArea>{children}</EditorArea>
 								</main>
+								<Terminal />
 							</div>
 						</div>
 						<footer>

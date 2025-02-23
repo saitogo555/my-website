@@ -12,7 +12,7 @@ export const FilledButton = ({ className, type = "button", children, ...props }:
 		<button
 			className={cn(
 				"block cursor-pointer px-4 py-3 transition-all",
-				"rounded-lg border-2 border-theme-accent bg-theme-accent text-center text-theme-text-primary",
+				"rounded-lg border-2 border-accent bg-accent text-center text-primary-text",
 				"hover:hue-rotate-30",
 				"disabled:cursor-not-allowed disabled:brightness-75",
 				className,

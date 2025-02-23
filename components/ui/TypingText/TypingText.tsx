@@ -25,7 +25,7 @@ export const TypingText = memo(({ className, tag, text, delay = 0 }: Props) => {
 					)}
 					{inView && (
 						<TypeAnimation
-							className={cn("text-theme-text-primary", className)}
+							className={cn("text-primary-text", className)}
 							sequence={[delay, text]}
 							wrapper={tag}
 							speed={{ type: "keyStrokeDelayInMs", value: 40 }}

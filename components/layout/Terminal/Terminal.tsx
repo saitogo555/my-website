@@ -1,8 +1,9 @@
+import { TerminalHeader } from "./TerminalHeader";
+
 export const Terminal = () => {
 	return (
-		<div>
-			<h1>Terminal</h1>
-			<p>Welcome to the terminal interface.</p>
+		<div className="bg-primary border-t border-t-divider">
+			<TerminalHeader />
 		</div>
 	);
 };

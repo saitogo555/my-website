@@ -9,7 +9,7 @@ const IndexPage = () => {
 	return (
 		<Container className="flex items-center">
 			<div>
-				<h1 className="font-bold text-6xl text-theme-text-primary">SAITO GO</h1>
+				<h1 className="font-bold text-6xl text-primary-text">SAITO GO</h1>
 				<div className="mt-4 h-32">
 					<div className="flex items-center text-2xl">
 						<span className="text-green-700">visitor@saitogo.me</span>

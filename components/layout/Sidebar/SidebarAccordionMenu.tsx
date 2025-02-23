@@ -17,14 +17,14 @@ export const SidebarAccordionMenu = memo(({ title, children }: Props) => {
 	return (
 		<div
 			className={cn(
-				"flex flex-col overflow-hidden border-t border-t-theme-border transition-all duration-200",
+				"flex flex-col overflow-hidden border-t border-t-divider transition-all duration-200",
 				"first-of-type:border-t-0",
 				isOpen ? "h-full" : "h-6 max-medium:h-12",
 			)}
 		>
 			<button
 				className={cn(
-					"flex cursor-pointer items-center font-bold text-theme-text-primary text-xs",
+					"flex cursor-pointer items-center font-bold text-primary-text text-xs",
 					"max-medium:text-base",
 				)}
 				type="button"

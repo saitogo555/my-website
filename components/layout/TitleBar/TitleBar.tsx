@@ -10,7 +10,7 @@ export const TitleBar = () => {
 		<div
 			className={cn(
 				"relative z-40 flex h-(--viewport-top-height) items-center justify-between gap-2",
-				"border-theme-border border-b bg-theme-primary",
+				"border-divider border-b bg-primary",
 			)}
 		>
 			<div className={cn("flex grow basis-1/5 items-center")}>

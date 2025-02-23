@@ -12,7 +12,7 @@ export const OutlinedButton = ({ className, type = "button", children, ...props 
 		<button
 			className={cn(
 				"block cursor-pointer px-4 py-3 transition-all",
-				"rounded-lg border-2 border-theme-accent text-center text-theme-accent",
+				"rounded-lg border-2 border-accent text-center text-accent",
 				"hover:hue-rotate-30",
 				"disabled:cursor-not-allowed disabled:brightness-75",
 				className,

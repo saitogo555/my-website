@@ -19,17 +19,17 @@ export const TimelineItem = ({ year, month, title, description, isCurrent }: Pro
 		<div className="flex gap-2">
 			<div className="flex flex-col">
 				<div className="relative h-6 w-6">
-					<div className="absolute h-full w-full rounded-full bg-theme-accent" />
+					<div className="absolute h-full w-full rounded-full bg-accent" />
 					{isCurrent && (
 						<div
 							className={cn(
 								"absolute top-1/2 left-1/2 z-[1] h-5/7 w-5/7",
-								"-translate-x-1/2 -translate-y-1/2 rounded-full bg-theme-secondary",
+								"-translate-x-1/2 -translate-y-1/2 rounded-full bg-secondary",
 							)}
 						/>
 					)}
 				</div>
-				{!isCurrent && <div className="mx-auto w-0.5 grow bg-theme-accent/30" />}
+				{!isCurrent && <div className="mx-auto w-0.5 grow bg-accent/30" />}
 			</div>
 			<div className="w-full">
 				<div className="flex items-center gap-2">
@@ -37,7 +37,7 @@ export const TimelineItem = ({ year, month, title, description, isCurrent }: Pro
 					{isCurrent ? (
 						<TimelineLabel>main</TimelineLabel>
 					) : (
-						<TimelineLabel className="bg-theme-accent hue-rotate-30">origin/main</TimelineLabel>
+						<TimelineLabel className="bg-accent hue-rotate-30">origin/main</TimelineLabel>
 					)}
 				</div>
 				<Card className="mt-4 mb-10 w-full p-8 max-small:p-5">

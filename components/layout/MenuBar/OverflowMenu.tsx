@@ -10,7 +10,7 @@ export const OverflowMenu = ({ items, ...props }: Props) => {
 	return (
 		<ul
 			className={cn(
-				"absolute top-full left-0 z-30 min-w-52 bg-theme-primary p-1",
+				"absolute top-full left-0 z-30 min-w-52 bg-primary p-1",
 				"overflow-hidden rounded-lg border border-neutral-700",
 			)}
 			{...props}

@@ -10,7 +10,7 @@ export const SidebarAnchorMenu = () => {
 			{toc.length > 0 ? (
 				toc.map((item) => <SidebarAnchorLink text={item.text} to={item.to} key={item.to} />)
 			) : (
-				<p className="mx-6 mt-2 text-sm text-theme-text-primary opacity-60">
+				<p className="mx-6 mt-2 text-sm text-primary-text opacity-60">
 					このページの見出しが見つかりません
 				</p>
 			)}

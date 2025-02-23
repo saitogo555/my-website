@@ -39,7 +39,7 @@ export const Gallery = ({ id, images }: Props) => {
 						</div>
 						<CardContent>
 							<TypingText
-								className="text-center text-theme-text-accent"
+								className="text-center text-accent-text"
 								tag="p"
 								text={image.title}
 							/>

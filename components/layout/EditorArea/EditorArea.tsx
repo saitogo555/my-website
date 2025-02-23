@@ -7,7 +7,7 @@ type Props = {
 
 export const EditorArea = ({ children }: Props) => {
 	return (
-		<div className="h-full bg-theme-secondary">
+		<div className="h-full bg-secondary">
 			<div
 				className={cn(
 					"h-full w-full overflow-y-auto overflow-x-hidden",

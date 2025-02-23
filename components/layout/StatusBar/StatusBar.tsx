@@ -3,11 +3,11 @@ import { VscRemote, VscSourceControl } from "react-icons/vsc";
 
 export const StatusBar = () => {
 	return (
-		<div className="relative z-30 flex h-(--viewport-bottom-height) justify-between border-theme-border border-t bg-theme-primary">
+		<div className="relative z-30 flex h-(--viewport-bottom-height) justify-between border-divider border-t bg-primary">
 			<div className="flex gap-1">
 				<div
 					className={cn(
-						"flex cursor-default items-center gap-1 bg-theme-accent px-3 text-sm text-theme-text-accent",
+						"flex cursor-default items-center gap-1 bg-accent px-3 text-sm text-accent-text",
 						"hover:contrast-75",
 						"max-medium:text-lg",
 					)}

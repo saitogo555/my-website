@@ -13,7 +13,7 @@ export const OverflowMenuItem = ({ text, href, iconSrc }: Props) => {
 			<a
 				className={cn(
 					"flex items-center rounded py-0.5 pr-4 pl-8",
-					"hover:bg-theme-accent",
+					"hover:bg-accent",
 					"max-medium:py-2 max-medium:text-lg",
 				)}
 				href={href}

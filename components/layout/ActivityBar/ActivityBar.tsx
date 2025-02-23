@@ -35,7 +35,7 @@ export const ActivityBar = memo(() => {
 		<aside
 			className={cn(
 				"relative z-30 flex h-full w-(--activity-bar-width) shrink-0 flex-col",
-				"overflow-y-auto overflow-x-hidden border-theme-border border-r bg-theme-primary",
+				"overflow-y-auto overflow-x-hidden border-divider border-r bg-primary",
 			)}
 		>
 			<ActivityButton

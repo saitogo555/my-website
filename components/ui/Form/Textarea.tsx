@@ -10,7 +10,7 @@ export const Textarea = memo(({ className, isError, ...props }: Props) => {
 	return (
 		<textarea
 			className={cn(
-				"w-full resize-none rounded-lg bg-neutral-700/60 p-4 text-theme-text-primary outline-none",
+				"w-full resize-none rounded-lg bg-neutral-700/60 p-4 text-primary-text outline-none",
 				"placeholder:opacity-40 focus:bg-neutral-700",
 				{ "bg-red-500/50": isError },
 				className,

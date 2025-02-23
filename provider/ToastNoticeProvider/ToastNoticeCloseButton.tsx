@@ -12,7 +12,7 @@ export const ToastNoticeCloseButton = ({ onClick }: Props) => {
 			type="button"
 			onClick={onClick}
 		>
-			<VscClose className="text-theme-text-primary" />
+			<VscClose className="text-primary-text" />
 		</button>
 	);
 };

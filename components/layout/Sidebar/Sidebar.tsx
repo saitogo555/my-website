@@ -17,14 +17,14 @@ export const Sidebar = () => {
 			<div
 				className={cn(
 					"flex h-full w-(--sidebar-width) select-none flex-col py-1",
-					"border-theme-border border-r bg-theme-primary transition-all duration-300",
+					"border-divider border-r bg-primary transition-all duration-300",
 					"max-medium:absolute max-medium:top-0 max-medium:z-20",
 					{
 						"-translate-x-full -mr-(--sidebar-width)": !sidebar.isOpen,
 					},
 				)}
 			>
-				<h2 className={cn("py-2 pl-6 text-theme-text-primary text-xs", "max-medium:text-base")}>
+				<h2 className={cn("py-2 pl-6 text-primary-text text-xs", "max-medium:text-base")}>
 					ナビゲーション
 				</h2>
 				<div className="flex grow flex-col overflow-hidden">

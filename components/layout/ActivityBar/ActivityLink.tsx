@@ -16,7 +16,7 @@ export const ActivityLink = memo(({ to, icon, ...props }: Props) => {
 
 	return (
 		<Link className="relative" href={to} {...props}>
-			{isCurrentPage && <div className="absolute top-0 left-0 h-full w-0.5 bg-theme-accent" />}
+			{isCurrentPage && <div className="absolute top-0 left-0 h-full w-0.5 bg-accent" />}
 			<ActivityIcon className={`${isCurrentPage && "text-neutral-200"}`} icon={icon} />
 		</Link>
 	);

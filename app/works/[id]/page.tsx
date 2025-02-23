@@ -51,15 +51,15 @@ const WorkIdPage = async ({ params }: Props) => {
 						<SectionTitle text="Details" />
 						<div className="flex flex-col gap-8">
 							<div>
-								<h3 className="font-bold text-lg text-theme-text-primary">役割</h3>
+								<h3 className="font-bold text-lg text-primary-text">役割</h3>
 								<RoleList roles={data.roles} />
 							</div>
 							<div>
-								<h3 className="font-bold text-lg text-theme-text-primary">使用技術</h3>
+								<h3 className="font-bold text-lg text-primary-text">使用技術</h3>
 								<TechnologyList technologies={data.technologies} />
 							</div>
 							<div>
-								<h3 className="font-bold text-lg text-theme-text-primary">リンク</h3>
+								<h3 className="font-bold text-lg text-primary-text">リンク</h3>
 								<RelatedLinks links={data.links} />
 							</div>
 						</div>
@@ -70,7 +70,7 @@ const WorkIdPage = async ({ params }: Props) => {
 				<SectionTitle text="Description" />
 				{data.details.map((text, i) => (
 					<TypingText
-						className="mb-6 text-lg text-theme-text-primary"
+						className="mb-6 text-lg text-primary-text"
 						key={i.toString()}
 						tag="p"
 						text={text}

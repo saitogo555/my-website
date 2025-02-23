@@ -32,7 +32,7 @@ export const SidebarAnchorLink = memo(({ text, to }: Props) => {
 			onClick={handleClick}
 		>
 			<VscSymbolVariable className={cn("text-lg text-sky-300")} />
-			<span className={cn("ml-2 text-sm text-theme-text-primary", "max-medium:text-lg")}>
+			<span className={cn("ml-2 text-sm text-primary-text", "max-medium:text-lg")}>
 				{text}
 			</span>
 		</Link>
