@@ -28,7 +28,7 @@ export const Terminal = () => {
 	}, [handleKeydown]);
 
 	return (
-		<div className={cn(" bg-primary", isOpen ? "h-96 border-t border-t-divider" : "h-0")}>
+		<div className={cn("h-96 border-t border-t-divider bg-primary", { "hidden": !isOpen })}>
 			<TerminalHeader onClose={closeTerminal} />
 		</div>
 	);
