@@ -5,7 +5,6 @@ import { EditorArea } from "@/components/layout/EditorArea";
 import { Sidebar } from "@/components/layout/Sidebar";
 import { StatusBar } from "@/components/layout/StatusBar";
 import { TabBar } from "@/components/layout/TabBar";
-import { Terminal } from "@/components/layout/Terminal";
 import { TitleBar } from "@/components/layout/TitleBar";
 import { SidebarProvider } from "@/provider/SidebarProvider";
 import { ToastNoticeProvider } from "@/provider/ToastNoticeProvider";
@@ -50,7 +49,6 @@ const RootLayout = ({ children }: Props) => {
 								<main className="grow overflow-hidden">
 									<EditorArea>{children}</EditorArea>
 								</main>
-								<Terminal />
 							</div>
 						</div>
 						<footer>
