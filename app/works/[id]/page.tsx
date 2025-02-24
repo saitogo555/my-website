@@ -8,7 +8,7 @@ import { Gallery } from "@/features/works/components/Gallery";
 import { RelatedLinks } from "@/features/works/components/RelatedLinks";
 import { RoleList } from "@/features/works/components/RoleList";
 import { TechnologyList } from "@/features/works/components/TechnologyList";
-import { workList } from "@/features/works/constants";
+import { WORK_LIST } from "@/features/works/constants";
 import { cn } from "@/utils";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -21,21 +21,21 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	const { id } = await params;
-	const data = workList.find((item) => item.id === id);
+	const data = WORK_LIST.find((item) => item.id === id);
 	return {
 		title: data ? data.title : "Not Found",
 	};
 }
 
 export async function generateStaticParams() {
-	return workList.map((item) => ({
+	return WORK_LIST.map((item) => ({
 		id: item.id,
 	}));
 }
 
 const WorkIdPage = async ({ params }: Props) => {
 	const { id } = await params;
-	const data = workList.find((item) => item.id === id);
+	const data = WORK_LIST.find((item) => item.id === id);
 
 	if (!data) return notFound();
 
