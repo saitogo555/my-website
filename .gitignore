@@ -38,3 +38,6 @@ next-env.d.ts
 
 # sitemap
 sitemap.xml
+
+# backup
+_backup

@@ -1,5 +1,5 @@
 import { ImageViewer } from "@/features/works/components/ImageViewer";
-import { workList } from "@/features/works/constants";
+import { WORK_LIST } from "@/features/works/constants";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -12,7 +12,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
 	const { id, index } = await params;
-	const data = workList.find((item) => item.id === id);
+	const data = WORK_LIST.find((item) => item.id === id);
 	const image = data?.images[Number.parseInt(index) - 1];
 
 	return {
@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-	return workList.flatMap((item) =>
+	return WORK_LIST.flatMap((item) =>
 		item.images.map((_, i) => ({
 			id: item.id,
 			index: (i + 1).toString(),
@@ -31,7 +31,7 @@ export async function generateStaticParams() {
 
 const ImageIndexPage = async ({ params }: Props) => {
 	const { id, index } = await params;
-	const data = workList.find((item) => item.id === id);
+	const data = WORK_LIST.find((item) => item.id === id);
 	const image = data?.images[Number.parseInt(index) - 1];
 
 	if (!image) return notFound();
