@@ -8,7 +8,13 @@ type Props = {
 
 export const Container = ({ className, children }: Props) => {
 	return (
-		<div className={cn("mx-auto min-h-full w-full max-w-extra p-8", "max-small:p-4", className)}>
+		<div
+			className={cn(
+				"mx-auto min-h-full w-full max-w-extra p-8",
+				"max-small:p-4 max-small:pb-8",
+				className,
+			)}
+		>
 			{children}
 		</div>
 	);
