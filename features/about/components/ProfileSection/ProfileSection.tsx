@@ -18,7 +18,7 @@ export const ProfileSection = () => {
 			<div className="basis-2/5">
 				<div className="order-2 flex h-full animate-fade-in-up flex-col">
 					<Image
-						className="grow overflow-hidden rounded-lg object-cover"
+						className="grow overflow-hidden rounded-lg"
 						src="/images/about/profile.webp"
 						alt="My Icon"
 					/>
