@@ -4,7 +4,7 @@ const BASE_IMAGE_PATH = "/images/works/zuiko-festival-2022";
 const PC_IMAGE_PATH = `${BASE_IMAGE_PATH}/pc`;
 const SP_IMAGE_PATH = `${BASE_IMAGE_PATH}/sp`;
 
-export const zuikoFestival2022: WorkData = {
+export const ZUIKO_FESTIVAL_2022: WorkData = {
 	id: "zuiko-festival-2022",
 	title: "ZUIKO FESTIVAL 2022",
 	summary: "名大eスポーツサークルDisboardが主催する「瑞光祭2022」のティザーサイトの制作",
