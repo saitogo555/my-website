@@ -16,7 +16,7 @@ const items: string[] = [
 	"コメント",
 ];
 
-export const TerminalHeader = ({ onClose }: Props) => {
+export const PanelHeader = ({ onClose }: Props) => {
 	return (
 		<div className="flex items-center justify-between px-6 py-1">
 			<ul className="flex items-center gap-6">

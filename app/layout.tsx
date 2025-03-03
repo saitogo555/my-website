@@ -5,7 +5,7 @@ import { EditorArea } from "@/components/layout/EditorArea";
 import { Sidebar } from "@/components/layout/Sidebar";
 import { StatusBar } from "@/components/layout/StatusBar";
 import { TabBar } from "@/components/layout/TabBar";
-import { Terminal } from "@/components/layout/Terminal";
+import { Panel } from "@/components/layout/Panel";
 import { TitleBar } from "@/components/layout/TitleBar";
 import { SidebarProvider } from "@/provider/SidebarProvider";
 import { ToastNoticeProvider } from "@/provider/ToastNoticeProvider";
@@ -50,7 +50,7 @@ const RootLayout = ({ children }: Props) => {
 								<main className="shrink grow basis-0 overflow-hidden">
 									<EditorArea>{children}</EditorArea>
 								</main>
-								<Terminal />
+								<Panel />
 							</div>
 						</div>
 						<footer>
