@@ -1,10 +1,10 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { TerminalHeader } from "./TerminalHeader";
+import { PanelHeader } from "./PanelHeader";
 import { cn } from "@/utils";
 
-export const Terminal = () => {
+export const Panel = () => {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 
 	const toggleTerminal = useCallback(() => setIsOpen((prev) => !prev), []);
@@ -29,7 +29,7 @@ export const Terminal = () => {
 
 	return (
 		<div className={cn("h-96 border-t border-t-divider bg-primary", { "hidden": !isOpen })}>
-			<TerminalHeader onClose={closeTerminal} />
+			<PanelHeader onClose={closeTerminal} />
 		</div>
 	);
 };

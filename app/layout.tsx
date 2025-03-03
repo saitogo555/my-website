@@ -5,6 +5,7 @@ import { EditorArea } from "@/components/layout/EditorArea";
 import { Sidebar } from "@/components/layout/Sidebar";
 import { StatusBar } from "@/components/layout/StatusBar";
 import { TabBar } from "@/components/layout/TabBar";
+import { Panel } from "@/components/layout/Panel";
 import { TitleBar } from "@/components/layout/TitleBar";
 import { SidebarProvider } from "@/provider/SidebarProvider";
 import { ToastNoticeProvider } from "@/provider/ToastNoticeProvider";
@@ -85,12 +86,13 @@ const RootLayout = ({ children }: Props) => {
 							<div className="relative flex h-(--viewport-middle-height)">
 								<ActivityBar />
 								<Sidebar />
-								<div className="flex min-w-0 grow flex-col">
-									<TabBar />
-									<main className="grow overflow-hidden">
-										<EditorArea>{children}</EditorArea>
-									</main>
-								</div>
+							</SidebarProvider>
+							<div className="flex min-w-0 grow flex-col">
+								<TabBar />
+								<main className="shrink grow basis-0 overflow-hidden">
+									<EditorArea>{children}</EditorArea>
+								</main>
+								<Panel />
 							</div>
 						</SidebarProvider>
 						<footer>
