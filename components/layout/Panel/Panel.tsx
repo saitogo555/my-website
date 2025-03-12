@@ -7,17 +7,17 @@ import { cn } from "@/utils";
 export const Panel = () => {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 
-	const toggleTerminal = useCallback(() => setIsOpen((prev) => !prev), []);
+	const togglePanel = useCallback(() => setIsOpen((prev) => !prev), []);
 
-	const closeTerminal = () => setIsOpen(false);
+	const closePanel = () => setIsOpen(false);
 
 	const handleKeydown = useCallback(
 		(e: KeyboardEvent) => {
 			if (!(e.ctrlKey && e.key === "@")) return
 			e.preventDefault()
-			toggleTerminal();
+			togglePanel();
 		},
-		[toggleTerminal],
+		[togglePanel],
 	);
 
 	useEffect(() => {
@@ -29,7 +29,7 @@ export const Panel = () => {
 
 	return (
 		<div className={cn("h-96 border-t border-t-divider bg-primary", { "hidden": !isOpen })}>
-			<PanelHeader onClose={closeTerminal} />
+			<PanelHeader onClose={closePanel} />
 		</div>
 	);
 };
