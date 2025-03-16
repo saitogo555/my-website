@@ -12,7 +12,7 @@ export const RelatedLinks = ({ links }: Props) => {
 			{links ? (
 				<ul>
 					{links.map((link, i) => (
-						<li key={i.toString()}>
+						<li className="table" key={i.toString()}>
 							<a
 								className={cn(
 									"mt-2 flex items-center gap-1 text-primary-text/70 underline",
