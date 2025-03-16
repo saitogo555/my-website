@@ -11,7 +11,7 @@ type Props = {
 export const WorkCard = ({ data }: Props) => {
 	return (
 		<Link href={`/works/${data.id}`}>
-			<Card className="group cursor-pointer duration-500" title={data.thumbnail.title}>
+			<Card className="group h-full cursor-pointer duration-500" title={data.thumbnail.title}>
 				<div className="overflow-hidden">
 					<CardMedia
 						className={cn(
