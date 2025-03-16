@@ -12,7 +12,7 @@ export const PageTitle = ({ text }: Props) => {
 		<InView className="mb-10">
 			<TypingText
 				className={cn(
-					"table font-bold text-6xl",
+					"table py-2 font-bold text-6xl",
 					"bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent",
 				)}
 				tag="h1"
