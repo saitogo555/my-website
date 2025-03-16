@@ -14,7 +14,7 @@ import { ProfileLinks } from "./ProfileLinks";
 
 export const ProfileSection = () => {
 	return (
-		<Section className={cn("flex gap-8", "max-medium:flex-col")}>
+		<Section className={cn("flex gap-8", "max-medium:flex-col", "min-medium:@max-small:flex-col")}>
 			<div className="basis-2/5">
 				<div className="order-2 flex h-full animate-fade-in-up flex-col">
 					<Image
