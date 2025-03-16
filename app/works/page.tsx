@@ -18,8 +18,8 @@ const WorksPage = () => {
 				<div
 					className={cn(
 						"grid grid-cols-3 gap-8",
-						"max-medium:grid-cols-2",
-						"max-small:grid-cols-1",
+						"max-medium:grid-cols-2 min-medium:@max-medium:grid-cols-2",
+						"max-small:grid-cols-1 min-medium:@max-small:grid-cols-1",
 					)}
 				>
 					{WORK_LIST.map((item, i) => (

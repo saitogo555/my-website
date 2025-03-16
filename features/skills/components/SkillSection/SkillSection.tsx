@@ -13,7 +13,11 @@ export const SkillSection = ({ heading, items }: Props) => {
 		<Section>
 			<SectionTitle text={heading} />
 			<div
-				className={cn("grid grid-cols-3 gap-6", "max-medium:grid-cols-2", "max-small:grid-cols-1")}
+				className={cn(
+					"grid grid-cols-3 gap-6",
+					"max-medium:grid-cols-2 min-medium:@max-medium:grid-cols-2",
+					"max-small:grid-cols-1 min-medium:@max-small:grid-cols-1",
+				)}
 			>
 				{items.map((item, i) => (
 					<SkillCard text={item.text} iconSrc={item.iconSrc} star={item.star} key={i.toString()} />

@@ -1,4 +1,3 @@
-import { Card, CardContent } from "@/components/ui/Card";
 import { Container } from "@/components/ui/Container";
 import { Image } from "@/components/ui/Image";
 import { PageTitle } from "@/components/ui/PageTitle";
@@ -42,29 +41,34 @@ const WorkIdPage = async ({ params }: Props) => {
 	return (
 		<Container>
 			<PageTitle text={data.title} />
-			<Section className={cn("flex gap-8", "max-medium:flex-col")}>
-				<div className="basis-3/5 overflow-hidden rounded-lg">
-					<Image src={data.thumbnail.src} alt={data.thumbnail.title} />
-				</div>
-				<Card className="basis-2/5">
-					<CardContent>
-						<SectionTitle text="Details" />
-						<div className="flex flex-col gap-8">
-							<div>
-								<h3 className="font-bold text-lg text-primary-text">役割</h3>
-								<RoleList roles={data.roles} />
-							</div>
-							<div>
-								<h3 className="font-bold text-lg text-primary-text">使用技術</h3>
-								<TechnologyList technologies={data.technologies} />
-							</div>
-							<div>
-								<h3 className="font-bold text-lg text-primary-text">リンク</h3>
-								<RelatedLinks links={data.links} />
-							</div>
+			<Section>
+				<div className="relative">
+					<Image
+						className="overflow-hidden rounded-lg"
+						src={data.thumbnail.src}
+						alt={data.thumbnail.title}
+					/>
+					<div
+						className={cn(
+							"absolute bottom-0 left-0 flex w-full gap-8 p-6 pt-16",
+							"bg-gradient-to-t from-black/80 via-black/50 to-transparent",
+							"max-medium:static max-medium:mt-8 max-medium:flex-col max-medium:p-0",
+							"max-medium:from-transparent max-medium:via-transparent"
+						)}
+					>
+						<div>
+							<h3 className="font-bold text-lg text-primary-text">役割</h3>
+							<RoleList roles={data.roles} />
 						</div>
-					</CardContent>
-				</Card>
+						<div>
+							<h3 className="font-bold text-lg text-primary-text">使用技術</h3>
+							<TechnologyList technologies={data.technologies} />
+						</div>
+					</div>
+				</div>
+				<div className="mt-8">
+					<RelatedLinks links={data.links} />
+				</div>
 			</Section>
 			<Section>
 				<SectionTitle text="Description" />
