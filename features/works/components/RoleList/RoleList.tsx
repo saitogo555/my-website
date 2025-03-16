@@ -7,7 +7,7 @@ type Props = {
 
 export const RoleList = ({ roles }: Props) => {
 	return (
-		<ul className="mt-2 flex gap-2">
+		<ul className="flex gap-2">
 			{roles.map((role, i) => (
 				<li key={i.toString()}>
 					<Chip>{role}</Chip>
