@@ -1,10 +1,4 @@
-# *
 User-agent: *
 Allow: /
 Disallow: /works/*/images/
-
-# Host
-Host: https://saitogo.me
-
-# Sitemaps
-Sitemap: https://saitogo.me/sitemap.xml
+Sitemap: https://www.saitogo.me/sitemap.xml
