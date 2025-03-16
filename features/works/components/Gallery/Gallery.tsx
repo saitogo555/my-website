@@ -13,7 +13,11 @@ type Props = {
 export const Gallery = ({ id, images }: Props) => {
 	return (
 		<div
-			className={cn("grid grid-cols-3 gap-8", "max-medium:grid-cols-2", "max-small:grid-cols-1")}
+			className={cn(
+				"grid grid-cols-3 gap-8",
+				"max-medium:grid-cols-2 min-medium:@max-medium:grid-cols-2",
+				"max-small:grid-cols-1 min-medium:@max-small:grid-cols-1",
+			)}
 		>
 			{images.map((image, i) => (
 				<Link key={i.toString()} href={`/works/${id}/images/${i + 1}`}>
