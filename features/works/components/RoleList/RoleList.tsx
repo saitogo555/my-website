@@ -10,7 +10,7 @@ export const RoleList = ({ roles }: Props) => {
 		<ul className="flex gap-2">
 			{roles.map((role, i) => (
 				<li key={i.toString()}>
-					<Chip>{role}</Chip>
+					<Chip className="flex h-8 items-center">{role}</Chip>
 				</li>
 			))}
 		</ul>
