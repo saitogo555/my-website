@@ -36,21 +36,21 @@ const RootLayout = ({ children }: Props) => {
 			<body>
 				<ToastNoticeProvider>
 					<div className="flex h-screen w-screen flex-col overflow-hidden bg-secondary">
-						<header>
-							<TitleBar />
-						</header>
-						<div className="relative flex h-(--viewport-middle-height)">
-							<SidebarProvider>
+						<SidebarProvider>
+							<header>
+								<TitleBar />
+							</header>
+							<div className="relative flex h-(--viewport-middle-height)">
 								<ActivityBar />
 								<Sidebar />
-							</SidebarProvider>
-							<div className="flex min-w-0 grow flex-col">
-								<TabBar />
-								<main className="grow overflow-hidden">
-									<EditorArea>{children}</EditorArea>
-								</main>
+								<div className="flex min-w-0 grow flex-col">
+									<TabBar />
+									<main className="grow overflow-hidden">
+										<EditorArea>{children}</EditorArea>
+									</main>
+								</div>
 							</div>
-						</div>
+						</SidebarProvider>
 						<footer>
 							<StatusBar />
 						</footer>
