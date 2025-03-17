@@ -1,3 +1,5 @@
+"use client";
+
 import { throttle } from "@/utils";
 import { useCallback, useEffect, useState } from "react";
 
