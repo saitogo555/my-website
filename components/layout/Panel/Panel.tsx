@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { PanelHeader } from "./PanelHeader";
 import { cn } from "@/utils";
+import { PanelContent } from "./PanelContent";
 
 export const Panel = () => {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -28,8 +29,9 @@ export const Panel = () => {
 	}, [handleKeydown]);
 
 	return (
-		<div className={cn("h-96 border-t border-t-divider bg-primary", { "hidden": !isOpen })}>
+		<div className={cn("flex h-96 flex-col border-t border-t-divider bg-primary", { "hidden": !isOpen })}>
 			<PanelHeader onClose={closePanel} />
+			<PanelContent />
 		</div>
 	);
 };
