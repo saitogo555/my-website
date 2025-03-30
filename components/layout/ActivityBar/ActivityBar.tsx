@@ -13,6 +13,7 @@ import {
 } from "react-icons/vsc";
 import { ActivityButton } from "./ActivityButton";
 import { ActivityLink } from "./ActivityLink";
+import { MdQrCodeScanner } from "react-icons/md";
 
 type ActivityLinkType = {
 	to: string;
@@ -47,6 +48,12 @@ export const ActivityBar = memo(() => {
 			{items.map((item) => (
 				<ActivityLink to={item.to} title={item.title} icon={item.icon} key={item.to.toString()} />
 			))}
+			<ActivityButton
+				className="mt-auto"
+				icon={<MdQrCodeScanner />}
+				title="QRコード"
+				aria-label="QRコードを表示"
+			/>
 		</aside>
 	);
 });
