@@ -1,6 +1,3 @@
-"use client";
-
-import { Image } from "@/components/ui/Image";
 import { Section, SectionTitle } from "@/components/ui/Section";
 import { TypingText } from "@/components/ui/TypingText";
 import { cn } from "@/utils";
@@ -11,17 +8,14 @@ import { TbCalendarMonth } from "react-icons/tb";
 import { PROFILE } from "../../constants/profile";
 import { ProfileCard } from "./ProfileCard";
 import { ProfileLinks } from "./ProfileLinks";
+import { ProfileImage } from "./ProfileImage";
 
 export const ProfileSection = () => {
 	return (
 		<Section className={cn("flex gap-8", "max-medium:flex-col", "min-medium:@max-small:flex-col")}>
 			<div className="basis-2/5">
 				<div className="order-2 flex h-full animate-fade-in-up flex-col">
-					<Image
-						className="grow overflow-hidden rounded-lg"
-						src="/images/about/profile.webp"
-						alt="My Icon"
-					/>
+					<ProfileImage />
 					<ProfileLinks />
 				</div>
 			</div>
