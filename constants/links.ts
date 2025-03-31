@@ -25,3 +25,9 @@ export const ZENN_LINK: ExternalLinkWithIcon = {
 	href: "https://zenn.dev/saitogo",
 	iconSrc: "/images/logo/zenn-logo.svg",
 };
+
+export const GRAVATAR_LINK: ExternalLinkWithIcon = {
+	text: "Gravatar",
+	href: "https://gravatar.com/saitogo555",
+	iconSrc: "/images/logo/gravatar-logo.svg",
+}
