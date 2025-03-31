@@ -1,9 +1,15 @@
 import { Image } from "@/components/ui/Image";
-import { GITHUB_LINK, NPM_LINK, X_LINK, ZENN_LINK } from "@/constants/links";
+import { GITHUB_LINK, GRAVATAR_LINK, NPM_LINK, X_LINK, ZENN_LINK } from "@/constants/links";
 import type { ExternalLink } from "@/types/link";
 import Link from "next/link";
 
-const items: (ExternalLink & { iconSrc: string })[] = [GITHUB_LINK, X_LINK, NPM_LINK, ZENN_LINK];
+const items: (ExternalLink & { iconSrc: string })[] = [
+	GITHUB_LINK,
+	X_LINK,
+	NPM_LINK,
+	ZENN_LINK,
+	GRAVATAR_LINK,
+];
 
 export const ProfileLinks = () => {
 	return (
