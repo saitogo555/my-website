@@ -3,11 +3,13 @@
 import { Card } from "@/components/ui/Card";
 import { Image } from "@/components/ui/Image";
 import { cn } from "@/utils";
-import type { MouseEvent } from "react";
+import { type KeyboardEvent, useState, type MouseEvent } from "react";
 
 const perspective = 1000;
 
 export const ProfileImage = () => {
+	const [isFlipped, setIsFlipped] = useState<boolean>(false);
+
 	const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
 		// マウスの位置と方向によって画像が傾く
 		const el = e.currentTarget;
@@ -32,15 +34,35 @@ export const ProfileImage = () => {
 		el.style.transition = "transform 0.3s ease-out";
 	};
 
+	const handleClick = () => {
+		setIsFlipped((prevIsFlipped) => !prevIsFlipped);
+	};
+
+	const handleKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {
+		// EnterキーまたはSpaceキーでクリックイベントを発火
+		if (!["Enter", " "].includes(e.key)) return;
+		e.preventDefault();
+		handleClick();
+	};
+
 	return (
 		<Card
 			className="relative aspect-square cursor-pointer overflow-visible bg-transparent shadow-none drop-shadow-lg"
 			onMouseMove={handleMouseMove}
 			onMouseLeave={handleMouseLeave}
+			onClick={handleClick}
+			onKeyDown={handleKeyDown}
 			tabIndex={0}
 		>
 			<div className="perspective-distant">
-				<div className={cn("backface-hidden absolute inset-0 transition-transform duration-500")}>
+				<div
+					className={cn(
+						"-rotate-y-180 backface-hidden absolute inset-0 transition-transform duration-500",
+						{
+							"rotate-y-0": isFlipped,
+						},
+					)}
+				>
 					<Image
 						className="grow overflow-hidden rounded-lg"
 						src="/images/about/profile.webp"
@@ -48,9 +70,9 @@ export const ProfileImage = () => {
 					/>
 				</div>
 				<div
-					className={cn(
-						"-rotate-y-180 backface-hidden absolute inset-0 transition-transform duration-500",
-					)}
+					className={cn("backface-hidden absolute inset-0 transition-transform duration-500", {
+						"rotate-y-180": isFlipped,
+					})}
 				>
 					<Image
 						className="grow overflow-hidden rounded-lg"
