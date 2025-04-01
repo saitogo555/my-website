@@ -6,7 +6,7 @@ import { GrGamepad } from "react-icons/gr";
 import { MdOutlineBloodtype, MdOutlineCake, MdOutlineLocationOn } from "react-icons/md";
 import { TbCalendarMonth } from "react-icons/tb";
 import { PROFILE } from "../../constants/profile";
-import { ProfileCard } from "./ProfileCard";
+import { ProfileItem } from "./ProfileItem";
 import { ProfileImage } from "./ProfileImage";
 import { ProfileLinks } from "./ProfileLinks";
 
@@ -28,23 +28,23 @@ export const ProfileSection = () => {
 							text={`${PROFILE.name} (${PROFILE.ruby})`}
 						/>
 					</div>
-					<ProfileCard label="年齢" text={PROFILE.age.toString()} icon={<MdOutlineCake />} />
-					<ProfileCard label="誕生日" text={PROFILE.birthday} icon={<TbCalendarMonth />} />
-					<ProfileCard label="血液型" text={PROFILE.bloodType} icon={<MdOutlineBloodtype />} />
-					<ProfileCard label="出身地" text={PROFILE.birthPlace} icon={<MdOutlineLocationOn />} />
-					<ProfileCard
+					<ProfileItem label="年齢" text={PROFILE.age.toString()} icon={<MdOutlineCake />} />
+					<ProfileItem label="誕生日" text={PROFILE.birthday} icon={<TbCalendarMonth />} />
+					<ProfileItem label="血液型" text={PROFILE.bloodType} icon={<MdOutlineBloodtype />} />
+					<ProfileItem label="出身地" text={PROFILE.birthPlace} icon={<MdOutlineLocationOn />} />
+					<ProfileItem
 						className={cn("col-span-2", "max-small:col-span-1")}
 						label="職業"
 						text={PROFILE.job}
 						icon={<BiBriefcase />}
 					/>
-					<ProfileCard
+					<ProfileItem
 						className={cn("col-span-2", "max-small:col-span-1")}
 						label="趣味"
 						text={PROFILE.hobbies.join(", ")}
 						icon={<GrGamepad />}
 					/>
-					<ProfileCard
+					<ProfileItem
 						className={cn("col-span-2", "max-small:col-span-1")}
 						label="メッセージ"
 						text={PROFILE.message}
