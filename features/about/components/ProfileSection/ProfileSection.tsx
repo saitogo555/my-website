@@ -16,7 +16,6 @@ export const ProfileSection = () => {
 			<div className="basis-2/5">
 				<div className="order-2 flex h-full animate-fade-in-up flex-col">
 					<ProfileImage />
-					<ProfileLinks />
 				</div>
 			</div>
 			<div className="basis-3/5">
@@ -51,6 +50,9 @@ export const ProfileSection = () => {
 						text={PROFILE.message}
 						icon={<BiMessageRoundedDetail />}
 					/>
+					<div className="col-span-2">
+						<ProfileLinks />
+					</div>
 				</div>
 			</div>
 		</Section>
