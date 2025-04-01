@@ -47,7 +47,7 @@ export const ProfileImage = () => {
 	return (
 		<Card
 			className={cn(
-				"relative aspect-square cursor-pointer overflow-visible bg-transparent shadow-none drop-shadow-lg",
+				"h-full cursor-pointer overflow-visible bg-transparent shadow-none drop-shadow-lg",
 				`transform-[perspective(${perspective}px) rotateX(0deg) rotateY(0deg)] transition-transform duration-100 ease-out`,
 			)}
 			onMouseMove={handleMouseMove}
@@ -56,7 +56,7 @@ export const ProfileImage = () => {
 			onKeyDown={handleKeyDown}
 			tabIndex={0}
 		>
-			<div className="perspective-distant">
+			<div className="perspective-distant relative h-full pb-[100%]">
 				<div
 					className={cn(
 						"-rotate-y-180 backface-hidden absolute inset-0 transition-transform duration-500",
@@ -66,9 +66,9 @@ export const ProfileImage = () => {
 					)}
 				>
 					<Image
-						className="grow overflow-hidden rounded-lg"
+						className="h-full rounded-lg object-cover object-left"
 						src="/images/about/profile.webp"
-						alt="My Icon"
+						alt="リアルアイコン"
 					/>
 				</div>
 				<div
@@ -77,9 +77,9 @@ export const ProfileImage = () => {
 					})}
 				>
 					<Image
-						className="grow overflow-hidden rounded-lg"
+						className="h-full rounded-lg object-cover object-left"
 						src="/images/about/profile-ghibli.webp"
-						alt="My Icon"
+						alt="ジブリ風アイコン"
 					/>
 				</div>
 			</div>
