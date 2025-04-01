@@ -50,7 +50,7 @@ export const ProfileSection = () => {
 						text={PROFILE.message}
 						icon={<BiMessageRoundedDetail />}
 					/>
-					<div className="col-span-2">
+					<div className={cn("col-span-2", "max-small:col-span-1")}>
 						<ProfileLinks />
 					</div>
 				</div>
