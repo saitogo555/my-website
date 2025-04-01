@@ -13,7 +13,7 @@ const items: (ExternalLink & { iconSrc: string })[] = [
 
 export const ProfileLinks = () => {
 	return (
-		<div className="mt-4 flex justify-center gap-4">
+		<div className="mt-4 flex flex-wrap justify-center gap-4">
 			{items.map((item) => (
 				<a
 					className="rounded-full p-2 transition-all hover:bg-neutral-300/10"
