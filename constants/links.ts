@@ -30,4 +30,4 @@ export const GRAVATAR_LINK: ExternalLinkWithIcon = {
 	text: "Gravatar",
 	href: "https://gravatar.com/saitogo555",
 	iconSrc: "/images/logo/gravatar-logo.svg",
-}
+};

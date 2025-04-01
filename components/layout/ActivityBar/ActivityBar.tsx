@@ -3,6 +3,7 @@
 import { useSidebar } from "@/hooks/useSidebar";
 import { cn } from "@/utils";
 import { type ReactNode, memo, useState } from "react";
+import { MdQrCodeScanner } from "react-icons/md";
 import {
 	VscAccount,
 	VscExtensions,
@@ -11,10 +12,9 @@ import {
 	VscHome,
 	VscMail,
 } from "react-icons/vsc";
+import { QRCode } from "../QRCode";
 import { ActivityButton } from "./ActivityButton";
 import { ActivityLink } from "./ActivityLink";
-import { MdQrCodeScanner } from "react-icons/md";
-import { QRCode } from "../QRCode";
 
 type ActivityLinkType = {
 	to: string;

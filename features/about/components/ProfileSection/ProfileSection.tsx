@@ -7,8 +7,8 @@ import { MdOutlineBloodtype, MdOutlineCake, MdOutlineLocationOn } from "react-ic
 import { TbCalendarMonth } from "react-icons/tb";
 import { PROFILE } from "../../constants/profile";
 import { ProfileCard } from "./ProfileCard";
-import { ProfileLinks } from "./ProfileLinks";
 import { ProfileImage } from "./ProfileImage";
+import { ProfileLinks } from "./ProfileLinks";
 
 export const ProfileSection = () => {
 	return (

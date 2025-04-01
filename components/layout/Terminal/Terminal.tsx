@@ -2,7 +2,7 @@ import { TerminalHeader } from "./TerminalHeader";
 
 export const Terminal = () => {
 	return (
-		<div className="bg-primary border-t border-t-divider">
+		<div className="border-t border-t-divider bg-primary">
 			<TerminalHeader />
 		</div>
 	);
