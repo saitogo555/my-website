@@ -24,7 +24,6 @@ export const ProfileImage = () => {
 		const rotateY = -deltaX * 10; // Y軸の回転角度
 		const transform = `perspective(${perspective}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
 		el.style.transform = transform;
-		el.style.transition = "transform 0.1s ease-out";
 	};
 
 	const handleMouseLeave = (e: MouseEvent<HTMLDivElement>) => {
@@ -47,7 +46,10 @@ export const ProfileImage = () => {
 
 	return (
 		<Card
-			className="relative aspect-square cursor-pointer overflow-visible bg-transparent shadow-none drop-shadow-lg"
+			className={cn(
+				"relative aspect-square cursor-pointer overflow-visible bg-transparent shadow-none drop-shadow-lg",
+				`transform-[perspective(${perspective}px) rotateX(0deg) rotateY(0deg)] transition-transform duration-100 ease-out`,
+			)}
 			onMouseMove={handleMouseMove}
 			onMouseLeave={handleMouseLeave}
 			onClick={handleClick}
