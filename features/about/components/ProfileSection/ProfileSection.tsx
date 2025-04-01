@@ -28,7 +28,7 @@ export const ProfileSection = () => {
 							text={`${PROFILE.name} (${PROFILE.ruby})`}
 						/>
 					</div>
-					<ProfileItem label="年齢" text={PROFILE.age.toString()} icon={<MdOutlineCake />} />
+					<ProfileItem label="年齢" text={`${PROFILE.age}歳`} icon={<MdOutlineCake />} />
 					<ProfileItem label="誕生日" text={PROFILE.birthday} icon={<TbCalendarMonth />} />
 					<ProfileItem label="血液型" text={PROFILE.bloodType} icon={<MdOutlineBloodtype />} />
 					<ProfileItem label="出身地" text={PROFILE.birthPlace} icon={<MdOutlineLocationOn />} />
