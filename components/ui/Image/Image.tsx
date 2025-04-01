@@ -1,16 +1,11 @@
-import NextImage from "next/image";
 import type { HTMLAttributes } from "react";
 
 type Props = {
 	className?: string;
 	src: string;
 	alt: string;
-} & HTMLAttributes<HTMLDivElement>;
+} & Omit<HTMLAttributes<HTMLImageElement>, "className" | "src" | "alt" | "loading">;
 
 export const Image = ({ className, src, alt, ...props }: Props) => {
-	return (
-		<div className={className} {...props}>
-			<NextImage className="!relative object-cover" src={src} alt={alt} fill />
-		</div>
-	);
+	return <img {...props} className={className} src={src} loading="lazy" alt={alt} />;
 };
