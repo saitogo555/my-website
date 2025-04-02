@@ -18,9 +18,9 @@ export const Image = ({ className, src, alt, aspectRatio = "16/9", ...props }: P
 	useEffect(() => {
 		const img = new window.Image();
 		img.src = src;
-		if (img.complete) {
+		img.onload = () => {
 			setIsLoading(false);
-		}
+		};
 	}, [src]);
 
 	const handleLoad = () => {
@@ -28,12 +28,12 @@ export const Image = ({ className, src, alt, aspectRatio = "16/9", ...props }: P
 	};
 
 	const handleError = () => {
+		console.error(`Error loading image: ${src}`);
 		setIsLoading(false);
 	};
 
 	return (
-		<div className="relative" style={{ aspectRatio: aspectRatio }}>
-			
+		<div className="relative" style={{ aspectRatio: isLoading ? aspectRatio : undefined }}>
 			{isLoading && (
 				<Skelton className="absolute inset-0 h-full w-full" style={{ aspectRatio: aspectRatio }} />
 			)}
