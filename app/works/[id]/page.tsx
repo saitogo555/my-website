@@ -44,13 +44,13 @@ const WorkIdPage = async ({ params }: Props) => {
 			<Section>
 				<div className="relative">
 					<Image
-						className="overflow-hidden rounded-lg"
+						className="w-full overflow-hidden rounded-lg"
 						src={data.thumbnail.src}
 						alt={data.thumbnail.title}
 					/>
 					<div
 						className={cn(
-							"absolute bottom-0 left-0 flex w-full gap-8 p-6 pt-16",
+							"absolute bottom-0 left-0 flex w-full gap-8 rounded-b-lg p-6 pt-16",
 							"bg-gradient-to-t from-black/80 via-black/50 to-transparent",
 							"max-medium:static max-medium:mt-8 max-medium:flex-col max-medium:p-0",
 							"max-medium:from-transparent max-medium:via-transparent",
