@@ -9,10 +9,20 @@ type Props = {
 	className?: string;
 	src: string;
 	alt: string;
-	aspectRatio?: string;
+	skeltonSize?: {
+		width?: string;
+		height?: string;
+		aspectRatio?: string;
+	};
 } & Omit<HTMLAttributes<HTMLImageElement>, "className" | "src" | "alt" | "loading">;
 
-export const Image = ({ className, src, alt, aspectRatio = "16/9", ...props }: Props) => {
+export const Image = ({
+	className,
+	src,
+	alt,
+	skeltonSize = { aspectRatio: "16/9" },
+	...props
+}: Props) => {
 	const [isLoading, setIsLoading] = useState<boolean>(true);
 
 	useEffect(() => {
@@ -33,19 +43,20 @@ export const Image = ({ className, src, alt, aspectRatio = "16/9", ...props }: P
 	};
 
 	return (
-		<div className="relative" style={{ aspectRatio: isLoading ? aspectRatio : undefined }}>
-			{isLoading && (
-				<Skelton className="absolute inset-0 h-full w-full" style={{ aspectRatio: aspectRatio }} />
+		<>
+			{isLoading ? (
+				<Skelton style={{ ...skeltonSize }} />
+			) : (
+				<img
+					{...props}
+					className={cn(className, { invisible: isLoading })}
+					src={src}
+					loading="lazy"
+					alt={alt}
+					onLoad={handleLoad}
+					onError={handleError}
+				/>
 			)}
-			<img
-				{...props}
-				className={cn(className, { invisible: isLoading })}
-				src={src}
-				loading="lazy"
-				alt={alt}
-				onLoad={handleLoad}
-				onError={handleError}
-			/>
-		</div>
+		</>
 	);
 };
