@@ -8,7 +8,7 @@ type Props = {
 export const Skelton = ({ className, ...props }: Props) => {
 	return (
 		<div className={cn("animate-skelton overflow-hidden rounded-lg", className)} {...props}>
-			<div className="h-full w-full bg-secondary/50 dark:bg-primary/50" />
+			<div className="h-full w-full bg-black/10 dark:bg-white/5" />
 		</div>
 	);
 };
