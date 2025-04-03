@@ -69,6 +69,7 @@ export const ProfileImage = () => {
 						className="h-full rounded-lg object-cover object-left"
 						src="/images/about/profile.webp"
 						alt="リアルアイコン"
+						skeltonSize={{ width: "100%", height: "100%", aspectRatio: "1/1" }}
 					/>
 				</div>
 				<div
@@ -80,6 +81,7 @@ export const ProfileImage = () => {
 						className="h-full rounded-lg object-cover object-left"
 						src="/images/about/profile-ghibli.webp"
 						alt="ジブリ風アイコン"
+						skeltonSize={{ width: "100%", height: "100%", aspectRatio: "1/1" }}
 					/>
 				</div>
 			</div>

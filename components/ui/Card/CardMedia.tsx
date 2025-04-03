@@ -6,12 +6,17 @@ type Props = {
 	src: string;
 	title?: string;
 	alt: string;
+	skeltonSize?: {
+		width?: string;
+		height?: string;
+		aspectRatio?: string;
+	};
 };
 
-export const CardMedia = ({ className, src, title, alt }: Props) => {
+export const CardMedia = ({ className, src, title, alt, skeltonSize }: Props) => {
 	return (
 		<div className={cn("w-full", className)}>
-			<Image src={src} alt={alt} title={title} />
+			<Image src={src} alt={alt} title={title} skeltonSize={skeltonSize} />
 		</div>
 	);
 };

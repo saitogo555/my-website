@@ -18,4 +18,5 @@
 	--container-extra: 1536px;
 
 	--animate-toast-in: toast-in 0.3s linear;
+	--animate-skelton: skeleton 2s ease-in-out infinite;
 }

@@ -27,8 +27,13 @@ export const QRCode = ({ onClose }: Props) => {
 			onKeyDown={handleKeydown}
 		>
 			<Card className="mx-4">
-				<CardContent>
-					<Image className="overflow-hidden rounded-lg" src="/images/qr-code.webp" alt="QR Code" />
+				<CardContent className="w-full max-w-md">
+					<Image
+						className="overflow-hidden rounded-lg"
+						src="/images/qr-code.webp"
+						alt="QR Code"
+						aspectRatio="1/1"
+					/>
 					<OutlinedButton className="mt-4 w-full" onClick={onClose}>
 						閉じる
 					</OutlinedButton>

@@ -44,7 +44,12 @@ export const SkillCard = ({ text, iconSrc, star }: Props) => {
 		<motion.div ref={ref} initial={initial} animate={animate(isInView)} transition={transition}>
 			<Card>
 				<CardContent className="flex h-24 items-center gap-4">
-					<Image className="w-8" src={iconSrc} alt={text} />
+					<Image
+						className="w-8"
+						src={iconSrc}
+						alt={text}
+						skeltonSize={{ width: "2rem", aspectRatio: "1/1" }}
+					/>
 					<TypingText className="text-xl" tag="p" text={text} delay={300} />
 					<StarRating className="ml-auto" value={star} />
 				</CardContent>
