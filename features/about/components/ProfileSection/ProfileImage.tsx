@@ -69,6 +69,7 @@ export const ProfileImage = () => {
 						className="grow overflow-hidden rounded-lg"
 						src="/images/about/profile.webp"
 						alt="My Icon"
+						aspectRatio="1/1"
 					/>
 				</div>
 				<div
@@ -80,6 +81,7 @@ export const ProfileImage = () => {
 						className="grow overflow-hidden rounded-lg"
 						src="/images/about/profile-ghibli.webp"
 						alt="My Icon"
+						aspectRatio="1/1"
 					/>
 				</div>
 			</div>
