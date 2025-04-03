@@ -8,5 +8,12 @@ type Props = {
 };
 
 export const MenuIcon = memo(({ iconSrc, alt }: Props) => {
-	return <Image className={cn("w-4", "max-medium:w-5")} src={iconSrc} alt={alt} />;
+	return (
+		<Image
+			className={cn("w-4", "max-medium:w-5")}
+			src={iconSrc}
+			alt={alt}
+			skeltonSize={{ width: "1rem", aspectRatio: "1/1" }}
+		/>
+	);
 });

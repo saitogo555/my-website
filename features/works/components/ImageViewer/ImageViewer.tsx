@@ -28,7 +28,7 @@ export const ImageViewer = ({ image }: Props) => {
 	};
 
 	return (
-		<div>
+		<div className="flex flex-col h-full">
 			<div
 				className={cn(
 					"sticky top-0 z-10 flex items-center justify-between bg-primary px-4 py-2 shadow-lg",
@@ -79,12 +79,15 @@ export const ImageViewer = ({ image }: Props) => {
 					</div>
 				</div>
 			</div>
-			<Image
-				className="mx-auto w-full"
-				src={image.src}
-				alt={image.title}
-				style={{ width: `${scale}%` }}
-			/>
+			<div className="grow">
+				<Image
+					className="mx-auto w-full"
+					src={image.src}
+					alt={image.title}
+					style={{ width: `${scale}%` }}
+					skeltonSize={{ width: "100%", height: "100%" }}
+				/>
+				</div>
 		</div>
 	);
 };

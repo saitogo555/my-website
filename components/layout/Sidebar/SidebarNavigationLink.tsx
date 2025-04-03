@@ -38,7 +38,12 @@ export const SidebarNavigationLink = memo(({ text, to, iconSrc }: Props) => {
 			aria-label={title}
 			onClick={handleClick}
 		>
-			<Image className={cn("w-4")} src={iconSrc} alt="File Icon" />
+			<Image
+				className={cn("w-4")}
+				src={iconSrc}
+				alt="File Icon"
+				skeltonSize={{ width: "1rem", aspectRatio: "1/1" }}
+			/>
 			<span className={cn("ml-2 text-primary-text text-sm", "max-medium:text-lg")}>{text}</span>
 		</Link>
 	);

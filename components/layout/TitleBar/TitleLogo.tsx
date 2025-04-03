@@ -16,7 +16,12 @@ export const TitleLogo = () => {
 
 	return (
 		<Link className={cn("mx-2 w-7")} href="/" title="Home" onClick={handleClick}>
-			<Image className="w-full" src="/images/logo.webp" alt="SAITO GO PORTFOLIO" />
+			<Image
+				className="w-full"
+				src="/images/logo.webp"
+				alt="SAITO GO PORTFOLIO"
+				skeltonSize={{ aspectRatio: "1/1" }}
+			/>
 		</Link>
 	);
 };
