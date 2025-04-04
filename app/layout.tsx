@@ -39,9 +39,9 @@ export const metadata: Metadata = {
 		images: [
 			{
 				url: "https://www.saitogo.me/images/og.webp",
-				width: 1200,
-				height: 630,
-				alt: "齋藤豪のプロフィール画像",
+				width: 1280,
+				height: 720,
+				alt: "OG画像",
 			},
 		],
 	},
