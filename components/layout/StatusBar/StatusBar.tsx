@@ -39,7 +39,7 @@ export const StatusBar = () => {
 					"max-medium:text-lg",
 				)}
 			>
-				&copy; 2024 SAITOGO
+				&copy; 2024-{new Date().getFullYear()} SAITOGO
 			</div>
 		</div>
 	);
