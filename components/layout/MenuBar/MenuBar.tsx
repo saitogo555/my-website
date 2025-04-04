@@ -1,6 +1,6 @@
 "use client";
 
-import { GITHUB_LINK, GRAVATAR_LINK, NPM_LINK, X_LINK, ZENN_LINK } from "@/constants/links";
+import { GITHUB_LINK, GRAVATAR_LINK, LINKEDIN_LINK, NPM_LINK, X_LINK, ZENN_LINK } from "@/constants/links";
 import { cn } from "@/utils";
 import { type RefObject, createRef, useCallback, useEffect, useRef, useState } from "react";
 import { RxDotsHorizontal } from "react-icons/rx";
@@ -26,6 +26,7 @@ const items: MenuItemType[] = [
 		href: GITHUB_LINK.href,
 	},
 	{ text: X_LINK.text, iconSrc: "/images/logo/x-logo.svg", href: X_LINK.href },
+	{ text: LINKEDIN_LINK.text, iconSrc: LINKEDIN_LINK.iconSrc, href: LINKEDIN_LINK.href },
 	{ text: NPM_LINK.text, iconSrc: "/images/logo/npm-logo.svg", href: NPM_LINK.href },
 	{ text: ZENN_LINK.text, iconSrc: "/images/logo/zenn-logo.svg", href: ZENN_LINK.href },
 	{ text: GRAVATAR_LINK.text, iconSrc: GRAVATAR_LINK.iconSrc, href: GRAVATAR_LINK.href },

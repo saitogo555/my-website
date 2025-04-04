@@ -14,6 +14,12 @@ export const X_LINK: ExternalLinkWithIcon = {
 	iconSrc: "/images/logo/x-logo.svg",
 };
 
+export const LINKEDIN_LINK: ExternalLinkWithIcon = {
+	text: "LinkedIn",
+	href: "https://www.linkedin.com/in/saitogo/",
+	iconSrc: "/images/logo/linkedin-logo.svg",
+};
+
 export const NPM_LINK: ExternalLinkWithIcon = {
 	text: "npm",
 	href: "https://www.npmjs.com/~saitogo",
