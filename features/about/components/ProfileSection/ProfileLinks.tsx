@@ -1,9 +1,16 @@
 import { Image } from "@/components/ui/Image";
-import { GITHUB_LINK, GRAVATAR_LINK, LINKEDIN_LINK, NPM_LINK, X_LINK, ZENN_LINK } from "@/constants/links";
-import type { ExternalLink } from "@/types/link";
+import {
+	type ExternalLinkWithIcon,
+	GITHUB_LINK,
+	GRAVATAR_LINK,
+	LINKEDIN_LINK,
+	NPM_LINK,
+	X_LINK,
+	ZENN_LINK,
+} from "@/constants/links";
 import Link from "next/link";
 
-const items: (ExternalLink & { iconSrc: string })[] = [
+const items: ExternalLinkWithIcon[] = [
 	GITHUB_LINK,
 	X_LINK,
 	LINKEDIN_LINK,
