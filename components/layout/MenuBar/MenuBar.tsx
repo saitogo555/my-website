@@ -1,6 +1,14 @@
 "use client";
 
-import { GITHUB_LINK, GRAVATAR_LINK, LINKEDIN_LINK, NPM_LINK, X_LINK, ZENN_LINK } from "@/constants/links";
+import {
+	type ExternalLinkWithIcon,
+	GITHUB_LINK,
+	GRAVATAR_LINK,
+	LINKEDIN_LINK,
+	NPM_LINK,
+	X_LINK,
+	ZENN_LINK,
+} from "@/constants/links";
 import { cn } from "@/utils";
 import { type RefObject, createRef, useCallback, useEffect, useRef, useState } from "react";
 import { RxDotsHorizontal } from "react-icons/rx";
@@ -13,28 +21,18 @@ type Props = {
 	className: string;
 };
 
-type MenuItemType = {
-	text: string;
-	iconSrc: string;
-	href: string;
-};
-
-const items: MenuItemType[] = [
-	{
-		text: GITHUB_LINK.text,
-		iconSrc: "/images/logo/github-logo.svg",
-		href: GITHUB_LINK.href,
-	},
-	{ text: X_LINK.text, iconSrc: "/images/logo/x-logo.svg", href: X_LINK.href },
-	{ text: LINKEDIN_LINK.text, iconSrc: LINKEDIN_LINK.iconSrc, href: LINKEDIN_LINK.href },
-	{ text: NPM_LINK.text, iconSrc: "/images/logo/npm-logo.svg", href: NPM_LINK.href },
-	{ text: ZENN_LINK.text, iconSrc: "/images/logo/zenn-logo.svg", href: ZENN_LINK.href },
-	{ text: GRAVATAR_LINK.text, iconSrc: GRAVATAR_LINK.iconSrc, href: GRAVATAR_LINK.href },
+const items: ExternalLinkWithIcon[] = [
+	GITHUB_LINK,
+	X_LINK,
+	LINKEDIN_LINK,
+	NPM_LINK,
+	ZENN_LINK,
+	GRAVATAR_LINK,
 ];
 
 export const MenuBar = ({ className }: Props) => {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
-	const [overflowItems, setOverflowItems] = useState<MenuItemType[]>([]);
+	const [overflowItems, setOverflowItems] = useState<ExternalLinkWithIcon[]>([]);
 	const menuRef = useRef<HTMLUListElement>(null);
 	const itemsRef = useRef<RefObject<HTMLLIElement | null>[]>(
 		items.map(() => createRef<HTMLLIElement | null>()),
@@ -59,7 +57,7 @@ export const MenuBar = ({ className }: Props) => {
 		btnRef.current.style.display = "block";
 		let totalWidth: number = btnRef.current.offsetWidth ?? 0; // メニューアイテムの横幅の合計
 		const menuWidth: number = menuRef.current.offsetWidth;
-		const newOverflowItems: MenuItemType[] = [];
+		const newOverflowItems: ExternalLinkWithIcon[] = [];
 
 		btnRef.current.style.display = "";
 		for (const itemRef of itemsRef.current) {
