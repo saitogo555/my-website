@@ -26,8 +26,50 @@ export const metadata: Metadata = {
 		"フルスタックWebデベロッパーの齋藤豪です。",
 		"フロントエンドとバックエンドの両方の知識を活かし、WebサイトやWebアプリを作ったり教えたりしてます。",
 	].join(),
-	openGraph: {},
-	twitter: {},
+	openGraph: {
+		type: "website",
+		locale: "ja_JP",
+		url: "https://www.saitogo.me/",
+		siteName: "齋藤豪 | SAITO GO",
+		title: "齋藤豪 | SAITO GO",
+		description: [
+			"フルスタックWebデベロッパーの齋藤豪です。",
+			"フロントエンドとバックエンドの両方の知識を活かし、WebサイトやWebアプリを作ったり教えたりしてます。",
+		].join(),
+		images: [
+			{
+				url: "https://www.saitogo.me/images/og.webp",
+				width: 1280,
+				height: 720,
+				alt: "OG画像",
+			},
+		],
+	},
+	twitter: {
+		card: "summary_large_image",
+		creator: "@saitogo555",
+		site: "@saitogo555",
+		title: "齋藤豪 | フルスタックWebデベロッパー",
+		description:
+			"フルスタックWebデベロッパーの齋藤豪です。フロントエンドとバックエンドの両方の知識を活かし、WebサイトやWebアプリを作ったり教えたりしてます。",
+		images: ["https://www.saitogo.me/images/og.webp"],
+	},
+	keywords: [
+		"齋藤 豪",
+		"さいとう ごう",
+		"サイトウ ゴウ",
+		"SAITO GO",
+		"フルスタック",
+		"Webデベロッパー",
+		"プログラマー",
+		"エンジニア",
+		"フロントエンド",
+		"バックエンド",
+		"デザイン",
+	],
+	alternates: {
+		canonical: "https://www.saitogo.me/",
+	},
 };
 
 const RootLayout = ({ children }: Props) => {
