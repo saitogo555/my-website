@@ -1,6 +1,6 @@
 import type { ExternalLink } from "@/types/link";
 
-type ExternalLinkWithIcon = ExternalLink & { iconSrc: string };
+export type ExternalLinkWithIcon = ExternalLink & { iconSrc: string };
 
 export const GITHUB_LINK: ExternalLinkWithIcon = {
 	text: "GitHub",
