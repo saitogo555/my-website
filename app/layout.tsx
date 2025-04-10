@@ -86,13 +86,13 @@ const RootLayout = ({ children }: Props) => {
 							<div className="relative flex h-(--viewport-middle-height)">
 								<ActivityBar />
 								<Sidebar />
-							</div>
-							<div className="flex min-w-0 grow flex-col">
-								<TabBar />
-								<main className="shrink grow basis-0 overflow-hidden">
-									<EditorArea>{children}</EditorArea>
-								</main>
-								<Panel />
+								<div className="flex min-w-0 grow flex-col">
+									<TabBar />
+									<main className="shrink grow basis-0 overflow-hidden">
+										<EditorArea>{children}</EditorArea>
+									</main>
+									<Panel />
+								</div>
 							</div>
 						</SidebarProvider>
 						<footer>
