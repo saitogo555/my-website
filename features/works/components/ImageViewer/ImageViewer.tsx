@@ -28,10 +28,10 @@ export const ImageViewer = ({ image }: Props) => {
 	};
 
 	return (
-		<div className="flex flex-col h-full">
+		<div className="flex h-full flex-col">
 			<div
 				className={cn(
-					"sticky top-0 z-10 flex items-center justify-between bg-primary px-4 py-2 shadow-lg",
+					"sticky top-0 z-0 flex items-center justify-between bg-secondary px-4 py-2 shadow-lg",
 					"max-medium:flex-col",
 				)}
 			>
