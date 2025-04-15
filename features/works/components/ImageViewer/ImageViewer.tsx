@@ -28,7 +28,7 @@ export const ImageViewer = ({ image }: Props) => {
 	};
 
 	return (
-		<div className="flex h-full flex-col">
+		<div className="flex h-full flex-col overflow-auto">
 			<div
 				className={cn(
 					"sticky top-0 z-0 flex items-center justify-between bg-secondary px-4 py-2 shadow-lg",
