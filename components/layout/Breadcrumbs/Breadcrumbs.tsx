@@ -10,13 +10,14 @@ export const Breadcrumbs = () => {
 
 	const breadcrumbs = useMemo(() => {
 		const splittedPathList = pathname.split("/").filter((path) => path.length > 0);
-		const links = splittedPathList.map((text, index) => {
+		const links = splittedPathList.map((name, index) => {
 			const to = `/${splittedPathList.slice(0, index + 1).join("/")}`;
+			const text = NAVIGATION_LINKS.find((link) => link.to === to)?.text ?? name;
 			const iconSrc = NAVIGATION_LINKS.find((link) => link.to === to)?.iconSrc;
 			return {
-				iconSrc,
 				to,
 				text,
+				iconSrc,
 			};
 		});
 		return links;
