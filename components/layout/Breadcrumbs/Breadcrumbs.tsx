@@ -26,7 +26,7 @@ export const Breadcrumbs = () => {
 	return (
 		<>
 			{breadcrumbs.length > 0 && (
-				<div className="flex h-[1.375rem] shrink-0 items-center px-4 text-sm shadow shadow-black">
+				<div className="relative z-10 flex h-[1.375rem] shrink-0 items-center px-4 text-sm shadow shadow-black/50">
 					{breadcrumbs.map((item, index) => (
 						<BreadcrumbItem
 							text={item.text}
