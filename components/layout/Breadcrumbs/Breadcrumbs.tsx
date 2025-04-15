@@ -4,6 +4,7 @@ import { NAVIGATION_LINKS } from "@/constants/navigation";
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
 import { BreadcrumbItem } from "./BreadcrumbItem";
+import { cn } from "@/utils";
 
 export const Breadcrumbs = () => {
 	const pathname = usePathname();
@@ -26,7 +27,13 @@ export const Breadcrumbs = () => {
 	return (
 		<>
 			{breadcrumbs.length > 0 && (
-				<div className="relative z-10 flex h-[1.375rem] shrink-0 items-center px-4 text-sm shadow shadow-black/50">
+				<div
+					className={cn(
+						"relative z-10 h-[1.375rem] w-full px-4 text-sm shadow shadow-black/50",
+						"flex shrink-0 items-center overflow-x-auto",
+						"max-medium:h-8",
+					)}
+				>
 					{breadcrumbs.map((item, index) => (
 						<BreadcrumbItem
 							text={item.text}
