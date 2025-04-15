@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "../styles/global.css";
 import { ActivityBar } from "@/components/layout/ActivityBar";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { EditorArea } from "@/components/layout/EditorArea";
 import { Sidebar } from "@/components/layout/Sidebar";
 import { StatusBar } from "@/components/layout/StatusBar";
@@ -87,6 +88,7 @@ const RootLayout = ({ children }: Props) => {
 								<Sidebar />
 								<div className="flex min-w-0 grow flex-col">
 									<TabBar />
+									<Breadcrumbs />
 									<main className="grow overflow-hidden">
 										<EditorArea>{children}</EditorArea>
 									</main>
