@@ -29,8 +29,9 @@ export const Breadcrumbs = () => {
 			{breadcrumbs.length > 0 && (
 				<div
 					className={cn(
-						"relative z-10 h-[1.375rem] w-full px-4 text-sm shadow shadow-black/50",
-						"flex shrink-0 items-center overflow-x-auto",
+						"relative z-10 w-full px-4 text-sm shadow shadow-black/50",
+						"flex shrink-0 items-center overflow-x-auto overflow-y-hidden",
+						"scrollbar-thin scrollbar-thumb-neutral-400/30 scrollbar-track-transparent",
 						"max-medium:h-8",
 					)}
 				>

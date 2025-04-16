@@ -22,13 +22,18 @@ export const ImageViewer = ({ image }: Props) => {
 	const handleClickScaleUp = () => {
 		setScale((prevScale) => Math.min(prevScale + 1, 100));
 	};
-
+	
 	const handleClickScaleDown = () => {
 		setScale((prevScale) => Math.max(prevScale - 1, 1));
 	};
 
 	return (
-		<div className="flex h-full flex-col overflow-auto">
+		<div
+			className={cn(
+				"flex h-full flex-col overflow-auto",
+				"scrollbar scrollbar-thumb-neutral-400/30 scrollbar-track-transparent",
+			)}
+		>
 			<div
 				className={cn(
 					"sticky top-0 z-0 flex items-center justify-between bg-secondary px-4 py-2 shadow-lg",
@@ -87,7 +92,7 @@ export const ImageViewer = ({ image }: Props) => {
 					style={{ width: `${scale}%` }}
 					skeltonSize={{ width: "100%", height: "100%" }}
 				/>
-				</div>
+			</div>
 		</div>
 	);
 };
