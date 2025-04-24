@@ -27,9 +27,9 @@ export const QRCode = ({ onClose }: Props) => {
 			onKeyDown={handleKeydown}
 		>
 			<Card className="mx-4">
-				<CardContent className="w-lg max-w-lg">
+				<CardContent className="w-fit">
 					<Image
-						className="overflow-hidden rounded-lg"
+						className="w-full overflow-hidden rounded-lg"
 						src="/images/qr-code.webp"
 						alt="QR Code"
 						skeltonSize={{
