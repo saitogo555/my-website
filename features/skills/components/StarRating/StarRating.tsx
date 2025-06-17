@@ -1,7 +1,7 @@
 "use client";
 
 import type { SkillLevel } from "@/features/skills/types/Skill";
-import { type AnimationProps, motion, useInView } from "framer-motion";
+import { motion, useInView, Variants } from "framer-motion";
 import { useRef } from "react";
 import { IoStar, IoStarOutline } from "react-icons/io5";
 import { twMerge } from "tailwind-merge";
@@ -11,7 +11,7 @@ type Props = {
 	value?: SkillLevel;
 };
 
-const fullStarVariants: AnimationProps["variants"] = {
+const fullStarVariants: Variants = {
 	hidden: {
 		opacity: 0,
 		scale: 0,
@@ -34,7 +34,7 @@ const fullStarVariants: AnimationProps["variants"] = {
 	}),
 };
 
-const emptyStarVariants: AnimationProps["variants"] = {
+const emptyStarVariants: Variants = {
 	hidden: {
 		opacity: 0,
 		z: 0,

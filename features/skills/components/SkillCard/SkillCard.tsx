@@ -3,7 +3,7 @@
 import { Card, CardContent } from "@/components/ui/Card";
 import { Image } from "@/components/ui/Image";
 import { TypingText } from "@/components/ui/TypingText";
-import { type AnimationProps, motion, useInView } from "framer-motion";
+import { motion, useInView, TargetAndTransition, Transition } from "framer-motion";
 import { useRef } from "react";
 import type { SkillLevel } from "../../types/Skill";
 import { StarRating } from "../StarRating";
@@ -14,19 +14,19 @@ type Props = {
 	star: SkillLevel;
 };
 
-const initial: AnimationProps["initial"] = {
+const initial: TargetAndTransition = {
 	y: "25%",
 	z: 0,
 	opacity: 0,
 };
 
-const animate = (isInView: boolean): AnimationProps["animate"] => ({
+const animate = (isInView: boolean): TargetAndTransition => ({
 	y: isInView ? 0 : "25%",
 	z: 0,
 	opacity: isInView ? 1 : 0,
 });
 
-const transition: AnimationProps["transition"] = {
+const transition: Transition = {
 	duration: 0.5,
 	type: "spring",
 	damping: 8,
