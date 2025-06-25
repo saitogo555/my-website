@@ -4,18 +4,20 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { type AnchorHTMLAttributes, type ReactNode, memo } from "react";
 import { ActivityIcon } from "./ActivityIcon";
+import { cn } from "@/utils";
 
 type Props = {
+	className?: string;
 	to: string;
 	icon: ReactNode;
 } & AnchorHTMLAttributes<HTMLAnchorElement>;
 
-export const ActivityLink = memo(({ to, icon, ...props }: Props) => {
+export const ActivityLink = memo(({ className, to, icon, ...props }: Props) => {
 	const currentPagePath = usePathname();
 	const isCurrentPage = currentPagePath === to;
 
 	return (
-		<Link className="relative" href={to} {...props}>
+		<Link className={cn("relative", className)} href={to} {...props}>
 			{isCurrentPage && <div className="absolute top-0 left-0 h-full w-0.5 bg-accent" />}
 			<ActivityIcon className={`${isCurrentPage && "text-neutral-200"}`} icon={icon} />
 		</Link>
