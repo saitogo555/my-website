@@ -13,7 +13,7 @@ export const PROFILE = {
 	name: "齋藤 豪",
 	ruby: "サイトウ ゴウ",
 	age: age,
-	birthday: `${birthYear}/${birthMonth}/${birthDate}`,
+	birthday: `${birthYear}/${birthMonth.toString().padStart(2, '0')}/${birthDate.toString().padStart(2, '0')}`,
 	bloodType: "A(+)",
 	birthPlace: "愛知県 名古屋市",
 	job: "自動車部品の試作品組立",
