@@ -12,6 +12,7 @@ import { ToastNoticeProvider } from "@/provider/ToastNoticeProvider";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { ReactNode } from "react";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 type Props = {
 	children?: ReactNode;
@@ -103,6 +104,7 @@ const RootLayout = ({ children }: Props) => {
 				<SpeedInsights />
 				<Analytics />
 			</body>
+			<GoogleAnalytics gaId={process.env.GTAG_ID || ""} />
 		</html>
 	);
 };
