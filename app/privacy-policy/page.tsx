@@ -21,12 +21,12 @@ const PrivacyPolicyPage = () => {
 			</Section>
 			<Section>
 				<SectionTitle text="個人情報の収集" />
-				<div className="space-y-4">
+				<div className="my-4">
 					<TypingText
 						tag="p"
 						text="当サイトでは、以下の場合に個人情報を収集することがあります："
 					/>
-					<ul className="list-disc list-inside space-y-2 ml-4">
+					<ul className="list-disc list-inside my-2 ml-4">
 						<li>
 							<TypingText
 								tag="span"
@@ -44,12 +44,12 @@ const PrivacyPolicyPage = () => {
 			</Section>
 			<Section>
 				<SectionTitle text="個人情報の利用目的" />
-				<div className="space-y-4">
+				<div className="my-4">
 					<TypingText
 						tag="p"
 						text="収集した個人情報は、以下の目的で利用します："
 					/>
-					<ul className="list-disc list-inside space-y-2 ml-4">
+					<ul className="list-disc list-inside my-2 ml-4">
 						<li>
 							<TypingText
 								tag="span"
@@ -74,7 +74,7 @@ const PrivacyPolicyPage = () => {
 			</Section>
 			<Section>
 				<SectionTitle text="Cookieの使用" />
-				<div className="space-y-4">
+				<div className="my-4">
 					<TypingText
 						tag="p"
 						text="当サイトでは、サービスの向上とユーザー体験の改善のため、Cookieを使用しています。"
@@ -87,7 +87,7 @@ const PrivacyPolicyPage = () => {
 			</Section>
 			<Section>
 				<SectionTitle text="Google Analytics" />
-				<div className="space-y-4">
+				<div className="my-4">
 					<TypingText
 						tag="p"
 						text="当サイトでは、サイトの利用状況を分析するためにGoogle Analyticsを使用しています。"
@@ -100,7 +100,7 @@ const PrivacyPolicyPage = () => {
 			</Section>
 			<Section>
 				<SectionTitle text="個人情報の保護" />
-				<div className="space-y-4">
+				<div className="my-4">
 					<TypingText
 						tag="p"
 						text="当サイトは、個人情報の漏洩、滅失、毀損を防止するため、適切な安全管理措置を講じています。"
@@ -113,7 +113,7 @@ const PrivacyPolicyPage = () => {
 			</Section>
 			<Section>
 				<SectionTitle text="個人情報の開示・訂正・削除" />
-				<div className="space-y-4">
+				<div className="my-4">
 					<TypingText
 						tag="p"
 						text="ユーザーは、自身の個人情報について、開示、訂正、削除を求めることができます。"
@@ -126,7 +126,7 @@ const PrivacyPolicyPage = () => {
 			</Section>
 			<Section>
 				<SectionTitle text="プライバシーポリシーの変更" />
-				<div className="space-y-4">
+				<div className="my-4">
 					<TypingText
 						tag="p"
 						text="当サイトは、必要に応じて本プライバシーポリシーを変更することがあります。"
@@ -139,7 +139,7 @@ const PrivacyPolicyPage = () => {
 			</Section>
 			<Section>
 				<SectionTitle text="お問い合わせ" />
-				<div className="space-y-4">
+				<div className="my-4">
 					<TypingText
 						tag="p"
 						text="本プライバシーポリシーに関するお問い合わせは、お問い合わせフォームよりご連絡ください。"
