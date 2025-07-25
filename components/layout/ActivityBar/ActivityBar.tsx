@@ -3,7 +3,7 @@
 import { useSidebar } from "@/hooks/useSidebar";
 import { cn } from "@/utils";
 import { type ReactNode, memo, useState } from "react";
-import { MdQrCodeScanner } from "react-icons/md";
+import { MdOutlinePrivacyTip, MdQrCodeScanner } from "react-icons/md";
 import {
 	VscAccount,
 	VscExtensions,
@@ -57,10 +57,21 @@ export const ActivityBar = memo(() => {
 					onClick={() => sidebar.toggle()}
 				/>
 				{items.map((item) => (
-					<ActivityLink to={item.to} title={item.title} icon={item.icon} key={item.to.toString()} />
+					<ActivityLink
+						to={item.to}
+						title={item.title}
+						icon={item.icon}
+						key={item.to.toString()}
+					/>
 				))}
-				<ActivityButton
+
+				<ActivityLink
 					className="mt-auto"
+					to="/privacy-policy"
+					title="プライバシーポリシー"
+					icon={<MdOutlinePrivacyTip />}
+				/>
+				<ActivityButton
 					icon={<MdQrCodeScanner />}
 					title="QRコード"
 					aria-label="QRコードを表示"
