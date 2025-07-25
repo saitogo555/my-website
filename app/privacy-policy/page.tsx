@@ -26,14 +26,14 @@ const PrivacyPolicyPage = () => {
 						tag="p"
 						text="当サイトでは、以下の場合に個人情報を収集することがあります："
 					/>
-					<ul className="list-disc list-inside my-2 ml-4">
-						<li>
+					<ul className="list-disc text-primary-text my-2 ml-4">
+						<li className="my-4 ml-1.5">
 							<TypingText
 								tag="span"
 								text="お問い合わせフォームからのご連絡時（お名前、メールアドレス、お問い合わせ内容）"
 							/>
 						</li>
-						<li>
+						<li className="my-4 ml-1.5">
 							<TypingText
 								tag="span"
 								text="Webサイトの利用状況の分析（Google Analyticsなどのツール使用時）"
@@ -49,17 +49,17 @@ const PrivacyPolicyPage = () => {
 						tag="p"
 						text="収集した個人情報は、以下の目的で利用します："
 					/>
-					<ul className="list-disc list-inside my-2 ml-4">
-						<li>
+					<ul className="list-disc text-primary-text my-2 ml-4">
+						<li className="my-4 ml-1.5">
 							<TypingText
 								tag="span"
 								text="お問い合わせに対する回答および対応"
 							/>
 						</li>
-						<li>
+						<li className="my-4 ml-1.5">
 							<TypingText tag="span" text="サイトの改善および品質向上" />
 						</li>
-						<li>
+						<li className="my-4 ml-1.5">
 							<TypingText tag="span" text="法的義務の履行" />
 						</li>
 					</ul>
