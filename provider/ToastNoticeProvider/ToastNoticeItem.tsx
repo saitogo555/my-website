@@ -1,4 +1,4 @@
-import { type MouseEventHandler, memo } from "react";
+import { type MouseEventHandler } from "react";
 import { ToastNoticeCloseButton } from "./ToastNoticeCloseButton";
 import { ToastNoticeIcon } from "./ToastNoticeIcon";
 import type { ToastNoticeType } from "./ToastNoticeProvider";
@@ -10,7 +10,7 @@ type Props = {
 	onClose: MouseEventHandler<HTMLButtonElement>;
 };
 
-export const ToastNoticeItem = memo(({ variant = "info", title, message, onClose }: Props) => {
+export const ToastNoticeItem = ({ variant = "info", title, message, onClose }: Props) => {
 	return (
 		<div className="w-[25rem] animate-toast-in border border-neutral-800 bg-secondary p-3 shadow-[0px_0px_12px_3px_#00000080] shadow-neutral-900">
 			<div className="flex items-center">
@@ -21,4 +21,4 @@ export const ToastNoticeItem = memo(({ variant = "info", title, message, onClose
 			<p className="mt-4 text-primary-text text-sm">{message}</p>
 		</div>
 	);
-});
+};

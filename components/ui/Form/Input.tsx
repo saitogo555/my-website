@@ -1,12 +1,12 @@
 import { cn } from "@/utils";
-import { type InputHTMLAttributes, memo } from "react";
+import { type InputHTMLAttributes } from "react";
 
 type Props = {
 	className?: string;
 	isError?: boolean;
 } & InputHTMLAttributes<HTMLInputElement>;
 
-export const Input = memo(({ className, isError, ...props }: Props) => {
+export const Input = ({ className, isError, ...props }: Props) => {
 	return (
 		<input
 			className={cn(
@@ -19,4 +19,4 @@ export const Input = memo(({ className, isError, ...props }: Props) => {
 			{...props}
 		/>
 	);
-});
+};

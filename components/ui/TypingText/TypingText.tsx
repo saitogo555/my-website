@@ -1,7 +1,6 @@
 "use client";
 
 import { cn } from "@/utils";
-import { memo } from "react";
 import { InView } from "react-intersection-observer";
 import { TypeAnimation } from "react-type-animation";
 
@@ -12,7 +11,7 @@ type Props = {
 	delay?: number;
 };
 
-export const TypingText = memo(({ className, tag, text, delay = 0 }: Props) => {
+export const TypingText = ({ className, tag, text, delay = 0 }: Props) => {
 	const Component = tag;
 
 	return (
@@ -36,4 +35,4 @@ export const TypingText = memo(({ className, tag, text, delay = 0 }: Props) => {
 			)}
 		</InView>
 	);
-});
+};

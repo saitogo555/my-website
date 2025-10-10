@@ -1,6 +1,6 @@
 "use client";
 
-import { type ReactNode, createContext, useCallback, useEffect, useState } from "react";
+import { type ReactNode, createContext, useEffect, useState } from "react";
 
 type Props = {
 	children: ReactNode;
@@ -26,26 +26,23 @@ export const SidebarProvider = ({ children }: Props) => {
 		setIsOpen(false);
 	};
 
-	const toggle = useCallback(() => {
+	const toggle = () => {
 		setIsOpen((prevIsOpen) => !prevIsOpen);
-	}, []);
-
-	const handleKeydown = useCallback(
-		(e: KeyboardEvent) => {
-			if (e.ctrlKey && e.key === "b") {
-				e.preventDefault();
-				toggle();
-			}
-		},
-		[toggle],
-	);
+	};
 
 	useEffect(() => {
+		const handleKeydown = (e: KeyboardEvent) => {
+			if (e.ctrlKey && e.key === "b") {
+				e.preventDefault();
+				setIsOpen((prevIsOpen) => !prevIsOpen);
+			}
+		};
+
 		window.addEventListener("keydown", handleKeydown);
 		return () => {
 			window.removeEventListener("keydown", handleKeydown);
 		};
-	}, [handleKeydown]);
+	}, []);
 
 	useEffect(() => {
 		setIsOpen(window.innerWidth > 1024);

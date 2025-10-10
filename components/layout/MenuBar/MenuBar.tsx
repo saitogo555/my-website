@@ -10,7 +10,7 @@ import {
 	ZENN_LINK,
 } from "@/constants/links";
 import { cn } from "@/utils";
-import { type RefObject, createRef, useCallback, useEffect, useRef, useState } from "react";
+import { type RefObject, createRef, useEffect, useRef, useState } from "react";
 import { RxDotsHorizontal } from "react-icons/rx";
 import { VscMenu } from "react-icons/vsc";
 import { MenuIcon } from "./MenuIcon";
@@ -43,56 +43,56 @@ export const MenuBar = ({ className }: Props) => {
 		setIsOpen((prevIsOpen) => !prevIsOpen);
 	};
 
-	const handleClickOutsideButton = useCallback((e: MouseEvent) => {
-		if (btnRef.current && !btnRef.current.contains(e.target as Node)) {
-			setIsOpen(false);
-		}
-	}, []);
-
-	const handleResize = useCallback(() => {
-		if (!menuRef.current || !btnRef.current) {
-			return;
-		}
-
-		btnRef.current.style.display = "block";
-		let totalWidth: number = btnRef.current.offsetWidth ?? 0; // メニューアイテムの横幅の合計
-		const menuWidth: number = menuRef.current.offsetWidth;
-		const newOverflowItems: ExternalLinkWithIcon[] = [];
-
-		btnRef.current.style.display = "";
-		for (const itemRef of itemsRef.current) {
-			if (!itemRef.current) {
-				continue;
-			}
-			itemRef.current.style.display = "flex";
-		}
-		itemsRef.current.forEach((itemRef, i) => {
-			if (!itemRef.current) {
+	useEffect(() => {
+		const handleResize = () => {
+			if (!menuRef.current || !btnRef.current) {
 				return;
 			}
 
-			totalWidth += itemRef.current.offsetWidth;
-			if (totalWidth > menuWidth) {
-				newOverflowItems.push(items[i]);
-				itemRef.current.style.display = "none";
-			}
-		});
+			btnRef.current.style.display = "block";
+			let totalWidth: number = btnRef.current.offsetWidth ?? 0; // メニューアイテムの横幅の合計
+			const menuWidth: number = menuRef.current.offsetWidth;
+			const newOverflowItems: ExternalLinkWithIcon[] = [];
 
-		if (items.length - newOverflowItems.length <= 2) {
+			btnRef.current.style.display = "";
 			for (const itemRef of itemsRef.current) {
 				if (!itemRef.current) {
 					continue;
 				}
-				itemRef.current.style.display = "none";
+				itemRef.current.style.display = "flex";
 			}
-			setOverflowItems(items);
-		} else {
-			setOverflowItems(newOverflowItems);
-		}
-		setIsOpen((prevIsOpen) => (newOverflowItems.length > 0 ? prevIsOpen : false));
-	}, []);
+			itemsRef.current.forEach((itemRef, i) => {
+				if (!itemRef.current) {
+					return;
+				}
 
-	useEffect(() => {
+				totalWidth += itemRef.current.offsetWidth;
+				if (totalWidth > menuWidth) {
+					newOverflowItems.push(items[i]);
+					itemRef.current.style.display = "none";
+				}
+			});
+
+			if (items.length - newOverflowItems.length <= 2) {
+				for (const itemRef of itemsRef.current) {
+					if (!itemRef.current) {
+						continue;
+					}
+					itemRef.current.style.display = "none";
+				}
+				setOverflowItems(items);
+			} else {
+				setOverflowItems(newOverflowItems);
+			}
+			setIsOpen((prevIsOpen) => (newOverflowItems.length > 0 ? prevIsOpen : false));
+		};
+
+		const handleClickOutsideButton = (e: MouseEvent) => {
+			if (btnRef.current && !btnRef.current.contains(e.target as Node)) {
+				setIsOpen(false);
+			}
+		};
+
 		handleResize();
 		window.addEventListener("resize", handleResize);
 		document.addEventListener("click", handleClickOutsideButton);
@@ -101,7 +101,7 @@ export const MenuBar = ({ className }: Props) => {
 			window.removeEventListener("resize", handleResize);
 			document.removeEventListener("click", handleClickOutsideButton);
 		};
-	}, [handleResize, handleClickOutsideButton]);
+	}, []);
 
 	return (
 		<ul className={cn("flex py-1", className)} ref={menuRef}>

@@ -8,7 +8,7 @@ import { cn } from "@/utils";
 import { getFormProps, getInputProps, getTextareaProps, useForm } from "@conform-to/react";
 import { parseWithZod } from "@conform-to/zod";
 import Form from "next/form";
-import { useActionState, useCallback, useEffect } from "react";
+import { useActionState } from "react";
 import { VscLoading } from "react-icons/vsc";
 import { formSchema } from "../../../../schemas/form";
 import type { EmailResponse } from "../../types";
@@ -18,14 +18,21 @@ import { FormSection } from "./FormSection";
 import { SuccessAlert } from "./SuccessAlert";
 
 export const ContactForm = () => {
+	const { add: addToastNotice } = useToastNotice();
 	const [result, formAction, isPending] = useActionState<EmailResponse, FormData>(
 		async (_, formData) => {
 			const res = await sendEmail(formData);
+			if (res) {
+				if (res.success) {
+					addToastNotice({ type: "info", message: res.message });
+				} else {
+					addToastNotice({ type: "error", message: res.message });
+				}
+			}
 			return res;
 		},
 		null,
 	);
-	const toastNotice = useToastNotice();
 	const [form, fields] = useForm({
 		onValidate({ formData }) {
 			return parseWithZod(formData, { schema: formSchema });
@@ -33,20 +40,6 @@ export const ContactForm = () => {
 		shouldValidate: "onBlur",
 		shouldRevalidate: "onInput",
 	});
-
-	const onChangeResult = useCallback(() => {
-		if (result === null) return;
-
-		if (result.success) {
-			toastNotice.add({ type: "info", message: result.message });
-		} else {
-			toastNotice.add({ type: "error", message: result.message });
-		}
-	}, [result, toastNotice.add]);
-
-	useEffect(() => {
-		onChangeResult();
-	}, [onChangeResult]);
 
 	return (
 		<Form {...getFormProps(form)} className="mx-auto flex flex-col gap-12" action={formAction}>

@@ -3,21 +3,20 @@ import { useSidebar } from "@/hooks/useSidebar";
 import type { AnchorLink } from "@/types/link";
 import { cn } from "@/utils";
 import Link from "next/link";
-import { memo, useCallback } from "react";
 import { VscSymbolVariable } from "react-icons/vsc";
 
 type Props = {} & AnchorLink;
 
-export const SidebarAnchorLink = memo(({ text, to }: Props) => {
+export const SidebarAnchorLink = ({ text, to }: Props) => {
 	const sidebar = useSidebar();
 	const { isMobile } = useBreakpoint();
 
-	const handleClick = useCallback(() => {
+	const handleClick = () => {
 		if (!isMobile) {
 			return;
 		}
 		sidebar.close();
-	}, [isMobile, sidebar]);
+	};
 
 	return (
 		<Link
@@ -35,4 +34,4 @@ export const SidebarAnchorLink = memo(({ text, to }: Props) => {
 			<span className={cn("ml-2 text-primary-text text-sm", "max-medium:text-lg")}>{text}</span>
 		</Link>
 	);
-});
+	};

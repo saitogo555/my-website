@@ -2,7 +2,7 @@
 
 import { useSidebar } from "@/hooks/useSidebar";
 import { cn } from "@/utils";
-import { type ReactNode, memo, useState } from "react";
+import { type ReactNode, useState } from "react";
 import { MdOutlinePrivacyTip, MdQrCodeScanner } from "react-icons/md";
 import {
 	VscAccount,
@@ -30,7 +30,7 @@ const items: ActivityLinkType[] = [
 	{ to: "/contact", title: "Contact", icon: <VscMail /> },
 ];
 
-export const ActivityBar = memo(() => {
+export const ActivityBar = () => {
 	const [isQrCodeVisible, setQrCodeVisible] = useState<boolean>(false);
 	const sidebar = useSidebar();
 
@@ -81,4 +81,4 @@ export const ActivityBar = memo(() => {
 			{isQrCodeVisible && <QRCode onClose={handleClickQrCodeCloseButton} />}
 		</>
 	);
-});
+};
