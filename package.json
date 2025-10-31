@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
+    "dev": "next dev",
+    "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "biome lint --write --verbose --unsafe .",
@@ -16,17 +16,17 @@
   "dependencies": {
     "@conform-to/react": "^1.8.2",
     "@conform-to/zod": "^1.8.2",
-    "@next/third-parties": "^15.5.2",
+    "@next/third-parties": "16.0.1",
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.12",
     "glob": "^11.0.3",
-    "next": "15.5.2",
+    "next": "16.0.1",
     "next-sitemap": "^4.2.3",
     "nodemailer": "^7.0.5",
-    "react": "19.1.1",
-    "react-dom": "19.1.1",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
     "react-icons": "^5.5.0",
     "react-intersection-observer": "^9.16.0",
     "react-type-animation": "^3.2.0",
@@ -35,13 +35,14 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.2",
-    "@next/bundle-analyzer": "15.5.2",
+    "@next/bundle-analyzer": "16.0.1",
     "@tailwindcss/postcss": "^4.1.12",
     "@types/glob": "^9.0.0",
     "@types/node": "^24.3.0",
     "@types/nodemailer": "^7.0.1",
-    "@types/react": "19.1.12",
-    "@types/react-dom": "19.1.8",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "playwright": "^1.56.1",
     "postcss": "^8.5.6",
     "tailwind-scrollbar": "^4.0.2",
     "tailwindcss": "^4.1.12",
@@ -49,7 +50,7 @@
     "typescript": "^5.9.2"
   },
   "overrides": {
-    "@types/react": "19.1.12",
-    "@types/react-dom": "19.1.8"
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2"
   }
 }
