@@ -25,7 +25,7 @@ export const StatusBar = () => {
             "hover:bg-neutral-300/10",
             "max-medium:text-lg"
           )}
-          href="https://github.com/saitogo555"
+          href="https://github.com/saitogo555/my-website"
           target="_blank"
           rel="noopener noreferrer"
         >
