@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
 		unoptimized: true,
 		formats: ["image/avif", "image/webp"],
 	},
+	cacheComponents: true,
 };
 
 export default nextConfig;
