@@ -11,7 +11,7 @@ import { SidebarProvider } from "@/provider/SidebarProvider";
 import { ToastNoticeProvider } from "@/provider/ToastNoticeProvider";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import type { ReactNode } from "react";
+import { Suspense, type ReactNode } from "react";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 type Props = {
@@ -97,7 +97,9 @@ const RootLayout = ({ children }: Props) => {
 							</div>
 						</SidebarProvider>
 						<footer>
-							<StatusBar />
+							<Suspense fallback={<div className="h-(--viewport-bottom-height) border-divider border-t bg-primary" />}>
+								<StatusBar />
+							</Suspense>
 						</footer>
 					</div>
 				</ToastNoticeProvider>
