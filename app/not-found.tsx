@@ -1,15 +1,15 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { FilledButton } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { PageTitle } from "@/components/ui/PageTitle";
-import type { Metadata } from "next";
-import Link from "next/link";
 
 export function generateMetadata(): Metadata {
 	return {
 		title: "404 Not Found",
 	};
-};
-	
+}
+
 export default function NotFoundPage() {
 	return (
 		<Container className="flex items-center justify-center">

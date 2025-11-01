@@ -1,6 +1,6 @@
 "use client";
 
-import { type ReactNode, createContext, useCallback, useEffect, useState } from "react";
+import { createContext, type ReactNode, useCallback, useEffect, useState } from "react";
 
 type Props = {
 	children: ReactNode;
@@ -52,4 +52,4 @@ export function SidebarProvider({ children }: Props) {
 	}, []);
 
 	return <SidebarContext value={{ isOpen, open, close, toggle }}>{children}</SidebarContext>;
-};
+}

@@ -12,4 +12,4 @@ export function ErrorAlert({ children }: Props) {
 			{children}
 		</p>
 	);
-};
+}

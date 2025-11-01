@@ -1,7 +1,7 @@
+import type { KeyboardEvent, MouseEvent } from "react";
 import { OutlinedButton } from "@/components/ui/Button";
 import { Card, CardContent } from "@/components/ui/Card";
 import { Image } from "@/components/ui/Image";
-import type { KeyboardEvent, MouseEvent } from "react";
 
 type Props = {
 	onClose: () => void;

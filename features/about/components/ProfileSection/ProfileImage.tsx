@@ -1,9 +1,9 @@
 "use client";
 
+import { type KeyboardEvent, type MouseEvent, useState } from "react";
 import { Card } from "@/components/ui/Card";
 import { Image } from "@/components/ui/Image";
 import { cn } from "@/utils";
-import { type KeyboardEvent, type MouseEvent, useState } from "react";
 
 const perspective = 1000;
 
@@ -87,4 +87,4 @@ export function ProfileImage() {
 			</div>
 		</Card>
 	);
-};
+}

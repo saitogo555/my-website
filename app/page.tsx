@@ -1,9 +1,9 @@
 "use client";
 
-import { FilledButton, OutlinedButton } from "@/components/ui/Button";
-import { Container } from "@/components/ui/Container";
 import Link from "next/link";
 import { TypeAnimation } from "react-type-animation";
+import { FilledButton, OutlinedButton } from "@/components/ui/Button";
+import { Container } from "@/components/ui/Container";
 
 export default function IndexPage() {
 	return (

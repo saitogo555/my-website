@@ -1,5 +1,5 @@
-import { cn } from "@/utils";
 import type { HTMLAttributes, ReactNode } from "react";
+import { cn } from "@/utils";
 
 type Props = {
 	children?: ReactNode;
@@ -11,4 +11,4 @@ export function Section({ children, ...props }: Props) {
 			{children}
 		</section>
 	);
-};
+}

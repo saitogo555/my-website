@@ -1,10 +1,10 @@
 "use client";
 
-import type { SkillLevel } from "@/features/skills/types/Skill";
-import { motion, useInView, Variants } from "framer-motion";
+import { motion, useInView, type Variants } from "framer-motion";
 import { useRef } from "react";
 import { IoStar, IoStarOutline } from "react-icons/io5";
 import { twMerge } from "tailwind-merge";
+import type { SkillLevel } from "@/features/skills/types/Skill";
 
 type Props = {
 	className?: string;
@@ -83,4 +83,4 @@ export function StarRating({ className, value }: Props) {
 			))}
 		</div>
 	);
-};
+}

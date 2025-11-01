@@ -1,9 +1,9 @@
+import Link from "next/link";
+import { VscSymbolVariable } from "react-icons/vsc";
 import { useBreakpoint } from "@/hooks/useBreakpoint";
 import { useSidebar } from "@/hooks/useSidebar";
 import type { AnchorLink } from "@/types/link";
 import { cn } from "@/utils";
-import Link from "next/link";
-import { VscSymbolVariable } from "react-icons/vsc";
 
 type Props = {} & AnchorLink;
 

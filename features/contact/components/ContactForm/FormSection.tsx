@@ -1,5 +1,5 @@
-import { TypingText } from "@/components/ui/TypingText";
 import type { ReactNode } from "react";
+import { TypingText } from "@/components/ui/TypingText";
 
 type Props = {
 	title: string;
@@ -17,4 +17,4 @@ export function FormSection({ title, required, children }: Props) {
 			<div>{children}</div>
 		</div>
 	);
-};
+}

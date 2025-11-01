@@ -47,4 +47,4 @@ export function TimelineItem({ year, month, title, description, isCurrent }: Pro
 			</div>
 		</div>
 	);
-};
+}

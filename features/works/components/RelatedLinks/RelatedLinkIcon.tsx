@@ -25,4 +25,4 @@ export function RelatedLinkIcon({ link }: Props) {
 	}
 
 	return Icon ? <Icon className="text-xl" /> : null;
-};
+}

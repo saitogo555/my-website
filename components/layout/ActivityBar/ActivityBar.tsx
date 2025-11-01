@@ -1,7 +1,5 @@
 "use client";
 
-import { useSidebar } from "@/hooks/useSidebar";
-import { cn } from "@/utils";
 import { type ReactNode, useState } from "react";
 import { MdOutlinePrivacyTip, MdQrCodeScanner } from "react-icons/md";
 import {
@@ -12,6 +10,8 @@ import {
 	VscHome,
 	VscMail,
 } from "react-icons/vsc";
+import { useSidebar } from "@/hooks/useSidebar";
+import { cn } from "@/utils";
 import { QRCode } from "../QRCode";
 import { ActivityButton } from "./ActivityButton";
 import { ActivityLink } from "./ActivityLink";
@@ -57,12 +57,7 @@ export function ActivityBar() {
 					onClick={() => sidebar.toggle()}
 				/>
 				{items.map((item) => (
-					<ActivityLink
-						to={item.to}
-						title={item.title}
-						icon={item.icon}
-						key={item.to.toString()}
-					/>
+					<ActivityLink to={item.to} title={item.title} icon={item.icon} key={item.to.toString()} />
 				))}
 
 				<ActivityLink
@@ -77,8 +72,8 @@ export function ActivityBar() {
 					aria-label="QRコードを表示"
 					onClick={handleClickQrCodeOpenButton}
 				/>
-		</aside>
-		{isQrCodeVisible && <QRCode onClose={handleClickQrCodeCloseButton} />}
-	</>
-);
+			</aside>
+			{isQrCodeVisible && <QRCode onClose={handleClickQrCodeCloseButton} />}
+		</>
+	);
 }

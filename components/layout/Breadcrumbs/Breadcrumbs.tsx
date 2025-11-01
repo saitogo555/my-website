@@ -1,9 +1,9 @@
 "use client";
 
-import { NAVIGATION_LINKS } from "@/constants/navigation";
 import { usePathname } from "next/navigation";
-import { BreadcrumbItem } from "./BreadcrumbItem";
+import { NAVIGATION_LINKS } from "@/constants/navigation";
 import { cn } from "@/utils";
+import { BreadcrumbItem } from "./BreadcrumbItem";
 
 export function Breadcrumbs() {
 	const pathname = usePathname();
@@ -44,4 +44,4 @@ export function Breadcrumbs() {
 			)}
 		</>
 	);
-};
+}

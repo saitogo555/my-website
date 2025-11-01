@@ -25,4 +25,4 @@ export function SkillSection({ heading, items }: Props) {
 			</div>
 		</Section>
 	);
-};
+}

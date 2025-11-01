@@ -20,9 +20,7 @@ export const RINK_SAUNA: WorkData = {
 		thumbnailSrc: `${BASE_IMAGE_PATH}/rink-sauna_thumb.webp`,
 	},
 	roles: ["フロントエンド", "バックエンド"],
-	technologies: [
-		{ name: "WordPress", iconSrc: "/images/logo/wordpress-logo.svg" },
-	],
+	technologies: [{ name: "WordPress", iconSrc: "/images/logo/wordpress-logo.svg" }],
 	links: ["https://rink-sauna.com/"],
 	images: [
 		{
@@ -55,7 +53,6 @@ export const RINK_SAUNA: WorkData = {
 			src: `${PC_IMAGE_PATH}/rink-sauna_pc-6.webp`,
 			thumbnailSrc: `${PC_IMAGE_PATH}/rink-sauna_pc-6_thumb.webp`,
 		},
-
 
 		{
 			title: "トップページ (SP)",

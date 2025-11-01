@@ -19,4 +19,4 @@ export function TerminalHeader() {
 			</ul>
 		</div>
 	);
-};
+}

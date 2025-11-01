@@ -1,10 +1,10 @@
 "use server";
 
-import type { EmailResponse } from "@/features/contact/types";
-import { wait } from "@/utils";
 import { parseWithZod } from "@conform-to/zod";
 import { createTransport } from "nodemailer";
 import type { Options as MailOptions } from "nodemailer/lib/mailer";
+import type { EmailResponse } from "@/features/contact/types";
+import { wait } from "@/utils";
 import { formSchema } from "../schemas/form";
 
 export async function sendEmail(formData: FormData): Promise<EmailResponse> {

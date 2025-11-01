@@ -1,5 +1,5 @@
-import { cn } from "@/utils";
 import type { ReactNode } from "react";
+import { cn } from "@/utils";
 
 type Props = {
 	className?: string;
@@ -19,4 +19,4 @@ export function Container({ className, children }: Props) {
 			{children}
 		</div>
 	);
-};
+}

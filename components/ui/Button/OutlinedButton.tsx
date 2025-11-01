@@ -1,5 +1,5 @@
-import { cn } from "@/utils";
 import type { ButtonHTMLAttributes, ReactNode } from "react";
+import { cn } from "@/utils";
 
 type Props = {
 	className?: string;
@@ -23,4 +23,4 @@ export function OutlinedButton({ className, type = "button", children, ...props 
 			{children}
 		</button>
 	);
-};
+}

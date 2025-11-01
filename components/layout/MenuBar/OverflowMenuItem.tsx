@@ -29,4 +29,4 @@ export function OverflowMenuItem({ text, href, iconSrc }: Props) {
 			</a>
 		</li>
 	);
-};
+}

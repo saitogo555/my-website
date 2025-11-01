@@ -15,4 +15,4 @@ export function RoleList({ roles }: Props) {
 			))}
 		</ul>
 	);
-};
+}

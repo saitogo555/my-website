@@ -1,8 +1,8 @@
 "use client";
 
-import { cn } from "@/utils";
 import { InView } from "react-intersection-observer";
 import { TypeAnimation } from "react-type-animation";
+import { cn } from "@/utils";
 
 type Props = {
 	className?: string;

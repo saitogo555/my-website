@@ -1,5 +1,5 @@
-import { cn } from "@/utils";
 import { VscChromeClose, VscChromeMinimize, VscChromeRestore } from "react-icons/vsc";
+import { cn } from "@/utils";
 import { WindowControlButton } from "./WindowControlButton";
 
 type Props = {
@@ -26,4 +26,4 @@ export function WindowControlBar({ className }: Props) {
 			/>
 		</div>
 	);
-};
+}

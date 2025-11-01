@@ -1,7 +1,7 @@
+import type { ReactNode } from "react";
 import { TypingText } from "@/components/ui/TypingText";
 import { InView } from "@/components/utils/InView";
 import { cn } from "@/utils";
-import type { ReactNode } from "react";
 
 type Props = {
 	className?: string;
@@ -22,4 +22,4 @@ export function ProfileItem({ className, label, text, icon }: Props) {
 			</div>
 		</InView>
 	);
-};
+}

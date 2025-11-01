@@ -1,5 +1,5 @@
-import { cn } from "@/utils";
 import type { HTMLAttributes } from "react";
+import { cn } from "@/utils";
 
 type Props = {
 	className?: string;
@@ -11,4 +11,4 @@ export function Skelton({ className, ...props }: Props) {
 			<div className="h-full w-full bg-black/10 dark:bg-white/5" />
 		</div>
 	);
-};
+}

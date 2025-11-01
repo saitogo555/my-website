@@ -1,5 +1,8 @@
 "use client";
 
+import { createRef, type RefObject, useEffect, useRef, useState } from "react";
+import { RxDotsHorizontal } from "react-icons/rx";
+import { VscMenu } from "react-icons/vsc";
 import {
 	type ExternalLinkWithIcon,
 	GITHUB_LINK,
@@ -10,9 +13,6 @@ import {
 	ZENN_LINK,
 } from "@/constants/links";
 import { cn } from "@/utils";
-import { type RefObject, createRef, useEffect, useRef, useState } from "react";
-import { RxDotsHorizontal } from "react-icons/rx";
-import { VscMenu } from "react-icons/vsc";
 import { MenuIcon } from "./MenuIcon";
 import { MenuItem } from "./MenuItem";
 import { OverflowMenu } from "./OverflowMenu";
@@ -92,6 +92,7 @@ export function MenuBar({ className }: Props) {
 		setIsOpen((prevIsOpen) => (newOverflowItems.length > 0 ? prevIsOpen : false));
 	};
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: React Compiler handles optimization
 	useEffect(() => {
 		handleResize();
 		window.addEventListener("resize", handleResize);
@@ -138,4 +139,4 @@ export function MenuBar({ className }: Props) {
 			</MenuItem>
 		</ul>
 	);
-};
+}

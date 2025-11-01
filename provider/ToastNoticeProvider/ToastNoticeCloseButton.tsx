@@ -15,4 +15,4 @@ export function ToastNoticeCloseButton({ onClick }: Props) {
 			<VscClose className="text-primary-text" />
 		</button>
 	);
-};
+}

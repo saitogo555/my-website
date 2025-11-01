@@ -12,4 +12,4 @@ export function SuccessAlert({ children }: Props) {
 			{children}
 		</p>
 	);
-};
+}

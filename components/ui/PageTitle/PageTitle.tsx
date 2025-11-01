@@ -20,4 +20,4 @@ export function PageTitle({ text }: Props) {
 			/>
 		</InView>
 	);
-};
+}

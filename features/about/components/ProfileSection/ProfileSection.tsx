@@ -1,13 +1,13 @@
-import { Section, SectionTitle } from "@/components/ui/Section";
-import { TypingText } from "@/components/ui/TypingText";
-import { cn } from "@/utils";
 import { BiBriefcase, BiMessageRoundedDetail } from "react-icons/bi";
 import { GrGamepad } from "react-icons/gr";
 import { MdOutlineBloodtype, MdOutlineCake, MdOutlineLocationOn } from "react-icons/md";
 import { TbCalendarMonth } from "react-icons/tb";
+import { Section, SectionTitle } from "@/components/ui/Section";
+import { TypingText } from "@/components/ui/TypingText";
+import { cn } from "@/utils";
 import { PROFILE } from "../../constants/profile";
-import { ProfileItem } from "./ProfileItem";
 import { ProfileImage } from "./ProfileImage";
+import { ProfileItem } from "./ProfileItem";
 import { ProfileLinks } from "./ProfileLinks";
 
 export function ProfileSection() {
@@ -57,4 +57,4 @@ export function ProfileSection() {
 			</div>
 		</Section>
 	);
-};
+}

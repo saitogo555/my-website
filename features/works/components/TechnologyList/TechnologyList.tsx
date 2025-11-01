@@ -15,4 +15,4 @@ export function TechnologyList({ technologies }: Props) {
 			))}
 		</ul>
 	);
-};
+}

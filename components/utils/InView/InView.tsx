@@ -16,4 +16,4 @@ export function InView({ className, children }: Props) {
 			{children}
 		</div>
 	);
-};
+}

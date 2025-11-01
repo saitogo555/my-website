@@ -1,9 +1,9 @@
 "use client";
 
-import { Image } from "@/components/ui/Image";
-import { cn } from "@/utils";
 import Link from "next/link";
 import { VscChevronRight, VscSymbolMethod } from "react-icons/vsc";
+import { Image } from "@/components/ui/Image";
+import { cn } from "@/utils";
 
 type Props = {
 	text: string;
@@ -37,4 +37,4 @@ export function BreadcrumbItem({ text, to, iconSrc, disableArrow }: Props) {
 			)}
 		</Link>
 	);
-};
+}

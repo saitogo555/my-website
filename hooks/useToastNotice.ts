@@ -1,5 +1,5 @@
-import { ToastNoticeContext } from "@/provider/ToastNoticeProvider";
 import { useContext } from "react";
+import { ToastNoticeContext } from "@/provider/ToastNoticeProvider";
 
 export const useToastNotice = () => {
 	const context = useContext(ToastNoticeContext);

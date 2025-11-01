@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { AnchorHTMLAttributes, ReactNode } from "react";
-import { ActivityIcon } from "./ActivityIcon";
 import { cn } from "@/utils";
+import { ActivityIcon } from "./ActivityIcon";
 
 type Props = {
 	className?: string;

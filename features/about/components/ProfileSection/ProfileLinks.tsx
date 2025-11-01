@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Image } from "@/components/ui/Image";
 import {
 	type ExternalLinkWithIcon,
@@ -8,7 +9,6 @@ import {
 	X_LINK,
 	ZENN_LINK,
 } from "@/constants/links";
-import Link from "next/link";
 
 const items: ExternalLinkWithIcon[] = [
 	GITHUB_LINK,
@@ -45,4 +45,4 @@ export function ProfileLinks() {
 			</Link>
 		</div>
 	);
-};
+}

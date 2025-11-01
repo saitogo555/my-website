@@ -1,11 +1,11 @@
 "use client";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Image } from "@/components/ui/Image";
 import { useBreakpoint } from "@/hooks/useBreakpoint";
 import { useSidebar } from "@/hooks/useSidebar";
 import type { NavigationLink } from "@/types/link";
 import { cn, getPageNameFromPath } from "@/utils";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 type Props = {
 	iconSrc: string;

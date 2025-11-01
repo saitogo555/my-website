@@ -51,4 +51,4 @@ export function Sidebar() {
 			/>
 		</div>
 	);
-};
+}

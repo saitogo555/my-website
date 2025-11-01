@@ -19,4 +19,4 @@ export function CardMedia({ className, src, title, alt, skeltonSize }: Props) {
 			<Image className="w-full" src={src} alt={alt} title={title} skeltonSize={skeltonSize} />
 		</div>
 	);
-};
+}

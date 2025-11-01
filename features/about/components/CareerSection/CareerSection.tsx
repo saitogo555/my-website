@@ -10,4 +10,4 @@ export function CareerSection() {
 			<Timeline />
 		</Section>
 	);
-};
+}

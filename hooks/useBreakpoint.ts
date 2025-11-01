@@ -1,7 +1,7 @@
 "use client";
 
-import { throttle } from "@/utils";
 import { useCallback, useEffect, useState } from "react";
+import { throttle } from "@/utils";
 
 export const useBreakpoint = () => {
 	const [isMobile, setIsMobile] = useState(false);

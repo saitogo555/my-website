@@ -1,6 +1,6 @@
-import { cn } from "@/utils";
 import { type ReactNode, useState } from "react";
 import { VscChevronRight } from "react-icons/vsc";
+import { cn } from "@/utils";
 
 type Props = {
 	title: string;

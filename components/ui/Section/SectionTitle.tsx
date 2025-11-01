@@ -27,4 +27,4 @@ export function SectionTitle({ className, text }: Props) {
 			/>
 		</div>
 	);
-};
+}

@@ -1,6 +1,6 @@
-import { cn } from "@/utils";
 import type { ReactNode } from "react";
 import { VscTarget } from "react-icons/vsc";
+import { cn } from "@/utils";
 
 type Props = {
 	className?: string;
@@ -19,4 +19,4 @@ export function TimelineLabel({ className, children }: Props) {
 			{children}
 		</div>
 	);
-};
+}

@@ -1,10 +1,10 @@
 "use client";
 
+import { GiMedal } from "react-icons/gi";
 import { Card, CardContent } from "@/components/ui/Card";
 import { TypingText } from "@/components/ui/TypingText";
 import { InView } from "@/components/utils/InView";
 import { cn } from "@/utils";
-import { GiMedal } from "react-icons/gi";
 
 type Props = {
 	title: string;
@@ -34,4 +34,4 @@ export function AwardCard({ title, subtitle, description, rank = "other" }: Prop
 			</Card>
 		</InView>
 	);
-};
+}

@@ -15,4 +15,4 @@ export function TechnologyChip({ name, iconSrc, version }: Props) {
 			{version && <span className="ml-1 text-gray-500">{version}</span>}
 		</Chip>
 	);
-};
+}

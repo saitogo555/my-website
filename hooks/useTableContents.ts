@@ -1,6 +1,6 @@
-import type { AnchorLink } from "@/types/link";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
+import type { AnchorLink } from "@/types/link";
 
 export const useTableOfContents = () => {
 	const [toc, setToc] = useState<AnchorLink[]>([]);

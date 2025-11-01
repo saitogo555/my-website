@@ -1,5 +1,5 @@
-import { cn } from "@/utils";
 import type { HTMLAttributes } from "react";
+import { cn } from "@/utils";
 import { OverflowMenuItem } from "./OverflowMenuItem";
 
 type Props = {
@@ -25,4 +25,4 @@ export function OverflowMenu({ items, ...props }: Props) {
 			))}
 		</ul>
 	);
-};
+}

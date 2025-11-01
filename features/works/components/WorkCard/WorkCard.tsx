@@ -1,7 +1,7 @@
+import Link from "next/link";
 import { Card, CardContent, CardMedia } from "@/components/ui/Card";
 import { TypingText } from "@/components/ui/TypingText";
 import { cn } from "@/utils";
-import Link from "next/link";
 import type { WorkData } from "../../types";
 
 type Props = {
@@ -33,4 +33,4 @@ export function WorkCard({ data }: Props) {
 			</Card>
 		</Link>
 	);
-};
+}

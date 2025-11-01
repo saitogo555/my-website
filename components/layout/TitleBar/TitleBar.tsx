@@ -20,4 +20,4 @@ export function TitleBar() {
 			<WindowControlBar className={cn("grow basis-1/5 justify-end")} />
 		</div>
 	);
-};
+}
