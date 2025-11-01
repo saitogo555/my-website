@@ -1,9 +1,8 @@
-"use client";
-
 import Link from "next/link";
-import { TypeAnimation } from "react-type-animation";
 import { FilledButton, OutlinedButton } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { CommandInputAnimation } from "@/features/index/components/CommandInputAnimation";
+import { CommandOutputAnimation } from "@/features/index/components/CommandOutputAnimation";
 
 export default function IndexPage() {
 	return (
@@ -17,29 +16,9 @@ export default function IndexPage() {
 						<span className="text-blue-700">~</span>
 						<span className="text-neutral-300">$</span>
 						<div className="mx-2" />
-						<TypeAnimation
-							className="text-neutral-300"
-							sequence={[500, "whoami"]}
-							speed={{ type: "keyStrokeDelayInMs", value: 40 }}
-							cursor={false}
-							wrapper="p"
-						/>
+						<CommandInputAnimation />
 					</div>
-					<TypeAnimation
-						className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text font-bold text-3xl text-transparent after:text-neutral-300"
-						sequence={[
-							2000,
-							"I'm Front-end Engi",
-							500,
-							"I'm Back-end Engi",
-							500,
-							"I'm Full Stack Web Developer",
-						]}
-						speed={20}
-						deletionSpeed={{ type: "keyStrokeDelayInMs", value: 40 }}
-						cursor={true}
-						wrapper="p"
-					/>
+					<CommandOutputAnimation />
 				</div>
 				<div className="flex gap-4">
 					<Link href="/about">
