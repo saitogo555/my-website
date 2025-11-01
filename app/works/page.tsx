@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 	title: "Works",
 };
 
-const WorksPage = () => {
+export default function WorksPage() {
 	return (
 		<Container>
 			<PageTitle text="Works" />
@@ -31,4 +31,3 @@ const WorksPage = () => {
 	);
 };
 
-export default WorksPage;

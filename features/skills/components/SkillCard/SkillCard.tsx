@@ -33,7 +33,7 @@ const transition: Transition = {
 	stiffness: 80,
 };
 
-export const SkillCard = ({ text, iconSrc, star }: Props) => {
+export function SkillCard({ text, iconSrc, star }: Props) {
 	const ref = useRef(null);
 	const isInView = useInView(ref, {
 		once: true,

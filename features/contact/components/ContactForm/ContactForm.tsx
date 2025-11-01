@@ -17,7 +17,7 @@ import { FormError } from "./FormError";
 import { FormSection } from "./FormSection";
 import { SuccessAlert } from "./SuccessAlert";
 
-export const ContactForm = () => {
+export function ContactForm() {
 	const [result, formAction, isPending] = useActionState<EmailResponse, FormData>(
 		async (_, formData) => {
 			const res = await sendEmail(formData);

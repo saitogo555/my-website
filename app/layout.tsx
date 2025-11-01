@@ -74,7 +74,7 @@ export const metadata: Metadata = {
   },
 };
 
-const RootLayout = ({ children }: Props) => {
+export default function RootLayout({ children }: Props) {
   return (
     <html lang="ja">
       <body>
@@ -109,6 +109,4 @@ const RootLayout = ({ children }: Props) => {
       <GoogleAnalytics gaId={process.env.GTAG_ID || ""} />
     </html>
   );
-};
-
-export default RootLayout;
+}

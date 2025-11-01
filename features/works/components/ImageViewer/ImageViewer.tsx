@@ -10,7 +10,7 @@ type Props = {
 	image: WorkImage;
 };
 
-export const ImageViewer = ({ image }: Props) => {
+export function ImageViewer({ image }: Props) {
 	const [scale, setScale] = useState<number>(100);
 
 	const handleChangeScale = (event: ChangeEvent<HTMLInputElement>) => {

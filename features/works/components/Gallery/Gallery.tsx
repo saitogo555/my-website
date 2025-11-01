@@ -10,7 +10,7 @@ type Props = {
 	images: WorkImage[];
 };
 
-export const Gallery = ({ id, images }: Props) => {
+export function Gallery({ id, images }: Props) {
 	return (
 		<div
 			className={cn(

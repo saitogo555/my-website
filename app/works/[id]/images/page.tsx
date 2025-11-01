@@ -6,9 +6,8 @@ type Props = {
 	}>;
 };
 
-const ImagesPage = async ({ params }: Props) => {
+export default async function ImagesPage({ params }: Props) {
 	const { id } = await params;
 	redirect(`/works/${id}/images/1`);
-};
+}
 
-export default ImagesPage;

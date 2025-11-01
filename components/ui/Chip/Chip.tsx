@@ -6,7 +6,7 @@ type Props = {
 	children?: ReactNode;
 };
 
-export const Chip = ({ className, children }: Props) => {
+export function Chip({ className, children }: Props) {
 	return (
 		<div className={cn("rounded-full bg-primary px-3 py-1 text-primary-text text-sm", className)}>
 			{children}

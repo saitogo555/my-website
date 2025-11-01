@@ -6,7 +6,7 @@ type Props = {
 	children?: ReactNode;
 };
 
-export const Container = ({ className, children }: Props) => {
+export function Container({ className, children }: Props) {
 	return (
 		<div
 			className={cn(

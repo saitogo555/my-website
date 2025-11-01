@@ -7,7 +7,7 @@ type Props = {
 	href: string;
 };
 
-export const OverflowMenuItem = ({ text, href, iconSrc }: Props) => {
+export function OverflowMenuItem({ text, href, iconSrc }: Props) {
 	return (
 		<li>
 			<a

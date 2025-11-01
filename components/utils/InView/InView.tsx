@@ -8,7 +8,7 @@ type Props = {
 	children?: ReactNode;
 };
 
-export const InView = ({ className, children }: Props) => {
+export function InView({ className, children }: Props) {
 	const { ref } = useInView({ threshold: 1, triggerOnce: true });
 
 	return (

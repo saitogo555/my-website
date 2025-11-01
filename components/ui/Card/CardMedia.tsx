@@ -13,7 +13,7 @@ type Props = {
 	};
 };
 
-export const CardMedia = ({ className, src, title, alt, skeltonSize }: Props) => {
+export function CardMedia({ className, src, title, alt, skeltonSize }: Props) {
 	return (
 		<div className={cn("w-full", className)}>
 			<Image className="w-full" src={src} alt={alt} title={title} skeltonSize={skeltonSize} />

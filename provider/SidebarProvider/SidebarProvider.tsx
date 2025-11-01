@@ -15,7 +15,7 @@ type SidebarContextProps = {
 
 export const SidebarContext = createContext<SidebarContextProps | undefined>(undefined);
 
-export const SidebarProvider = ({ children }: Props) => {
+export function SidebarProvider({ children }: Props) {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 
 	const open = () => {

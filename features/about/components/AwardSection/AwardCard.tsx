@@ -13,7 +13,7 @@ type Props = {
 	rank?: "gold" | "silver" | "bronze" | "other";
 };
 
-export const AwardCard = ({ title, subtitle, description, rank = "other" }: Props) => {
+export function AwardCard({ title, subtitle, description, rank = "other" }: Props) {
 	return (
 		<InView>
 			<Card className="relative z-0 h-full">

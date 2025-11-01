@@ -30,7 +30,7 @@ const items: ExternalLinkWithIcon[] = [
 	GRAVATAR_LINK,
 ];
 
-export const MenuBar = ({ className }: Props) => {
+export function MenuBar({ className }: Props) {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 	const [overflowItems, setOverflowItems] = useState<ExternalLinkWithIcon[]>([]);
 	const menuRef = useRef<HTMLUListElement>(null);

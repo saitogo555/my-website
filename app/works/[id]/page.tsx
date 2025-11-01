@@ -32,7 +32,7 @@ export async function generateStaticParams() {
 	}));
 }
 
-const WorkIdPage = async ({ params }: Props) => {
+export default async function WorkIdPage({ params }: Props) {
 	const { id } = await params;
 	const data = WORK_LIST.find((item) => item.id === id);
 
@@ -89,4 +89,3 @@ const WorkIdPage = async ({ params }: Props) => {
 	);
 };
 
-export default WorkIdPage;

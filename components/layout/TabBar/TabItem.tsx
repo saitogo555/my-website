@@ -9,7 +9,7 @@ type Props = {
 	iconSrc: string;
 } & NavigationLink;
 
-export const TabItem = ({ text, to, iconSrc }: Props) => {
+export function TabItem({ text, to, iconSrc }: Props) {
 	const currentPagePath = usePathname();
 	const isCurrentPage = currentPagePath === to;
 	const title = getPageNameFromPath(to);

@@ -45,7 +45,7 @@ const items: { label: string; text: string }[] = [
 	},
 ];
 
-const SkillsPage = () => {
+export default function SkillsPage() {
 	return (
 		<Container>
 			<PageTitle text="Skills" />
@@ -90,4 +90,3 @@ const SkillsPage = () => {
 	);
 };
 
-export default SkillsPage;

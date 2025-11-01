@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 	title: "Privacy Policy",
 };
 
-const PrivacyPolicyPage = () => {
+export default function PrivacyPolicyPage() {
 	return (
 		<Container>
 			<PageTitle text="Privacy Policy" />
@@ -151,4 +151,3 @@ const PrivacyPolicyPage = () => {
 	);
 };
 
-export default PrivacyPolicyPage;

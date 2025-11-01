@@ -6,7 +6,7 @@ type Props = {
 	items: { text: string; iconSrc: string; href: string }[];
 } & HTMLAttributes<HTMLUListElement>;
 
-export const OverflowMenu = ({ items, ...props }: Props) => {
+export function OverflowMenu({ items, ...props }: Props) {
 	return (
 		<ul
 			className={cn(

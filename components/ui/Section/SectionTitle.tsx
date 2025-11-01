@@ -8,7 +8,7 @@ type Props = {
 	text?: string;
 };
 
-export const SectionTitle = ({ className, text }: Props) => {
+export function SectionTitle({ className, text }: Props) {
 	const id = text?.replace(/\s+/g, "-");
 
 	return (

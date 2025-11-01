@@ -8,7 +8,7 @@ type Props = {
 	data: WorkData;
 };
 
-export const WorkCard = ({ data }: Props) => {
+export function WorkCard({ data }: Props) {
 	return (
 		<Link href={`/works/${data.id}`}>
 			<Card className="group h-full cursor-pointer duration-500" title={data.thumbnail.title}>

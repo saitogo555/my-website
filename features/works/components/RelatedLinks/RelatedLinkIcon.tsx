@@ -5,7 +5,7 @@ type Props = {
 	link: string;
 };
 
-export const RelatedLinkIcon = ({ link }: Props) => {
+export function RelatedLinkIcon({ link }: Props) {
 	let Icon = null;
 	try {
 		const url = new URL(link);

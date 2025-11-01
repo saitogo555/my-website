@@ -5,7 +5,7 @@ import { Container } from "@/components/ui/Container";
 import Link from "next/link";
 import { TypeAnimation } from "react-type-animation";
 
-const IndexPage = () => {
+export default function IndexPage() {
 	return (
 		<Container className="flex items-center">
 			<div>
@@ -52,6 +52,4 @@ const IndexPage = () => {
 			</div>
 		</Container>
 	);
-};
-
-export default IndexPage;
+}

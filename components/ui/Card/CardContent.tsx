@@ -6,7 +6,7 @@ type Props = {
 	children?: ReactNode;
 } & HTMLAttributes<HTMLDivElement>;
 
-export const CardContent = ({ className, children, ...props }: Props) => {
+export function CardContent({ className, children, ...props }: Props) {
 	return (
 		<div className={cn("p-6", className)} {...props}>
 			{children}

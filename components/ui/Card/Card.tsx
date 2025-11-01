@@ -6,7 +6,7 @@ type Props = {
 	children?: ReactNode;
 } & HTMLAttributes<HTMLDivElement>;
 
-export const Card = ({ className, children, ...props }: Props) => {
+export function Card({ className, children, ...props }: Props) {
 	return (
 		<div className={cn("overflow-hidden rounded-lg bg-primary shadow-lg", className)} {...props}>
 			{children}

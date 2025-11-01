@@ -5,7 +5,7 @@ import { cn } from "@/utils";
 import { SidebarAnchorMenu } from "./SidebarAnchorMenu";
 import { SidebarNavigation } from "./SidebarNavigationMenu";
 
-export const Sidebar = () => {
+export function Sidebar() {
 	const sidebar = useSidebar();
 
 	const handleClickOverlay = () => {

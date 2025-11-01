@@ -29,7 +29,7 @@ export async function generateStaticParams() {
 	);
 }
 
-const ImageIndexPage = async ({ params }: Props) => {
+export default async function ImageIndexPage({ params }: Props) {
 	const { id, index } = await params;
 	const data = WORK_LIST.find((item) => item.id === id);
 	const image = data?.images[Number.parseInt(index) - 1];
@@ -39,4 +39,3 @@ const ImageIndexPage = async ({ params }: Props) => {
 	return <ImageViewer image={image} />;
 };
 
-export default ImageIndexPage;

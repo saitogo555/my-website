@@ -2,7 +2,7 @@ import { cn } from "@/utils";
 import { VscRemote, VscSourceControl } from "react-icons/vsc";
 import { Copyright } from "./Copyright";
 
-export const StatusBar = () => {
+export function StatusBar() {
   return (
     <div className="relative z-30 flex h-(--viewport-bottom-height) justify-between border-divider border-t bg-primary">
       <div className="flex gap-1">

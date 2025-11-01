@@ -7,7 +7,7 @@ type Props = {
 	children?: ReactNode;
 };
 
-export const FormSection = ({ title, required, children }: Props) => {
+export function FormSection({ title, required, children }: Props) {
 	return (
 		<div className="flex flex-col gap-2">
 			<div className="flex gap-1">

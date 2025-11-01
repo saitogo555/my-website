@@ -6,7 +6,7 @@ type Props = {
 	className?: string;
 };
 
-export const WindowControlBar = ({ className }: Props) => {
+export function WindowControlBar({ className }: Props) {
 	return (
 		<div className={cn("flex h-full", className)}>
 			<WindowControlButton

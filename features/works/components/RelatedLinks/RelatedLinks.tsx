@@ -6,7 +6,7 @@ type Props = {
 	links: string[];
 };
 
-export const RelatedLinks = ({ links }: Props) => {
+export function RelatedLinks({ links }: Props) {
 	return (
 		<>
 			{links ? (

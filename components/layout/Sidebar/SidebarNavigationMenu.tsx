@@ -2,7 +2,7 @@ import { NAVIGATION_LINKS } from "@/constants/navigation";
 import { SidebarAccordionMenu } from "./SidebarAccordionMenu";
 import { SidebarNavigationLink } from "./SidebarNavigationLink";
 
-export const SidebarNavigation = () => {
+export function SidebarNavigation() {
 	return (
 		<SidebarAccordionMenu title="SAITOGO.ME">
 			<nav>

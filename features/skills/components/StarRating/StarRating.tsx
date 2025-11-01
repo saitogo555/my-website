@@ -51,7 +51,7 @@ const emptyStarVariants: Variants = {
 	}),
 };
 
-export const StarRating = ({ className, value }: Props) => {
+export function StarRating({ className, value }: Props) {
 	const ref = useRef(null);
 	const isInView = useInView(ref, {
 		once: true,

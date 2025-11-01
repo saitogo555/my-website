@@ -6,7 +6,7 @@ import { useSidebar } from "@/hooks/useSidebar";
 import { cn } from "@/utils";
 import Link from "next/link";
 
-export const TitleLogo = () => {
+export function TitleLogo() {
 	const sidebar = useSidebar();
 	const { isMobile } = useBreakpoint();
 

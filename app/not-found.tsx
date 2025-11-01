@@ -4,13 +4,13 @@ import { PageTitle } from "@/components/ui/PageTitle";
 import type { Metadata } from "next";
 import Link from "next/link";
 
-export const generateMetadata = (): Metadata => {
+export function generateMetadata(): Metadata {
 	return {
 		title: "404 Not Found",
 	};
 };
-
-const NotFoundPage = () => {
+	
+export default function NotFoundPage() {
 	return (
 		<Container className="flex items-center justify-center">
 			<div className="flex flex-col items-center">
@@ -21,6 +21,4 @@ const NotFoundPage = () => {
 			</div>
 		</Container>
 	);
-};
-
-export default NotFoundPage;
+}

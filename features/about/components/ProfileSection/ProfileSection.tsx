@@ -10,7 +10,7 @@ import { ProfileItem } from "./ProfileItem";
 import { ProfileImage } from "./ProfileImage";
 import { ProfileLinks } from "./ProfileLinks";
 
-export const ProfileSection = () => {
+export function ProfileSection() {
 	return (
 		<Section className={cn("flex gap-8", "max-medium:flex-col", "min-medium:@max-small:flex-col")}>
 			<div className="basis-2/5">

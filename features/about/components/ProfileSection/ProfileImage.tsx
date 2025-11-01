@@ -7,7 +7,7 @@ import { type KeyboardEvent, type MouseEvent, useState } from "react";
 
 const perspective = 1000;
 
-export const ProfileImage = () => {
+export function ProfileImage() {
 	const [isFlipped, setIsFlipped] = useState<boolean>(false);
 
 	const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {

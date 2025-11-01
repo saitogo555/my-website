@@ -7,7 +7,7 @@ type Props = {
 	children?: ReactNode;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
-export const FilledButton = ({ className, type = "button", children, ...props }: Props) => {
+export function FilledButton({ className, type = "button", children, ...props }: Props) {
 	return (
 		<button
 			className={cn(

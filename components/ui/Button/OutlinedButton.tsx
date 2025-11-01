@@ -7,7 +7,7 @@ type Props = {
 	children?: ReactNode;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
-export const OutlinedButton = ({ className, type = "button", children, ...props }: Props) => {
+export function OutlinedButton({ className, type = "button", children, ...props }: Props) {
 	return (
 		<button
 			className={cn(

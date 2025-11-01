@@ -5,7 +5,7 @@ type Props = {
 	children: ReactNode;
 };
 
-export const EditorArea = ({ children }: Props) => {
+export function EditorArea({ children }: Props) {
 	return (
 		<div className="h-full bg-secondary">
 			<div

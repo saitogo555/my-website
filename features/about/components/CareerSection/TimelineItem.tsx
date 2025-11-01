@@ -11,7 +11,7 @@ type Props = {
 	isCurrent?: boolean;
 };
 
-export const TimelineItem = ({ year, month, title, description, isCurrent }: Props) => {
+export function TimelineItem({ year, month, title, description, isCurrent }: Props) {
 	const yyyy = year;
 	const mm = `00${month}`.slice(-2);
 

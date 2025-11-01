@@ -7,7 +7,7 @@ type Props = {
 	children: ReactNode;
 };
 
-export const TimelineLabel = ({ className, children }: Props) => {
+export function TimelineLabel({ className, children }: Props) {
 	return (
 		<div
 			className={cn(

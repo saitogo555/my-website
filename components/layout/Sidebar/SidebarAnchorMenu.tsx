@@ -2,7 +2,7 @@ import { useTableOfContents } from "@/hooks/useTableContents";
 import { SidebarAccordionMenu } from "./SidebarAccordionMenu";
 import { SidebarAnchorLink } from "./SidebarAnchorLink";
 
-export const SidebarAnchorMenu = () => {
+export function SidebarAnchorMenu() {
 	const toc = useTableOfContents();
 
 	return (

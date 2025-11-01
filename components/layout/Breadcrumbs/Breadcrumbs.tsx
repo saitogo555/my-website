@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { BreadcrumbItem } from "./BreadcrumbItem";
 import { cn } from "@/utils";
 
-export const Breadcrumbs = () => {
+export function Breadcrumbs() {
 	const pathname = usePathname();
 
 	const splittedPathList = pathname.split("/").filter((path) => path.length > 0);

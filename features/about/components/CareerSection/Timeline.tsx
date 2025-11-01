@@ -46,7 +46,7 @@ const items: {
 	},
 ];
 
-export const Timeline = () => {
+export function Timeline() {
 	return (
 		<div>
 			{items.map((item, i) => (

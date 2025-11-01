@@ -7,7 +7,7 @@ type Props = {
 	text?: string;
 };
 
-export const PageTitle = ({ text }: Props) => {
+export function PageTitle({ text }: Props) {
 	return (
 		<InView className="mb-10">
 			<TypingText

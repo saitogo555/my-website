@@ -21,7 +21,7 @@ type ToastNoticeContextProps = {
 
 export const ToastNoticeContext = createContext<ToastNoticeContextProps | undefined>(undefined);
 
-export const ToastNoticeProvider = ({ children }: Props) => {
+export function ToastNoticeProvider({ children }: Props) {
 	const [toastNotices, setToastNotices] = useState<ToastNotice[]>([]);
 
 	const add = useCallback((options: { type?: ToastNoticeType; message: string }) => {

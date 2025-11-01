@@ -8,7 +8,7 @@ type Props = {
 	className?: string;
 };
 
-export const SearchBar = ({ className }: Props) => {
+export function SearchBar({ className }: Props) {
 	const toastNotice = useToastNotice();
 
 	const handleClick = async () => {

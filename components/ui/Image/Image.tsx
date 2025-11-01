@@ -16,13 +16,13 @@ type Props = {
 	};
 } & Omit<HTMLAttributes<HTMLImageElement>, "className" | "src" | "alt" | "loading">;
 
-export const Image = ({
+export function Image({
 	className,
 	src,
 	alt,
 	skeltonSize = { aspectRatio: "16/9" },
 	...props
-}: Props) => {
+}: Props) {
 	const [isLoading, setIsLoading] = useState<boolean>(true);
 
 	useEffect(() => {
