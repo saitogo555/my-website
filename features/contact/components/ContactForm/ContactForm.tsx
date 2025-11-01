@@ -8,7 +8,7 @@ import { cn } from "@/utils";
 import { getFormProps, getInputProps, getTextareaProps, useForm } from "@conform-to/react";
 import { parseWithZod } from "@conform-to/zod";
 import Form from "next/form";
-import { useActionState, useCallback, useEffect } from "react";
+import { useActionState, useEffect } from "react";
 import { VscLoading } from "react-icons/vsc";
 import { formSchema } from "../../../../schemas/form";
 import type { EmailResponse } from "../../types";
@@ -34,7 +34,7 @@ export const ContactForm = () => {
 		shouldRevalidate: "onInput",
 	});
 
-	const onChangeResult = useCallback(() => {
+	useEffect(() => {
 		if (result === null) return;
 
 		if (result.success) {
@@ -43,10 +43,6 @@ export const ContactForm = () => {
 			toastNotice.add({ type: "error", message: result.message });
 		}
 	}, [result, toastNotice.add]);
-
-	useEffect(() => {
-		onChangeResult();
-	}, [onChangeResult]);
 
 	return (
 		<Form {...getFormProps(form)} className="mx-auto flex flex-col gap-12" action={formAction}>

@@ -1,12 +1,12 @@
 import { cn } from "@/utils";
-import { type TextareaHTMLAttributes, memo } from "react";
+import type { TextareaHTMLAttributes } from "react";
 
 type Props = {
 	className?: string;
 	isError?: boolean;
 } & TextareaHTMLAttributes<HTMLTextAreaElement>;
 
-export const Textarea = memo(({ className, isError, ...props }: Props) => {
+export function Textarea({ className, isError, ...props }: Props) {
 	return (
 		<textarea
 			className={cn(
@@ -18,4 +18,4 @@ export const Textarea = memo(({ className, isError, ...props }: Props) => {
 			{...props}
 		/>
 	);
-});
+}

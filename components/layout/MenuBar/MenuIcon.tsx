@@ -1,13 +1,12 @@
 import { Image } from "@/components/ui/Image";
 import { cn } from "@/utils";
-import { memo } from "react";
 
 type Props = {
 	iconSrc: string;
 	alt: string;
 };
 
-export const MenuIcon = memo(({ iconSrc, alt }: Props) => {
+export function MenuIcon({ iconSrc, alt }: Props) {
 	return (
 		<Image
 			className={cn("w-4", "max-medium:w-5")}
@@ -16,4 +15,4 @@ export const MenuIcon = memo(({ iconSrc, alt }: Props) => {
 			skeltonSize={{ width: "1rem", aspectRatio: "1/1" }}
 		/>
 	);
-});
+}

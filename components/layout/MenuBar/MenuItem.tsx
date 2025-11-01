@@ -1,5 +1,5 @@
 import { cn } from "@/utils";
-import { type HTMLAttributes, type ReactNode, type Ref, memo } from "react";
+import type { HTMLAttributes, ReactNode, Ref } from "react";
 
 type Props = {
 	className?: string;
@@ -7,7 +7,7 @@ type Props = {
 	children?: ReactNode;
 } & HTMLAttributes<HTMLLIElement>;
 
-export const MenuItem = memo(({ className, ref, children, ...props }: Props) => {
+export function MenuItem({ className, ref, children, ...props }: Props) {
 	return (
 		<li
 			className={cn(
@@ -21,4 +21,4 @@ export const MenuItem = memo(({ className, ref, children, ...props }: Props) => 
 			{children}
 		</li>
 	);
-});
+}

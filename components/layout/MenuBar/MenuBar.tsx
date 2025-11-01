@@ -10,7 +10,7 @@ import {
 	ZENN_LINK,
 } from "@/constants/links";
 import { cn } from "@/utils";
-import { type RefObject, createRef, useCallback, useEffect, useRef, useState } from "react";
+import { type RefObject, createRef, useEffect, useRef, useState } from "react";
 import { RxDotsHorizontal } from "react-icons/rx";
 import { VscMenu } from "react-icons/vsc";
 import { MenuIcon } from "./MenuIcon";
@@ -43,13 +43,13 @@ export const MenuBar = ({ className }: Props) => {
 		setIsOpen((prevIsOpen) => !prevIsOpen);
 	};
 
-	const handleClickOutsideButton = useCallback((e: MouseEvent) => {
+	const handleClickOutsideButton = (e: MouseEvent) => {
 		if (btnRef.current && !btnRef.current.contains(e.target as Node)) {
 			setIsOpen(false);
 		}
-	}, []);
+	};
 
-	const handleResize = useCallback(() => {
+	const handleResize = () => {
 		if (!menuRef.current || !btnRef.current) {
 			return;
 		}
@@ -90,7 +90,7 @@ export const MenuBar = ({ className }: Props) => {
 			setOverflowItems(newOverflowItems);
 		}
 		setIsOpen((prevIsOpen) => (newOverflowItems.length > 0 ? prevIsOpen : false));
-	}, []);
+	};
 
 	useEffect(() => {
 		handleResize();
@@ -101,7 +101,7 @@ export const MenuBar = ({ className }: Props) => {
 			window.removeEventListener("resize", handleResize);
 			document.removeEventListener("click", handleClickOutsideButton);
 		};
-	}, [handleResize, handleClickOutsideButton]);
+	}, []);
 
 	return (
 		<ul className={cn("flex py-1", className)} ref={menuRef}>
