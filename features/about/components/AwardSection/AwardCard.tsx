@@ -1,5 +1,3 @@
-"use client";
-
 import { GiMedal } from "react-icons/gi";
 import { Card, CardContent } from "@/components/ui/Card";
 import { TypingText } from "@/components/ui/TypingText";

@@ -1,5 +1,3 @@
-"use client";
-
 import { Section, SectionTitle } from "@/components/ui/Section";
 import { Timeline } from "./Timeline";
 

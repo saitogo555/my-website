@@ -1,4 +1,3 @@
-"use client";
 import { cn } from "@/utils";
 import { InView } from "../../utils/InView";
 import { TypingText } from "../TypingText";
