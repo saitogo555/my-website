@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /works/*/images/
-Sitemap: https://www.saitogo.me/sitemap.xml
+Sitemap: https://saitogo.me/sitemap.xml

@@ -1,8 +1,6 @@
 "use client";
 
-import { useSidebar } from "@/hooks/useSidebar";
-import { cn } from "@/utils";
-import { type ReactNode, memo, useState } from "react";
+import { type ReactNode, useState } from "react";
 import { MdOutlinePrivacyTip, MdQrCodeScanner } from "react-icons/md";
 import {
 	VscAccount,
@@ -12,6 +10,8 @@ import {
 	VscHome,
 	VscMail,
 } from "react-icons/vsc";
+import { useSidebar } from "@/hooks/useSidebar";
+import { cn } from "@/utils";
 import { QRCode } from "../QRCode";
 import { ActivityButton } from "./ActivityButton";
 import { ActivityLink } from "./ActivityLink";
@@ -30,7 +30,7 @@ const items: ActivityLinkType[] = [
 	{ to: "/contact", title: "Contact", icon: <VscMail /> },
 ];
 
-export const ActivityBar = memo(() => {
+export function ActivityBar() {
 	const [isQrCodeVisible, setQrCodeVisible] = useState<boolean>(false);
 	const sidebar = useSidebar();
 
@@ -57,12 +57,7 @@ export const ActivityBar = memo(() => {
 					onClick={() => sidebar.toggle()}
 				/>
 				{items.map((item) => (
-					<ActivityLink
-						to={item.to}
-						title={item.title}
-						icon={item.icon}
-						key={item.to.toString()}
-					/>
+					<ActivityLink to={item.to} title={item.title} icon={item.icon} key={item.to.toString()} />
 				))}
 
 				<ActivityLink
@@ -81,4 +76,4 @@ export const ActivityBar = memo(() => {
 			{isQrCodeVisible && <QRCode onClose={handleClickQrCodeCloseButton} />}
 		</>
 	);
-});
+}

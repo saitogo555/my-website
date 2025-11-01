@@ -1,28 +1,24 @@
 "use client";
 
-import { NAVIGATION_LINKS } from "@/constants/navigation";
 import { usePathname } from "next/navigation";
-import { useMemo } from "react";
-import { BreadcrumbItem } from "./BreadcrumbItem";
+import { NAVIGATION_LINKS } from "@/constants/navigation";
 import { cn } from "@/utils";
+import { BreadcrumbItem } from "./BreadcrumbItem";
 
-export const Breadcrumbs = () => {
+export function Breadcrumbs() {
 	const pathname = usePathname();
 
-	const breadcrumbs = useMemo(() => {
-		const splittedPathList = pathname.split("/").filter((path) => path.length > 0);
-		const links = splittedPathList.map((name, index) => {
-			const to = `/${splittedPathList.slice(0, index + 1).join("/")}`;
-			const text = NAVIGATION_LINKS.find((link) => link.to === to)?.text ?? name;
-			const iconSrc = NAVIGATION_LINKS.find((link) => link.to === to)?.iconSrc;
-			return {
-				to,
-				text,
-				iconSrc,
-			};
-		});
-		return links;
-	}, [pathname]);
+	const splittedPathList = pathname.split("/").filter((path) => path.length > 0);
+	const breadcrumbs = splittedPathList.map((name, index) => {
+		const to = `/${splittedPathList.slice(0, index + 1).join("/")}`;
+		const text = NAVIGATION_LINKS.find((link) => link.to === to)?.text ?? name;
+		const iconSrc = NAVIGATION_LINKS.find((link) => link.to === to)?.iconSrc;
+		return {
+			to,
+			text,
+			iconSrc,
+		};
+	});
 
 	return (
 		<>
@@ -48,4 +44,4 @@ export const Breadcrumbs = () => {
 			)}
 		</>
 	);
-};
+}

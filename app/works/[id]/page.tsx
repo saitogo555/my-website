@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 import { Image } from "@/components/ui/Image";
 import { PageTitle } from "@/components/ui/PageTitle";
@@ -9,8 +11,6 @@ import { RoleList } from "@/features/works/components/RoleList";
 import { TechnologyList } from "@/features/works/components/TechnologyList";
 import { WORK_LIST } from "@/features/works/constants";
 import { cn } from "@/utils";
-import type { Metadata } from "next";
-import { notFound } from "next/navigation";
 
 type Props = {
 	params: Promise<{
@@ -32,7 +32,7 @@ export async function generateStaticParams() {
 	}));
 }
 
-const WorkIdPage = async ({ params }: Props) => {
+export default async function WorkIdPage({ params }: Props) {
 	const { id } = await params;
 	const data = WORK_LIST.find((item) => item.id === id);
 
@@ -87,6 +87,4 @@ const WorkIdPage = async ({ params }: Props) => {
 			</Section>
 		</Container>
 	);
-};
-
-export default WorkIdPage;
+}

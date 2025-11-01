@@ -1,13 +1,13 @@
 "use client";
 
+import { type KeyboardEvent, type MouseEvent, useState } from "react";
 import { Card } from "@/components/ui/Card";
 import { Image } from "@/components/ui/Image";
 import { cn } from "@/utils";
-import { type KeyboardEvent, type MouseEvent, useState } from "react";
 
 const perspective = 1000;
 
-export const ProfileImage = () => {
+export function ProfileImage() {
 	const [isFlipped, setIsFlipped] = useState<boolean>(false);
 
 	const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
@@ -66,7 +66,7 @@ export const ProfileImage = () => {
 					)}
 				>
 					<Image
-						className="h-full rounded-lg object-cover object-left"
+						className="h-full w-full rounded-lg object-cover object-left"
 						src="/images/about/profile.webp"
 						alt="リアルアイコン"
 						skeltonSize={{ width: "100%", height: "100%", aspectRatio: "1/1" }}
@@ -78,7 +78,7 @@ export const ProfileImage = () => {
 					})}
 				>
 					<Image
-						className="h-full rounded-lg object-cover object-left"
+						className="h-full w-full rounded-lg object-cover object-left"
 						src="/images/about/profile-ghibli.webp"
 						alt="ジブリ風アイコン"
 						skeltonSize={{ width: "100%", height: "100%", aspectRatio: "1/1" }}
@@ -87,4 +87,4 @@ export const ProfileImage = () => {
 			</div>
 		</Card>
 	);
-};
+}

@@ -1,9 +1,9 @@
 "use client";
 
-import { Image } from "@/components/ui/Image";
-import { cn } from "@/utils";
 import Link from "next/link";
 import { VscChevronRight, VscSymbolMethod } from "react-icons/vsc";
+import { Image } from "@/components/ui/Image";
+import { cn } from "@/utils";
 
 type Props = {
 	text: string;
@@ -12,7 +12,7 @@ type Props = {
 	disableArrow?: boolean;
 };
 
-export const BreadcrumbItem = ({ text, to, iconSrc, disableArrow }: Props) => {
+export function BreadcrumbItem({ text, to, iconSrc, disableArrow }: Props) {
 	return (
 		<Link
 			className="group flex shrink-0 items-center text-primary-text/80 text-sm"
@@ -37,4 +37,4 @@ export const BreadcrumbItem = ({ text, to, iconSrc, disableArrow }: Props) => {
 			)}
 		</Link>
 	);
-};
+}

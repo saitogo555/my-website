@@ -1,8 +1,8 @@
+import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { PageTitle } from "@/components/ui/PageTitle";
 import { TypingText } from "@/components/ui/TypingText";
 import { ContactForm } from "@/features/contact/components/ContactForm";
-import type { Metadata } from "next";
 
 export const metadata: Metadata = {
 	title: "Contact",

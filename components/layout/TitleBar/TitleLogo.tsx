@@ -1,12 +1,12 @@
 "use client";
 
+import Link from "next/link";
 import { Image } from "@/components/ui/Image";
 import { useBreakpoint } from "@/hooks/useBreakpoint";
 import { useSidebar } from "@/hooks/useSidebar";
 import { cn } from "@/utils";
-import Link from "next/link";
 
-export const TitleLogo = () => {
+export function TitleLogo() {
 	const sidebar = useSidebar();
 	const { isMobile } = useBreakpoint();
 
@@ -24,4 +24,4 @@ export const TitleLogo = () => {
 			/>
 		</Link>
 	);
-};
+}

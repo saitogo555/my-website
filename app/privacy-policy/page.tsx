@@ -1,15 +1,14 @@
+import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { PageTitle } from "@/components/ui/PageTitle";
-import { Section } from "@/components/ui/Section";
-import { SectionTitle } from "@/components/ui/Section";
+import { Section, SectionTitle } from "@/components/ui/Section";
 import { TypingText } from "@/components/ui/TypingText";
-import type { Metadata } from "next";
 
 export const metadata: Metadata = {
 	title: "Privacy Policy",
 };
 
-const PrivacyPolicyPage = () => {
+export default function PrivacyPolicyPage() {
 	return (
 		<Container>
 			<PageTitle text="Privacy Policy" />
@@ -22,11 +21,8 @@ const PrivacyPolicyPage = () => {
 			<Section>
 				<SectionTitle text="個人情報の収集" />
 				<div className="my-4">
-					<TypingText
-						tag="p"
-						text="当サイトでは、以下の場合に個人情報を収集することがあります："
-					/>
-					<ul className="list-disc text-primary-text my-2 ml-4">
+					<TypingText tag="p" text="当サイトでは、以下の場合に個人情報を収集することがあります：" />
+					<ul className="my-2 ml-4 list-disc text-primary-text">
 						<li className="my-4 ml-1.5">
 							<TypingText
 								tag="span"
@@ -45,16 +41,10 @@ const PrivacyPolicyPage = () => {
 			<Section>
 				<SectionTitle text="個人情報の利用目的" />
 				<div className="my-4">
-					<TypingText
-						tag="p"
-						text="収集した個人情報は、以下の目的で利用します："
-					/>
-					<ul className="list-disc text-primary-text my-2 ml-4">
+					<TypingText tag="p" text="収集した個人情報は、以下の目的で利用します：" />
+					<ul className="my-2 ml-4 list-disc text-primary-text">
 						<li className="my-4 ml-1.5">
-							<TypingText
-								tag="span"
-								text="お問い合わせに対する回答および対応"
-							/>
+							<TypingText tag="span" text="お問い合わせに対する回答および対応" />
 						</li>
 						<li className="my-4 ml-1.5">
 							<TypingText tag="span" text="サイトの改善および品質向上" />
@@ -118,10 +108,7 @@ const PrivacyPolicyPage = () => {
 						tag="p"
 						text="ユーザーは、自身の個人情報について、開示、訂正、削除を求めることができます。"
 					/>
-					<TypingText
-						tag="p"
-						text="ご希望の場合は、お問い合わせフォームよりご連絡ください。"
-					/>
+					<TypingText tag="p" text="ご希望の場合は、お問い合わせフォームよりご連絡ください。" />
 				</div>
 			</Section>
 			<Section>
@@ -131,10 +118,7 @@ const PrivacyPolicyPage = () => {
 						tag="p"
 						text="当サイトは、必要に応じて本プライバシーポリシーを変更することがあります。"
 					/>
-					<TypingText
-						tag="p"
-						text="変更した場合は、当ページにて告知いたします。"
-					/>
+					<TypingText tag="p" text="変更した場合は、当ページにて告知いたします。" />
 				</div>
 			</Section>
 			<Section>
@@ -149,6 +133,4 @@ const PrivacyPolicyPage = () => {
 			</Section>
 		</Container>
 	);
-};
-
-export default PrivacyPolicyPage;
+}

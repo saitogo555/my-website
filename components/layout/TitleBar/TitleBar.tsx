@@ -4,7 +4,7 @@ import { SearchBar } from "../SearchBar";
 import { WindowControlBar } from "../WindowControlBar";
 import { TitleLogo } from "./TitleLogo";
 
-export const TitleBar = () => {
+export function TitleBar() {
 	return (
 		<div
 			className={cn(
@@ -20,4 +20,4 @@ export const TitleBar = () => {
 			<WindowControlBar className={cn("grow basis-1/5 justify-end")} />
 		</div>
 	);
-};
+}

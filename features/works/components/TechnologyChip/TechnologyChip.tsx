@@ -7,7 +7,7 @@ type Props = {
 	version?: string;
 };
 
-export const TechnologyChip = ({ name, iconSrc, version }: Props) => {
+export function TechnologyChip({ name, iconSrc, version }: Props) {
 	return (
 		<Chip className="flex h-8 items-center text-base">
 			<Image src={iconSrc} alt={name} className="mr-2 h-5" />
@@ -15,4 +15,4 @@ export const TechnologyChip = ({ name, iconSrc, version }: Props) => {
 			{version && <span className="ml-1 text-gray-500">{version}</span>}
 		</Chip>
 	);
-};
+}

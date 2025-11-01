@@ -1,12 +1,12 @@
-import { cn } from "@/utils";
 import { FiExternalLink } from "react-icons/fi";
+import { cn } from "@/utils";
 import { RelatedLinkIcon } from "./RelatedLinkIcon";
 
 type Props = {
 	links: string[];
 };
 
-export const RelatedLinks = ({ links }: Props) => {
+export function RelatedLinks({ links }: Props) {
 	return (
 		<>
 			{links ? (
@@ -34,4 +34,4 @@ export const RelatedLinks = ({ links }: Props) => {
 			)}
 		</>
 	);
-};
+}

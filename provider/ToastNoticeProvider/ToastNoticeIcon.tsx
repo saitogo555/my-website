@@ -1,4 +1,4 @@
-import { type ReactNode, memo } from "react";
+import type { ReactNode } from "react";
 import { VscError, VscInfo, VscWarning } from "react-icons/vsc";
 import type { ToastNoticeType } from "./ToastNoticeProvider";
 
@@ -12,6 +12,6 @@ const icons: Record<ToastNoticeType, ReactNode> = {
 	error: <VscError className="text-red-400" />,
 };
 
-export const ToastNoticeIcon = memo(({ variant }: Props) => {
+export function ToastNoticeIcon({ variant }: Props) {
 	return <span className="text-2xl">{icons[variant]}</span>;
-});
+}

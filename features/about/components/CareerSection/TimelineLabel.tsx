@@ -1,13 +1,13 @@
-import { cn } from "@/utils";
 import type { ReactNode } from "react";
 import { VscTarget } from "react-icons/vsc";
+import { cn } from "@/utils";
 
 type Props = {
 	className?: string;
 	children: ReactNode;
 };
 
-export const TimelineLabel = ({ className, children }: Props) => {
+export function TimelineLabel({ className, children }: Props) {
 	return (
 		<div
 			className={cn(
@@ -19,4 +19,4 @@ export const TimelineLabel = ({ className, children }: Props) => {
 			{children}
 		</div>
 	);
-};
+}

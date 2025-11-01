@@ -1,9 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import type { HTMLAttributes } from "react";
+import NextImage, { type ImageProps } from "next/image";
+import { useEffect, useState } from "react";
 import { Skelton } from "../Skelton";
-import { cn } from "@/utils";
 
 type Props = {
 	className?: string;
@@ -14,15 +13,15 @@ type Props = {
 		height?: string;
 		aspectRatio?: string;
 	};
-} & Omit<HTMLAttributes<HTMLImageElement>, "className" | "src" | "alt" | "loading">;
+} & Omit<ImageProps, "className" | "src" | "alt" | "loading" | "width" | "height">;
 
-export const Image = ({
+export function Image({
 	className,
 	src,
 	alt,
 	skeltonSize = { aspectRatio: "16/9" },
 	...props
-}: Props) => {
+}: Props) {
 	const [isLoading, setIsLoading] = useState<boolean>(true);
 
 	useEffect(() => {
@@ -47,9 +46,11 @@ export const Image = ({
 			{isLoading ? (
 				<Skelton style={{ ...skeltonSize }} />
 			) : (
-				<img
+				<NextImage
 					{...props}
-					className={cn(className, { invisible: isLoading })}
+					className={className}
+					width={0}
+					height={0}
 					src={src}
 					loading="lazy"
 					alt={alt}
@@ -59,4 +60,4 @@ export const Image = ({
 			)}
 		</>
 	);
-};
+}

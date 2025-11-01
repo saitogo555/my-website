@@ -1,12 +1,12 @@
+import type { ReactNode } from "react";
 import { cn } from "@/utils";
-import { type ReactNode, memo } from "react";
 
 type Props = {
 	className?: string;
 	icon: ReactNode;
 };
 
-export const ActivityIcon = memo(({ className, icon }: Props) => {
+export function ActivityIcon({ className, icon }: Props) {
 	return (
 		<div
 			className={cn(
@@ -19,4 +19,4 @@ export const ActivityIcon = memo(({ className, icon }: Props) => {
 			{icon}
 		</div>
 	);
-});
+}

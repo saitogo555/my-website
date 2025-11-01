@@ -1,18 +1,18 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { throttle } from "@/utils";
-import { useCallback, useEffect, useState } from "react";
 
 export const useBreakpoint = () => {
 	const [isMobile, setIsMobile] = useState(false);
 
-	const handleResize = useCallback(
+	const handleResize = () => {
 		throttle(() => {
 			setIsMobile(window.innerWidth <= 1024);
-		}, 500),
-		[],
-	);
+		}, 500);
+	};
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: React Compiler handles optimization
 	useEffect(() => {
 		handleResize();
 		window.addEventListener("resize", handleResize);
@@ -20,7 +20,7 @@ export const useBreakpoint = () => {
 		return () => {
 			window.removeEventListener("resize", handleResize);
 		};
-	}, [handleResize]);
+	}, []);
 
 	return {
 		isMobile,

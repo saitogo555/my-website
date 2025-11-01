@@ -5,7 +5,7 @@ type Props = {
 	onClick: MouseEventHandler<HTMLButtonElement>;
 };
 
-export const ToastNoticeCloseButton = ({ onClick }: Props) => {
+export function ToastNoticeCloseButton({ onClick }: Props) {
 	return (
 		<button
 			className="ml-auto cursor-pointer rounded p-0.5 text-xl hover:bg-neutral-300/10"
@@ -15,4 +15,4 @@ export const ToastNoticeCloseButton = ({ onClick }: Props) => {
 			<VscClose className="text-primary-text" />
 		</button>
 	);
-};
+}

@@ -5,7 +5,7 @@ type Props = {
 	technologies: WorkData["technologies"];
 };
 
-export const TechnologyList = ({ technologies }: Props) => {
+export function TechnologyList({ technologies }: Props) {
 	return (
 		<ul className="flex gap-2">
 			{technologies.map((tech, i) => (
@@ -15,4 +15,4 @@ export const TechnologyList = ({ technologies }: Props) => {
 			))}
 		</ul>
 	);
-};
+}

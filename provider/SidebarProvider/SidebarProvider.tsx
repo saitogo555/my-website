@@ -1,6 +1,6 @@
 "use client";
 
-import { type ReactNode, createContext, useCallback, useEffect, useState } from "react";
+import { createContext, type ReactNode, useEffect, useState } from "react";
 
 type Props = {
 	children: ReactNode;
@@ -15,7 +15,7 @@ type SidebarContextProps = {
 
 export const SidebarContext = createContext<SidebarContextProps | undefined>(undefined);
 
-export const SidebarProvider = ({ children }: Props) => {
+export function SidebarProvider({ children }: Props) {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 
 	const open = () => {
@@ -26,30 +26,28 @@ export const SidebarProvider = ({ children }: Props) => {
 		setIsOpen(false);
 	};
 
-	const toggle = useCallback(() => {
+	const toggle = () => {
 		setIsOpen((prevIsOpen) => !prevIsOpen);
-	}, []);
+	};
 
-	const handleKeydown = useCallback(
-		(e: KeyboardEvent) => {
-			if (e.ctrlKey && e.key === "b") {
-				e.preventDefault();
-				toggle();
-			}
-		},
-		[toggle],
-	);
+	const handleKeydown = (e: KeyboardEvent) => {
+		if (e.ctrlKey && e.key === "b") {
+			e.preventDefault();
+			toggle();
+		}
+	};
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: React Compiler handles optimization
 	useEffect(() => {
 		window.addEventListener("keydown", handleKeydown);
 		return () => {
 			window.removeEventListener("keydown", handleKeydown);
 		};
-	}, [handleKeydown]);
+	}, []);
 
 	useEffect(() => {
 		setIsOpen(window.innerWidth > 1024);
 	}, []);
 
 	return <SidebarContext value={{ isOpen, open, close, toggle }}>{children}</SidebarContext>;
-};
+}

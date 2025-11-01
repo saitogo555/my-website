@@ -1,14 +1,14 @@
-import { cn } from "@/utils";
 import type { HTMLAttributes } from "react";
+import { cn } from "@/utils";
 
 type Props = {
 	className?: string;
 } & Omit<HTMLAttributes<HTMLDivElement>, "className">;
 
-export const Skelton = ({ className, ...props }: Props) => {
+export function Skelton({ className, ...props }: Props) {
 	return (
 		<div className={cn("animate-skelton overflow-hidden rounded-lg", className)} {...props}>
 			<div className="h-full w-full bg-black/10 dark:bg-white/5" />
 		</div>
 	);
-};
+}

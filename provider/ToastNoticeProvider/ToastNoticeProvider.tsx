@@ -1,6 +1,6 @@
 "use client";
 
-import { type ReactNode, createContext, useCallback, useState } from "react";
+import { createContext, type ReactNode, useState } from "react";
 import { ToastNoticeItem } from "./ToastNoticeItem";
 
 type Props = {
@@ -21,16 +21,16 @@ type ToastNoticeContextProps = {
 
 export const ToastNoticeContext = createContext<ToastNoticeContextProps | undefined>(undefined);
 
-export const ToastNoticeProvider = ({ children }: Props) => {
+export function ToastNoticeProvider({ children }: Props) {
 	const [toastNotices, setToastNotices] = useState<ToastNotice[]>([]);
 
-	const add = useCallback((options: { type?: ToastNoticeType; message: string }) => {
+	const add = (options: { type?: ToastNoticeType; message: string }) => {
 		const { type = "info", message } = options;
-		const id = new Date().getTime();
+		const id = Date.now();
 
 		setToastNotices((prevToastNotices) => [{ id, type, message }, ...prevToastNotices]);
 		setTimeout(() => remove(id), 3000);
-	}, []);
+	};
 
 	const remove = (id: number) => {
 		setToastNotices((prev) => prev.filter((toast) => toast.id !== id));
@@ -52,4 +52,4 @@ export const ToastNoticeProvider = ({ children }: Props) => {
 			</div>
 		</ToastNoticeContext>
 	);
-};
+}

@@ -5,7 +5,7 @@ type Props = {
 	link: string;
 };
 
-export const RelatedLinkIcon = ({ link }: Props) => {
+export function RelatedLinkIcon({ link }: Props) {
 	let Icon = null;
 	try {
 		const url = new URL(link);
@@ -25,4 +25,4 @@ export const RelatedLinkIcon = ({ link }: Props) => {
 	}
 
 	return Icon ? <Icon className="text-xl" /> : null;
-};
+}

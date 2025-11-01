@@ -1,14 +1,14 @@
+import Link from "next/link";
 import { Card, CardContent, CardMedia } from "@/components/ui/Card";
 import { TypingText } from "@/components/ui/TypingText";
 import { cn } from "@/utils";
-import Link from "next/link";
 import type { WorkData } from "../../types";
 
 type Props = {
 	data: WorkData;
 };
 
-export const WorkCard = ({ data }: Props) => {
+export function WorkCard({ data }: Props) {
 	return (
 		<Link href={`/works/${data.id}`}>
 			<Card className="group h-full cursor-pointer duration-500" title={data.thumbnail.title}>
@@ -33,4 +33,4 @@ export const WorkCard = ({ data }: Props) => {
 			</Card>
 		</Link>
 	);
-};
+}

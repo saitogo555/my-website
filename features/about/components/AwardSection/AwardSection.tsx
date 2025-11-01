@@ -17,7 +17,7 @@ const items: { title: string; eventName: string; description: string }[] = [
 	},
 ];
 
-export const AwardSection = () => {
+export function AwardSection() {
 	return (
 		<Section>
 			<SectionTitle text="Award" />
@@ -33,4 +33,4 @@ export const AwardSection = () => {
 			</div>
 		</Section>
 	);
-};
+}

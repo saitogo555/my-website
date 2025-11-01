@@ -28,13 +28,13 @@
 }
 
 @keyframes skeleton {
-  20% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.2;
-  }
-  80% {
-    opacity: 1;
-  }
+	20% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.2;
+	}
+	80% {
+		opacity: 1;
+	}
 }

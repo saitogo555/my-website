@@ -5,7 +5,7 @@ type Props = {
 	roles: WorkData["roles"];
 };
 
-export const RoleList = ({ roles }: Props) => {
+export function RoleList({ roles }: Props) {
 	return (
 		<ul className="flex gap-2">
 			{roles.map((role, i) => (
@@ -15,4 +15,4 @@ export const RoleList = ({ roles }: Props) => {
 			))}
 		</ul>
 	);
-};
+}

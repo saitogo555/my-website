@@ -1,5 +1,8 @@
 "use client";
 
+import { createRef, type RefObject, useEffect, useRef, useState } from "react";
+import { RxDotsHorizontal } from "react-icons/rx";
+import { VscMenu } from "react-icons/vsc";
 import {
 	type ExternalLinkWithIcon,
 	GITHUB_LINK,
@@ -10,9 +13,6 @@ import {
 	ZENN_LINK,
 } from "@/constants/links";
 import { cn } from "@/utils";
-import { type RefObject, createRef, useCallback, useEffect, useRef, useState } from "react";
-import { RxDotsHorizontal } from "react-icons/rx";
-import { VscMenu } from "react-icons/vsc";
 import { MenuIcon } from "./MenuIcon";
 import { MenuItem } from "./MenuItem";
 import { OverflowMenu } from "./OverflowMenu";
@@ -30,7 +30,7 @@ const items: ExternalLinkWithIcon[] = [
 	GRAVATAR_LINK,
 ];
 
-export const MenuBar = ({ className }: Props) => {
+export function MenuBar({ className }: Props) {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 	const [overflowItems, setOverflowItems] = useState<ExternalLinkWithIcon[]>([]);
 	const menuRef = useRef<HTMLUListElement>(null);
@@ -43,13 +43,13 @@ export const MenuBar = ({ className }: Props) => {
 		setIsOpen((prevIsOpen) => !prevIsOpen);
 	};
 
-	const handleClickOutsideButton = useCallback((e: MouseEvent) => {
+	const handleClickOutsideButton = (e: MouseEvent) => {
 		if (btnRef.current && !btnRef.current.contains(e.target as Node)) {
 			setIsOpen(false);
 		}
-	}, []);
+	};
 
-	const handleResize = useCallback(() => {
+	const handleResize = () => {
 		if (!menuRef.current || !btnRef.current) {
 			return;
 		}
@@ -90,8 +90,9 @@ export const MenuBar = ({ className }: Props) => {
 			setOverflowItems(newOverflowItems);
 		}
 		setIsOpen((prevIsOpen) => (newOverflowItems.length > 0 ? prevIsOpen : false));
-	}, []);
+	};
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: React Compiler handles optimization
 	useEffect(() => {
 		handleResize();
 		window.addEventListener("resize", handleResize);
@@ -101,7 +102,7 @@ export const MenuBar = ({ className }: Props) => {
 			window.removeEventListener("resize", handleResize);
 			document.removeEventListener("click", handleClickOutsideButton);
 		};
-	}, [handleResize, handleClickOutsideButton]);
+	}, []);
 
 	return (
 		<ul className={cn("flex py-1", className)} ref={menuRef}>
@@ -138,4 +139,4 @@ export const MenuBar = ({ className }: Props) => {
 			</MenuItem>
 		</ul>
 	);
-};
+}

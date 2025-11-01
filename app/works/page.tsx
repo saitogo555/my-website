@@ -1,16 +1,16 @@
+import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { PageTitle } from "@/components/ui/PageTitle";
 import { Section } from "@/components/ui/Section";
 import { WorkCard } from "@/features/works/components/WorkCard";
 import { WORK_LIST } from "@/features/works/constants";
 import { cn } from "@/utils";
-import type { Metadata } from "next";
 
 export const metadata: Metadata = {
 	title: "Works",
 };
 
-const WorksPage = () => {
+export default function WorksPage() {
 	return (
 		<Container>
 			<PageTitle text="Works" />
@@ -29,6 +29,4 @@ const WorksPage = () => {
 			</Section>
 		</Container>
 	);
-};
-
-export default WorksPage;
+}

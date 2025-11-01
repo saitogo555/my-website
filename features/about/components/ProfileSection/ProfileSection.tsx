@@ -1,16 +1,16 @@
-import { Section, SectionTitle } from "@/components/ui/Section";
-import { TypingText } from "@/components/ui/TypingText";
-import { cn } from "@/utils";
 import { BiBriefcase, BiMessageRoundedDetail } from "react-icons/bi";
 import { GrGamepad } from "react-icons/gr";
 import { MdOutlineBloodtype, MdOutlineCake, MdOutlineLocationOn } from "react-icons/md";
 import { TbCalendarMonth } from "react-icons/tb";
+import { Section, SectionTitle } from "@/components/ui/Section";
+import { TypingText } from "@/components/ui/TypingText";
+import { cn } from "@/utils";
 import { PROFILE } from "../../constants/profile";
-import { ProfileItem } from "./ProfileItem";
 import { ProfileImage } from "./ProfileImage";
+import { ProfileItem } from "./ProfileItem";
 import { ProfileLinks } from "./ProfileLinks";
 
-export const ProfileSection = () => {
+export function ProfileSection() {
 	return (
 		<Section className={cn("flex gap-8", "max-medium:flex-col", "min-medium:@max-small:flex-col")}>
 			<div className="basis-2/5">
@@ -57,4 +57,4 @@ export const ProfileSection = () => {
 			</div>
 		</Section>
 	);
-};
+}

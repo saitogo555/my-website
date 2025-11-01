@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { PageTitle } from "@/components/ui/PageTitle";
 import { Section } from "@/components/ui/Section";
@@ -24,7 +25,6 @@ import {
 } from "@/features/skills/constants/SkillsData";
 import type { SkillLevel } from "@/features/skills/types/Skill";
 import { cn } from "@/utils";
-import type { Metadata } from "next";
 
 export const metadata: Metadata = {
 	title: "Skills",
@@ -45,7 +45,7 @@ const items: { label: string; text: string }[] = [
 	},
 ];
 
-const SkillsPage = () => {
+export default function SkillsPage() {
 	return (
 		<Container>
 			<PageTitle text="Skills" />
@@ -88,6 +88,4 @@ const SkillsPage = () => {
 			<SkillSection heading="Virtualization" items={VIRTUALIZATION_LIST} />
 		</Container>
 	);
-};
-
-export default SkillsPage;
+}

@@ -8,7 +8,7 @@ type Props = {
 	items: Skill[];
 };
 
-export const SkillSection = ({ heading, items }: Props) => {
+export function SkillSection({ heading, items }: Props) {
 	return (
 		<Section>
 			<SectionTitle text={heading} />
@@ -25,4 +25,4 @@ export const SkillSection = ({ heading, items }: Props) => {
 			</div>
 		</Section>
 	);
-};
+}

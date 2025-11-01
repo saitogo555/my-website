@@ -1,10 +1,8 @@
-"use client";
-
+import { GiMedal } from "react-icons/gi";
 import { Card, CardContent } from "@/components/ui/Card";
 import { TypingText } from "@/components/ui/TypingText";
 import { InView } from "@/components/utils/InView";
 import { cn } from "@/utils";
-import { GiMedal } from "react-icons/gi";
 
 type Props = {
 	title: string;
@@ -13,7 +11,7 @@ type Props = {
 	rank?: "gold" | "silver" | "bronze" | "other";
 };
 
-export const AwardCard = ({ title, subtitle, description, rank = "other" }: Props) => {
+export function AwardCard({ title, subtitle, description, rank = "other" }: Props) {
 	return (
 		<InView>
 			<Card className="relative z-0 h-full">
@@ -34,4 +32,4 @@ export const AwardCard = ({ title, subtitle, description, rank = "other" }: Prop
 			</Card>
 		</InView>
 	);
-};
+}

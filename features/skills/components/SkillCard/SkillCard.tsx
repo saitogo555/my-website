@@ -1,10 +1,10 @@
 "use client";
 
+import { motion, type TargetAndTransition, type Transition, useInView } from "framer-motion";
+import { useRef } from "react";
 import { Card, CardContent } from "@/components/ui/Card";
 import { Image } from "@/components/ui/Image";
 import { TypingText } from "@/components/ui/TypingText";
-import { motion, useInView, TargetAndTransition, Transition } from "framer-motion";
-import { useRef } from "react";
 import type { SkillLevel } from "../../types/Skill";
 import { StarRating } from "../StarRating";
 
@@ -33,7 +33,7 @@ const transition: Transition = {
 	stiffness: 80,
 };
 
-export const SkillCard = ({ text, iconSrc, star }: Props) => {
+export function SkillCard({ text, iconSrc, star }: Props) {
 	const ref = useRef(null);
 	const isInView = useInView(ref, {
 		once: true,
@@ -56,4 +56,4 @@ export const SkillCard = ({ text, iconSrc, star }: Props) => {
 			</Card>
 		</motion.div>
 	);
-};
+}

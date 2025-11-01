@@ -1,13 +1,13 @@
-import { cn } from "@/utils";
-import { type ReactNode, memo, useState } from "react";
+import { type ReactNode, useState } from "react";
 import { VscChevronRight } from "react-icons/vsc";
+import { cn } from "@/utils";
 
 type Props = {
 	title: string;
 	children?: ReactNode;
 };
 
-export const SidebarAccordionMenu = memo(({ title, children }: Props) => {
+export function SidebarAccordionMenu({ title, children }: Props) {
 	const [isOpen, setIsOpen] = useState<boolean>(true);
 
 	const handleToggleNavigation = () => {
@@ -51,4 +51,4 @@ export const SidebarAccordionMenu = memo(({ title, children }: Props) => {
 			</div>
 		</div>
 	);
-});
+}

@@ -9,7 +9,7 @@ const items: string[] = [
 	"コメント",
 ];
 
-export const TerminalHeader = () => {
+export function TerminalHeader() {
 	return (
 		<div>
 			<ul>
@@ -19,4 +19,4 @@ export const TerminalHeader = () => {
 			</ul>
 		</div>
 	);
-};
+}

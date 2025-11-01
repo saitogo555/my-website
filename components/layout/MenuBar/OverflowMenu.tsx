@@ -1,12 +1,12 @@
-import { cn } from "@/utils";
 import type { HTMLAttributes } from "react";
+import { cn } from "@/utils";
 import { OverflowMenuItem } from "./OverflowMenuItem";
 
 type Props = {
 	items: { text: string; iconSrc: string; href: string }[];
 } & HTMLAttributes<HTMLUListElement>;
 
-export const OverflowMenu = ({ items, ...props }: Props) => {
+export function OverflowMenu({ items, ...props }: Props) {
 	return (
 		<ul
 			className={cn(
@@ -25,4 +25,4 @@ export const OverflowMenu = ({ items, ...props }: Props) => {
 			))}
 		</ul>
 	);
-};
+}

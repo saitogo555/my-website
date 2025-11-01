@@ -1,13 +1,13 @@
+import type { KeyboardEvent, MouseEvent } from "react";
 import { OutlinedButton } from "@/components/ui/Button";
 import { Card, CardContent } from "@/components/ui/Card";
 import { Image } from "@/components/ui/Image";
-import type { KeyboardEvent, MouseEvent } from "react";
 
 type Props = {
 	onClose: () => void;
 };
 
-export const QRCode = ({ onClose }: Props) => {
+export function QRCode({ onClose }: Props) {
 	const handleClickOverlay = (e: MouseEvent<HTMLDivElement>) => {
 		if (e.target === e.currentTarget) {
 			onClose();
@@ -23,6 +23,10 @@ export const QRCode = ({ onClose }: Props) => {
 	return (
 		<div
 			className="fixed inset-0 z-50 flex items-center justify-center bg-black/60"
+			role="dialog"
+			tabIndex={-1}
+			aria-modal="true"
+			aria-label="QRコードダイアログ"
 			onClick={handleClickOverlay}
 			onKeyDown={handleKeydown}
 		>
@@ -44,4 +48,4 @@ export const QRCode = ({ onClose }: Props) => {
 			</Card>
 		</div>
 	);
-};
+}

@@ -1,9 +1,9 @@
 "use client";
 
-import { cn } from "@/utils";
-import { memo } from "react";
+import { usePathname } from "next/navigation";
 import { InView } from "react-intersection-observer";
 import { TypeAnimation } from "react-type-animation";
+import { cn } from "@/utils";
 
 type Props = {
 	className?: string;
@@ -12,11 +12,12 @@ type Props = {
 	delay?: number;
 };
 
-export const TypingText = memo(({ className, tag, text, delay = 0 }: Props) => {
+export function TypingText({ className, tag, text, delay = 0 }: Props) {
 	const Component = tag;
+	const pathname = usePathname(); // pathnameをキーにしてコンポーネントを再マウントさせる
 
 	return (
-		<InView className={className} threshold={1} triggerOnce>
+		<InView className={className} threshold={1} triggerOnce key={pathname}>
 			{({ inView, ref }) => (
 				<div ref={ref}>
 					{/* SEO対策でプリレンダリングされるようにしている */}
@@ -36,4 +37,4 @@ export const TypingText = memo(({ className, tag, text, delay = 0 }: Props) => {
 			)}
 		</InView>
 	);
-});
+}

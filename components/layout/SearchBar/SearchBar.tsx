@@ -1,14 +1,14 @@
 "use client";
 
+import { IoMdSearch } from "react-icons/io";
 import { useToastNotice } from "@/hooks/useToastNotice";
 import { cn } from "@/utils";
-import { IoMdSearch } from "react-icons/io";
 
 type Props = {
 	className?: string;
 };
 
-export const SearchBar = ({ className }: Props) => {
+export function SearchBar({ className }: Props) {
 	const toastNotice = useToastNotice();
 
 	const handleClick = async () => {
@@ -47,4 +47,4 @@ export const SearchBar = ({ className }: Props) => {
 			SAITOGO.ME
 		</button>
 	);
-};
+}

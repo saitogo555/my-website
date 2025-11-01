@@ -1,12 +1,12 @@
-import { cn } from "@/utils";
 import type { ReactNode } from "react";
+import { cn } from "@/utils";
 
 type Props = {
 	className?: string;
 	children?: ReactNode;
 };
 
-export const Container = ({ className, children }: Props) => {
+export function Container({ className, children }: Props) {
 	return (
 		<div
 			className={cn(
@@ -19,4 +19,4 @@ export const Container = ({ className, children }: Props) => {
 			{children}
 		</div>
 	);
-};
+}

@@ -1,16 +1,16 @@
 "use client";
 
-import { Image } from "@/components/ui/Image";
-import { cn } from "@/utils";
 import { type ChangeEvent, useState } from "react";
 import { VscTriangleDown, VscTriangleUp } from "react-icons/vsc";
+import { Image } from "@/components/ui/Image";
+import { cn } from "@/utils";
 import type { WorkImage } from "../../types";
 
 type Props = {
 	image: WorkImage;
 };
 
-export const ImageViewer = ({ image }: Props) => {
+export function ImageViewer({ image }: Props) {
 	const [scale, setScale] = useState<number>(100);
 
 	const handleChangeScale = (event: ChangeEvent<HTMLInputElement>) => {
@@ -22,7 +22,7 @@ export const ImageViewer = ({ image }: Props) => {
 	const handleClickScaleUp = () => {
 		setScale((prevScale) => Math.min(prevScale + 1, 100));
 	};
-	
+
 	const handleClickScaleDown = () => {
 		setScale((prevScale) => Math.max(prevScale - 1, 1));
 	};
@@ -95,4 +95,4 @@ export const ImageViewer = ({ image }: Props) => {
 			</div>
 		</div>
 	);
-};
+}

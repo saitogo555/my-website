@@ -1,15 +1,15 @@
 "use client";
 
+import { getFormProps, getInputProps, getTextareaProps, useForm } from "@conform-to/react";
+import { parseWithZod } from "@conform-to/zod";
+import Form from "next/form";
+import { useActionState, useEffect } from "react";
+import { VscLoading } from "react-icons/vsc";
 import { sendEmail } from "@/actions/email";
 import { FilledButton } from "@/components/ui/Button";
 import { Input, Textarea } from "@/components/ui/Form";
 import { useToastNotice } from "@/hooks/useToastNotice";
 import { cn } from "@/utils";
-import { getFormProps, getInputProps, getTextareaProps, useForm } from "@conform-to/react";
-import { parseWithZod } from "@conform-to/zod";
-import Form from "next/form";
-import { useActionState, useCallback, useEffect } from "react";
-import { VscLoading } from "react-icons/vsc";
 import { formSchema } from "../../../../schemas/form";
 import type { EmailResponse } from "../../types";
 import { ErrorAlert } from "./ErrorAlert";
@@ -17,7 +17,7 @@ import { FormError } from "./FormError";
 import { FormSection } from "./FormSection";
 import { SuccessAlert } from "./SuccessAlert";
 
-export const ContactForm = () => {
+export function ContactForm() {
 	const [result, formAction, isPending] = useActionState<EmailResponse, FormData>(
 		async (_, formData) => {
 			const res = await sendEmail(formData);
@@ -34,7 +34,8 @@ export const ContactForm = () => {
 		shouldRevalidate: "onInput",
 	});
 
-	const onChangeResult = useCallback(() => {
+	// biome-ignore lint/correctness/useExhaustiveDependencies: React Compiler handles optimization
+	useEffect(() => {
 		if (result === null) return;
 
 		if (result.success) {
@@ -42,11 +43,7 @@ export const ContactForm = () => {
 		} else {
 			toastNotice.add({ type: "error", message: result.message });
 		}
-	}, [result, toastNotice.add]);
-
-	useEffect(() => {
-		onChangeResult();
-	}, [onChangeResult]);
+	}, [result]);
 
 	return (
 		<Form {...getFormProps(form)} className="mx-auto flex flex-col gap-12" action={formAction}>
@@ -119,4 +116,4 @@ export const ContactForm = () => {
 			</div>
 		</Form>
 	);
-};
+}

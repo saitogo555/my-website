@@ -1,8 +1,8 @@
+import { use } from "react";
 import { ToastNoticeContext } from "@/provider/ToastNoticeProvider";
-import { useContext } from "react";
 
 export const useToastNotice = () => {
-	const context = useContext(ToastNoticeContext);
+	const context = use(ToastNoticeContext);
 	if (!context) {
 		throw new Error("useToastNotice must be used within a ToastNoticeProvider");
 	}

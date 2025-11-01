@@ -1,4 +1,3 @@
-"use client";
 import { cn } from "@/utils";
 import { InView } from "../../utils/InView";
 import { TypingText } from "../TypingText";
@@ -7,7 +6,7 @@ type Props = {
 	text?: string;
 };
 
-export const PageTitle = ({ text }: Props) => {
+export function PageTitle({ text }: Props) {
 	return (
 		<InView className="mb-10">
 			<TypingText
@@ -20,4 +19,4 @@ export const PageTitle = ({ text }: Props) => {
 			/>
 		</InView>
 	);
-};
+}

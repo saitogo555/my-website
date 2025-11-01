@@ -1,7 +1,7 @@
+import type { ReactNode } from "react";
 import { TypingText } from "@/components/ui/TypingText";
 import { InView } from "@/components/utils/InView";
 import { cn } from "@/utils";
-import type { ReactNode } from "react";
 
 type Props = {
 	className?: string;
@@ -10,7 +10,7 @@ type Props = {
 	icon: ReactNode;
 };
 
-export const ProfileItem = ({ className, label, text, icon }: Props) => {
+export function ProfileItem({ className, label, text, icon }: Props) {
 	return (
 		<InView className={cn("flex items-center gap-4", className)}>
 			<div className="rounded-full bg-primary p-4">
@@ -22,4 +22,4 @@ export const ProfileItem = ({ className, label, text, icon }: Props) => {
 			</div>
 		</InView>
 	);
-};
+}

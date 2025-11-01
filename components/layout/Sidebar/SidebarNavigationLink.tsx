@@ -1,30 +1,29 @@
 "use client";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Image } from "@/components/ui/Image";
 import { useBreakpoint } from "@/hooks/useBreakpoint";
 import { useSidebar } from "@/hooks/useSidebar";
 import type { NavigationLink } from "@/types/link";
 import { cn, getPageNameFromPath } from "@/utils";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { memo, useCallback } from "react";
 
 type Props = {
 	iconSrc: string;
 } & NavigationLink;
 
-export const SidebarNavigationLink = memo(({ text, to, iconSrc }: Props) => {
+export function SidebarNavigationLink({ text, to, iconSrc }: Props) {
 	const currentPagePath = usePathname();
 	const sidebar = useSidebar();
 	const { isMobile } = useBreakpoint();
 	const isCurrentPage = currentPagePath === to;
 	const title = getPageNameFromPath(to);
 
-	const handleClick = useCallback(() => {
+	const handleClick = () => {
 		if (!isMobile) {
 			return;
 		}
 		sidebar.close();
-	}, [isMobile, sidebar]);
+	};
 
 	return (
 		<Link
@@ -47,4 +46,4 @@ export const SidebarNavigationLink = memo(({ text, to, iconSrc }: Props) => {
 			<span className={cn("ml-2 text-primary-text text-sm", "max-medium:text-lg")}>{text}</span>
 		</Link>
 	);
-});
+}

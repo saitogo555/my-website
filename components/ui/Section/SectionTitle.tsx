@@ -1,5 +1,3 @@
-"use client";
-
 import { cn } from "@/utils";
 import { TypingText } from "../TypingText";
 
@@ -8,13 +6,13 @@ type Props = {
 	text?: string;
 };
 
-export const SectionTitle = ({ className, text }: Props) => {
+export function SectionTitle({ className, text }: Props) {
 	const id = text?.replace(/\s+/g, "-");
 
 	return (
 		<div
 			id={id}
-			className={cn("mb-8 h-11 border-b-4 border-b-divider text-4xl text-primary-text", className)}
+			className={cn("mb-8 border-b-4 border-b-divider text-4xl text-primary-text", className)}
 			data-anchor-link={text}
 		>
 			<TypingText
@@ -27,4 +25,4 @@ export const SectionTitle = ({ className, text }: Props) => {
 			/>
 		</div>
 	);
-};
+}

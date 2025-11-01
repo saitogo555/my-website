@@ -2,7 +2,7 @@ import { NAVIGATION_LINKS } from "@/constants/navigation";
 import { cn } from "@/utils";
 import { TabItem } from "./TabItem";
 
-export const TabBar = () => {
+export function TabBar() {
 	return (
 		<div
 			className={cn(
@@ -16,4 +16,4 @@ export const TabBar = () => {
 			))}
 		</div>
 	);
-};
+}

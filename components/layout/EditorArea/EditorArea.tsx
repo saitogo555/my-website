@@ -1,11 +1,11 @@
-import { cn } from "@/utils";
 import type { ReactNode } from "react";
+import { cn } from "@/utils";
 
 type Props = {
 	children: ReactNode;
 };
 
-export const EditorArea = ({ children }: Props) => {
+export function EditorArea({ children }: Props) {
 	return (
 		<div className="h-full bg-secondary">
 			<div
@@ -18,4 +18,4 @@ export const EditorArea = ({ children }: Props) => {
 			</div>
 		</div>
 	);
-};
+}

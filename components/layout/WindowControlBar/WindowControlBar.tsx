@@ -1,12 +1,12 @@
-import { cn } from "@/utils";
 import { VscChromeClose, VscChromeMinimize, VscChromeRestore } from "react-icons/vsc";
+import { cn } from "@/utils";
 import { WindowControlButton } from "./WindowControlButton";
 
 type Props = {
 	className?: string;
 };
 
-export const WindowControlBar = ({ className }: Props) => {
+export function WindowControlBar({ className }: Props) {
 	return (
 		<div className={cn("flex h-full", className)}>
 			<WindowControlButton
@@ -26,4 +26,4 @@ export const WindowControlBar = ({ className }: Props) => {
 			/>
 		</div>
 	);
-};
+}

@@ -1,15 +1,15 @@
 "use client";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Image } from "@/components/ui/Image";
 import type { NavigationLink } from "@/types/link";
 import { cn, getPageNameFromPath } from "@/utils";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 type Props = {
 	iconSrc: string;
 } & NavigationLink;
 
-export const TabItem = ({ text, to, iconSrc }: Props) => {
+export function TabItem({ text, to, iconSrc }: Props) {
 	const currentPagePath = usePathname();
 	const isCurrentPage = currentPagePath === to;
 	const title = getPageNameFromPath(to);
@@ -38,4 +38,4 @@ export const TabItem = ({ text, to, iconSrc }: Props) => {
 			<span className={cn("ml-2 text-primary-text text-sm", "max-medium:text-lg")}>{text}</span>
 		</Link>
 	);
-};
+}
