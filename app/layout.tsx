@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 	openGraph: {
 		type: "website",
 		locale: "ja_JP",
-		url: "https://www.saitogo.me/",
+		url: "https://saitogo.me/",
 		siteName: "齋藤豪 | SAITO GO",
 		title: "齋藤豪 | SAITO GO",
 		description: [
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
 		].join(),
 		images: [
 			{
-				url: "https://www.saitogo.me/images/og.webp",
+				url: "https://saitogo.me/images/og.webp",
 				width: 1280,
 				height: 720,
 				alt: "OG画像",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
 		title: "齋藤豪 | フルスタックWebデベロッパー",
 		description:
 			"フルスタックWebデベロッパーの齋藤豪です。フロントエンドとバックエンドの両方の知識を活かし、WebサイトやWebアプリを作ったり教えたりしてます。",
-		images: ["https://www.saitogo.me/images/og.webp"],
+		images: ["https://saitogo.me/images/og.webp"],
 	},
 	keywords: [
 		"齋藤 豪",
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
 		"デザイン",
 	],
 	alternates: {
-		canonical: "https://www.saitogo.me/",
+		canonical: "https://saitogo.me/",
 	},
 };
 
