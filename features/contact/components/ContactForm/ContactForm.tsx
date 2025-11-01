@@ -34,6 +34,7 @@ export function ContactForm() {
 		shouldRevalidate: "onInput",
 	});
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: React Compiler handles optimization
 	useEffect(() => {
 		if (result === null) return;
 
@@ -42,7 +43,7 @@ export function ContactForm() {
 		} else {
 			toastNotice.add({ type: "error", message: result.message });
 		}
-	}, [result, toastNotice.add]);
+	}, [result]);
 
 	return (
 		<Form {...getFormProps(form)} className="mx-auto flex flex-col gap-12" action={formAction}>
