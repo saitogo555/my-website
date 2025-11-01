@@ -8,25 +8,27 @@ type Props = {
 };
 
 export function QRCode({ onClose }: Props) {
-	const handleClickOverlay = (e: MouseEvent<HTMLButtonElement>) => {
+	const handleClickOverlay = (e: MouseEvent<HTMLDivElement>) => {
 		if (e.target === e.currentTarget) {
 			onClose();
 		}
 	};
 
-	const handleKeydown = (e: KeyboardEvent<HTMLButtonElement>) => {
+	const handleKeydown = (e: KeyboardEvent<HTMLDivElement>) => {
 		if (e.key === "Escape") {
 			onClose();
 		}
 	};
 
 	return (
-		<button
-			type="button"
+		<div
 			className="fixed inset-0 z-50 flex items-center justify-center bg-black/60"
+			role="dialog"
+			tabIndex={-1}
+			aria-modal="true"
+			aria-label="QRコードダイアログ"
 			onClick={handleClickOverlay}
 			onKeyDown={handleKeydown}
-			aria-label="QRコードダイアログを閉じる"
 		>
 			<Card className="mx-4">
 				<CardContent className="w-fit">
@@ -44,6 +46,6 @@ export function QRCode({ onClose }: Props) {
 					</OutlinedButton>
 				</CardContent>
 			</Card>
-		</button>
+		</div>
 	);
 }
