@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, type ReactNode, useCallback, useEffect, useState } from "react";
+import { createContext, type ReactNode, useEffect, useState } from "react";
 
 type Props = {
 	children: ReactNode;
@@ -26,26 +26,24 @@ export function SidebarProvider({ children }: Props) {
 		setIsOpen(false);
 	};
 
-	const toggle = useCallback(() => {
+	const toggle = () => {
 		setIsOpen((prevIsOpen) => !prevIsOpen);
-	}, []);
+	};
 
-	const handleKeydown = useCallback(
-		(e: KeyboardEvent) => {
-			if (e.ctrlKey && e.key === "b") {
-				e.preventDefault();
-				toggle();
-			}
-		},
-		[toggle],
-	);
+	const handleKeydown = (e: KeyboardEvent) => {
+		if (e.ctrlKey && e.key === "b") {
+			e.preventDefault();
+			toggle();
+		}
+	};
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: React Compiler handles optimization
 	useEffect(() => {
 		window.addEventListener("keydown", handleKeydown);
 		return () => {
 			window.removeEventListener("keydown", handleKeydown);
 		};
-	}, [handleKeydown]);
+	}, []);
 
 	useEffect(() => {
 		setIsOpen(window.innerWidth > 1024);
