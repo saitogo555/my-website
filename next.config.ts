@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
 		unoptimized: true,
 		formats: ["image/avif", "image/webp"],
 	},
-	cacheComponents: true,
+	// cacheComponents: true,
 	reactCompiler: true,
 };
 
