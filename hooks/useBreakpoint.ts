@@ -6,15 +6,13 @@ import { throttle } from "@/utils";
 export const useBreakpoint = () => {
 	const [isMobile, setIsMobile] = useState(false);
 
-	const handleResize = () => {
-		throttle(() => {
-			setIsMobile(window.innerWidth <= 1024);
-		}, 500);
-	};
-
-	// biome-ignore lint/correctness/useExhaustiveDependencies: React Compiler handles optimization
 	useEffect(() => {
-		handleResize();
+		const updateBreakpoint = () => {
+			setIsMobile(window.innerWidth <= 1024);
+		};
+		
+		updateBreakpoint();
+		const handleResize = throttle(updateBreakpoint, 500);
 		window.addEventListener("resize", handleResize);
 
 		return () => {
