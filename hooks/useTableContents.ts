@@ -1,13 +1,15 @@
+"use client";
+
 import { usePathname } from "next/navigation";
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import type { AnchorLink } from "@/types/link";
 
 export const useTableOfContents = () => {
 	const [toc, setToc] = useState<AnchorLink[]>([]);
 	const pathname = usePathname();
 
-	// biome-ignore lint/correctness/useExhaustiveDependencies: ページ遷移時に実行したいのでpathname変数を依存リストに追加
-	const generateTableOfContents = useCallback(() => {
+	// biome-ignore lint/correctness/useExhaustiveDependencies: pathname変更時に目次を更新するため
+	useEffect(() => {
 		const headings = document.querySelectorAll("[data-anchor-link]");
 		const tocItems: AnchorLink[] = Array.from(headings).map((heading, i) => {
 			const dataAttr = heading.getAttribute("data-anchor-link") ?? `toc-${i}`;
@@ -23,10 +25,6 @@ export const useTableOfContents = () => {
 
 		setToc(tocItems);
 	}, [pathname]);
-
-	useEffect(() => {
-		generateTableOfContents();
-	}, [generateTableOfContents]);
 
 	return toc;
 };
